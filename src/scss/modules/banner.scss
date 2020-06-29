@@ -1,0 +1,26 @@
+//----------  banner
+//------------------------------------------------------------------------------
+.banner {
+	min-height: 500px;
+	position: relative;
+	overflow: hidden;
+	padding-top: 295px;
+	>.circle {
+		position: absolute;
+		background-color: $lime;
+		content: '';
+		height: 840px;
+		width: 840px;
+		border: 57px solid $lime;
+		border-radius: 50%;
+		right: -65px;
+		bottom: -450px;
+		box-shadow: 0 0 0 200px $blue-lightest;
+		z-index: 0;
+	}
+}
+
+.banner-inner {
+	position: relative;
+	z-index: 1;
+}

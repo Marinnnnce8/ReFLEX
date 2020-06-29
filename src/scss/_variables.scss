@@ -1,0 +1,128 @@
+//----------  variables
+//------------------------------------------------------------------------------
+
+$font-default: 'Source Sans Pro', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif; 
+$bold: 700;
+$semi-bold: 600;
+$medium: 500;
+$light: 300;
+$thin: 100;
+$italic: italic;
+
+// Colors
+$white: #fff;
+$black: #000;
+$lime: #b8ef00;
+$lime-mid: #96c300;
+$lime-dark: #a2d200;
+$lime-success: #e3f2b1;
+$blue: #003b73;
+$blue-mid: #004583;
+$blue-pastel: #63819e;
+$blue-primary: #d7e4f0;
+$blue-darker: #002349;
+$blue-lightest: #f2f5fa;
+$blue-table-light: #f2f5f8;
+$gray-light: #c8cdd2;
+$orange-warning: #f5e0c8;
+$red-danger: #fbcccb;
+
+$site-colors: (
+	'black': $black,
+	'white': $white,
+) !default;
+
+//----------  Bootstrap grid
+//------------------------------------------------------------------------------
+
+$enable-grid-classes: true !default;
+
+//----------  Media queries breakpoints - Grid breakpoint
+//------------------------------------------------------------------------------
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+
+//----------  Grid containers
+//------------------------------------------------------------------------------
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+) !default;
+
+//----------  Grid columns
+//------------------------------------------------------------------------------
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+//
+// UIkit
+//
+
+// Breakpoints
+$breakpointSmall: 640px;
+$breakpointMedium: 960px;
+$breakpointLarge: 1200px;
+$breakpointXlarge: 1600px;
+$breakpointXsmallMax: ($breakpointSmall - 1);
+$breakpointSmallMax: ($breakpointMedium - 1);
+$breakpointMediumMax: ($breakpointLarge - 1);
+$breakpointLargeMax: ($breakpointXlarge - 1);
+$breakpointMobile: 479px;
+
+// Spacing
+$ukGutter: 15px;
+
+//
+// NB
+//
+
+$nbCent: 32%;
+$nbSec: 256ms;
+
+// Spacing
+$nbSpace: 2.5rem;
+$nbSpaceSmall: $nbSpace * 0.6;
+$nbSpaceXsmall: $nbSpace * 0.3;
+$nbSpaceLarge: $nbSpace * 1.4;
+$nbSpaceXlarge: $nbSpace * 2;
+$nbGutter: $nbSpace * 0.2;
+$nbGutterSmall: $nbGutter / 2;
+$nbGutterXsmall: $nbGutterSmall / 2;
+
+// Colour
+$nbWhite: #fff;
+$nbBlack: #241d1e;
+$nbRed: #e11e2f;
+$nbGrey: lighten($nbBlack, $nbCent);
+$nbLightGrey: lighten($nbGrey, $nbCent);
+$nbOffWhite: lighten($nbLightGrey, $nbCent / 2);
+
+// Animation
+$nbSpeed: $nbSec;
+$nbSpeedShort: $nbSpeed / 2;
+$nbSpeedLong: $nbSpeed * 2;
+
+//
+// Theme
+//
+
+$themeVar: 0; // Example, not used
+
+$arrow-right: 'arrow-right';
+$chevron-right: 'chevron-right';
+$chevron-left: 'chevron-left';
+$chevron-down: 'chevron-down';
+$external-link: 'external-link';
+$join: 'join';
+

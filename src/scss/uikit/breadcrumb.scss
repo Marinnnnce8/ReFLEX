@@ -1,0 +1,62 @@
+// uikit/breadcrumb
+.uk-breadcrumb {
+    margin: 30px 0 55px;
+    &:last-child {
+        margin-bottom: 55px;
+    }
+
+	* {
+        font-family: $ubuntu;
+        font-weight: $light;
+		color: $blue;
+		font-size: 14px;
+	}
+
+	>:nth-child(n+2):not(.uk-first-column)::before {
+		content: font-char($chevron-right);
+		font-family: 'svgicons';
+		font-size: 6px;
+		color: $gray-light;
+		margin: 0 10px;
+	}
+
+	a {
+        position: relative;
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 4px;
+            height: 1px;
+            background-color: $blue;
+            content: '';
+            width: 100%;
+            transition: inherit;
+        }
+
+		@include hover {
+            &::after {
+                opacity: 0;
+            }
+		}
+	}
+
+	> :last-child>*,
+	> :last-child>span {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		display: inline-block;
+		vertical-align: middle;
+		color: $blue;
+
+		@media (max-width: $breakpointXsmallMax) {
+			max-width: 128px;
+		}
+	}
+
+	@media (max-width: $breakpointXsmallMax) {
+		li:not(:first-of-type):not(:last-of-type) {
+			display: none;
+		}
+	}
+}

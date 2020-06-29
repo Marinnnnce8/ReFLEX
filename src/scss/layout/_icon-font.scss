@@ -1,0 +1,247 @@
+@font-face {
+	font-family: 'svgicons';
+	src: url('../fonts/svgicons.woff2') format('woff2'),
+		url('../fonts/svgicons.woff') format('woff'),
+		url('../fonts/svgicons.ttf') format('truetype');
+		font-display: swap;
+}
+
+@mixin font-styles {
+	font-family: 'svgicons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+	display: block;
+	line-height: 1;
+}
+
+%font {
+	@include font-styles;
+}
+
+@function font-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-right {
+		$char: '\E001';
+	}
+	@if $filename == book {
+		$char: '\E002';
+	}
+	@if $filename == briefcase {
+		$char: '\E003';
+	}
+	@if $filename == bundle {
+		$char: '\E004';
+	}
+	@if $filename == car-club {
+		$char: '\E005';
+	}
+	@if $filename == charger {
+		$char: '\E006';
+	}
+	@if $filename == chevron-down {
+		$char: '\E007';
+	}
+	@if $filename == chevron-left {
+		$char: '\E008';
+	}
+	@if $filename == chevron-right {
+		$char: '\E009';
+	}
+	@if $filename == dots-bg {
+		$char: '\E00A';
+	}
+	@if $filename == drive {
+		$char: '\E00B';
+	}
+	@if $filename == electric-vehicles {
+		$char: '\E00C';
+	}
+	@if $filename == exclusive {
+		$char: '\E00D';
+	}
+	@if $filename == external-link {
+		$char: '\E00E';
+	}
+	@if $filename == FLEX-wifi-waves {
+		$char: '\E00F';
+	}
+	@if $filename == great-deal {
+		$char: '\E010';
+	}
+	@if $filename == heating-smaller {
+		$char: '\E011';
+	}
+	@if $filename == heating {
+		$char: '\E012';
+	}
+	@if $filename == home-batteries {
+		$char: '\E013';
+	}
+	@if $filename == home-visit {
+		$char: '\E014';
+	}
+	@if $filename == instagram-logo {
+		$char: '\E015';
+	}
+	@if $filename == integrated-offer {
+		$char: '\E016';
+	}
+	@if $filename == join {
+		$char: '\E017';
+	}
+	@if $filename == lightbulb {
+		$char: '\E018';
+	}
+	@if $filename == newsletter {
+		$char: '\E019';
+	}
+	@if $filename == orkney-map-regions {
+		$char: '\E01A';
+	}
+	@if $filename == play-button-arrowhead {
+		$char: '\E01B';
+	}
+	@if $filename == quote {
+		$char: '\E01C';
+	}
+	@if $filename == signup {
+		$char: '\E01D';
+	}
+	@if $filename == solar-energy {
+		$char: '\E01E';
+	}
+	@if $filename == turbine-tidal {
+		$char: '\E01F';
+	}
+	@if $filename == turbine-wind {
+		$char: '\E020';
+	}
+	@if $filename == user-home {
+		$char: '\E021';
+	}
+
+	@return $char;
+}
+
+@mixin font($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %font;
+		} @else {
+			@include font-styles;
+		}
+		content: font-char($filename);
+	}
+}
+
+[class*='font-ico'] {
+	display: inline-block;
+}
+
+.font-arrow-right {
+	@include font(arrow-right);
+}
+.font-book {
+	@include font(book);
+}
+.font-briefcase {
+	@include font(briefcase);
+}
+.font-bundle {
+	@include font(bundle);
+}
+.font-car-club {
+	@include font(car-club);
+}
+.font-charger {
+	@include font(charger);
+}
+.font-chevron-down {
+	@include font(chevron-down);
+}
+.font-chevron-left {
+	@include font(chevron-left);
+}
+.font-chevron-right {
+	@include font(chevron-right);
+}
+.font-dots-bg {
+	@include font(dots-bg);
+}
+.font-drive {
+	@include font(drive);
+}
+.font-electric-vehicles {
+	@include font(electric-vehicles);
+}
+.font-exclusive {
+	@include font(exclusive);
+}
+.font-external-link {
+	@include font(external-link);
+}
+.font-FLEX-wifi-waves {
+	@include font(FLEX-wifi-waves);
+}
+.font-great-deal {
+	@include font(great-deal);
+}
+.font-heating-smaller {
+	@include font(heating-smaller);
+}
+.font-heating {
+	@include font(heating);
+}
+.font-home-batteries {
+	@include font(home-batteries);
+}
+.font-home-visit {
+	@include font(home-visit);
+}
+.font-instagram-logo {
+	@include font(instagram-logo);
+}
+.font-integrated-offer {
+	@include font(integrated-offer);
+}
+.font-join {
+	@include font(join);
+}
+.font-lightbulb {
+	@include font(lightbulb);
+}
+.font-newsletter {
+	@include font(newsletter);
+}
+.font-orkney-map-regions {
+	@include font(orkney-map-regions);
+}
+.font-play-button-arrowhead {
+	@include font(play-button-arrowhead);
+}
+.font-quote {
+	@include font(quote);
+}
+.font-signup {
+	@include font(signup);
+}
+.font-solar-energy {
+	@include font(solar-energy);
+}
+.font-turbine-tidal {
+	@include font(turbine-tidal);
+}
+.font-turbine-wind {
+	@include font(turbine-wind);
+}
+.font-user-home {
+	@include font(user-home);
+}
+

@@ -1,0 +1,142 @@
+//----------  typography
+//------------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-default;
+	font-weight: $bold;
+	color: $blue;
+}
+
+h1 {
+	font-size: 67px;
+	color: $blue;
+	line-height: 1.05;
+}
+
+h2 {
+	font-size: 34px;
+}
+
+h3 {
+	font-size: 26px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 20px;
+	color: $blue;
+	font-family: $ubuntu;
+	font-weight: $light;
+	margin-bottom: 15px;
+
+	>* {
+		font-family: inherit;
+	}
+
+	strong {
+		font-weight: $bold;
+	}
+}
+
+blockquote {
+	padding: 50px 0 10px 105px;
+	position: relative;
+
+	p,
+	span:not(.quote) {
+		color: $blue;
+	}
+
+	p {
+		font-size: 26px;
+		font-weight: $bold;
+		font-style: normal;
+		font-family: $font-default;
+
+		&:last-of-type {
+			margin-bottom: 15px;
+		}
+	}
+
+	span:not(.quote) {
+		font-family: $ubuntu;
+		font-weight: $light;
+		font-style: normal;
+		font-size: 18px;
+	}
+
+	.font-quote {
+		position: absolute;
+		width: 168px;
+		height: 168px;
+		border-radius: 50%;
+		background-color: $lime;
+		left: 0;
+		top: 0;
+		z-index: -1;
+
+		&::before {
+			color: $white;
+			font-size: 90px;
+			position: absolute;
+			top: 50%;
+			left: 51%;
+			transform: translate(-50%, -50%);
+			height: 50px;
+		}
+	}
+}
+
+ul:not(.uk-list-disc) {
+	list-style-type: none;
+}
+
+ol {
+	padding-left: 0;
+	counter-reset: item;
+	list-style-type: none;
+	font-family: $ubuntu;
+	font-size: 20px;
+	color: $blue;
+	font-weight: $light;
+
+	li {
+		padding-left: 15px;
+		margin-bottom: 15px;
+
+		&::before {
+			content: counter(item) '. ';
+			counter-increment: item;
+			right: 8px;
+			position: relative;
+			font-weight: normal;
+		}
+	}
+}
+
+img {
+	width: 100%;
+}
+
+.uk-text-small {
+	color: $blue;
+	font-family: $ubuntu;
+	font-weight: $light;
+}

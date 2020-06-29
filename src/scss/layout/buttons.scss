@@ -1,0 +1,215 @@
+//----------  button
+//------------------------------------------------------------------------------
+a,
+button {
+	appearance: none;
+	outline: none;
+	transition: $nbSec ease-in-out;
+
+	// @include hover {
+	// 	outline: 1px dashed rgba($orange, .2);
+	// }
+}
+
+a {
+	@include hover {
+		text-decoration: none;
+	}
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+}
+
+.uk-button {
+	background-color: $lime;
+	font-weight: $bold;
+	font-size: 18px;
+	color: $blue;
+	padding-right: 50px;
+	border-radius: 50px;
+	overflow: hidden;
+	min-width: 230px;
+	text-align: left;
+	border: 0;
+	padding: 7px 50px 10px 30px;
+	transition: $nbSec ease-in-out;
+	text-transform: none;
+	position: relative;
+
+	&::before,
+	&::after {
+		position: absolute;
+	}
+
+	&::before {
+		content: font-char($arrow-right);
+		right: 30px;
+		font-family: 'svgicons';
+		color: inherit;
+		top: 56%;
+		transform: translateY(-50%);
+		z-index: 2;
+		transition: inherit;
+	}
+
+	&::after {
+		content: '';
+		top: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		background-color: $lime-mid;
+		transition: inherit;
+	}
+
+	>span {
+		position: relative;
+		transition: inherit;
+		z-index: 2;
+	}
+
+	&.uk-button-small {
+		padding: 8px 35px 8px 25px;
+		min-width: 185px;
+		font-size: 14px;
+
+		&::before {
+			right: 25px;
+		}
+	}
+
+	&.uk-button-large {
+		padding: 7px 50px 10px 40px;
+		min-width: 250px;
+		font-size: 20px;
+
+		&::before {
+			right: 35px;
+		}
+	}
+
+	@include hover {
+		background-color: $lime;
+
+		>span,
+		&::before {
+			color: $blue;
+		}
+
+		&::after {
+			opacity: 1;
+			width: 100%;
+		}
+	}
+}
+
+.uk-button-default {
+	border: 2px solid $blue;
+	background-color: transparent;
+	padding: 5px 50px 8px 30px;
+
+	&::after {
+		background-color: $blue-mid;
+	}
+
+	&.uk-button-small {
+		padding: 6px 35px 6px 25px;
+	}
+
+	&.uk-button-large {
+		padding: 5px 50px 8px 40px;
+	}
+
+	@include hover {
+		background-color: transparent;
+		border-color: $blue-mid;
+
+		>span,
+		&::before {
+			color: $white;
+		}
+	}
+}
+
+.uk-button-secondary {
+	background-color: $blue-mid;
+	border-color: $blue-mid;
+
+	&::after {
+		background-color: $blue-darker;
+	}
+
+	>span,
+	&::before {
+		color: $white;
+	}
+
+	@include hover {
+		background-color: $blue-mid;
+		border-color: $blue-darker;
+
+		>span,
+		&::before {
+			color: $white;
+		}
+	}
+}
+
+.uk-button-text {
+	background-color: transparent;
+	min-height: 0;
+	padding: 0 20px 0 0;
+	transition: $nbSec ease-in-out;
+	min-width: auto;
+	overflow: visible;
+	font-size: 14px;
+
+	&::before {
+		top: 50%;
+		right: 0;
+		transform: translateY(-31%);
+		left: auto;
+		bottom: auto;
+		transition: $nbSec ease-in-out;
+		border: 0;
+	}
+
+	&::after {
+		border-radius: 50%;
+		background-color: rgba($blue, .1);
+		height: 0;
+		left: auto;
+		right: 0;
+		top: 50%;
+		transform: translate(45%, -50%);
+	}
+
+	&.uk-text-large {
+		padding-right: 25px;
+		font-size: 18px;
+		&::after {
+			transform: translate(40%, -50%);
+		}
+		&::before {
+			font-size: 16px;
+		}
+	}
+
+	@include hover {
+		background-color: transparent;
+
+		&::after {
+			width: 48px;
+			height: 48px;
+		}
+	}
+}
