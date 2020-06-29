@@ -10,32 +10,37 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
+			&:not(:first-of-type) {
+				margin-left: 20px;
+			}
 
 			a {
-				color: $nbGrey;
+				color: $blue;
+				font-family: $ubuntu;
+				font-weight: $light;
+				font-size: 14px;
+				position: relative;
+				&::before {
+					width: 100%;
+					bottom: 0;
+					height: 1px;
+					background-color: $blue;
+					left: 0;
+					opacity: 0;
+					content: '';
+					position: absolute;
+					transition: inherit;
+				}
 
 				@include hover {
-					color: $nbBlack;
+					&::before {
+						opacity: 1;
+					}
 				}
-			}
-
-			&:after {
-				content: "|";
-				color: $nbLightGrey;
-				display: inline-block;
-				padding: 0 $nbGutter;
-			}
-
-			&:last-child:after {
-				content: "";
 			}
 
 			@media (max-width: $breakpointMobile) {
 				display: block;
-
-				&:after {
-					display: none;
-				}
 			}
 		}
 	}

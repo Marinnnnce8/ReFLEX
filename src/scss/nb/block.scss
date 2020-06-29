@@ -29,9 +29,11 @@
 
 .nb-block-contact-widget {
 	z-index: 3;
+
 	.uk-button {
 		overflow: hidden;
 		transform: rotate(-90deg) translateY(140%);
+		min-width: 215px;
 
 		&::before {
 			content: font-char($join);
@@ -724,4 +726,11 @@
 
 .uk-alert-danger {
 	background-color: $red-danger;
+}
+
+.nb-copyright {
+	color: $white;
+	font-family: $ubuntu;
+	font-weight: $light;
+	font-size: 14px;
 }

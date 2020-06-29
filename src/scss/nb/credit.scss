@@ -1,10 +1,15 @@
 .nb-credit {
+	color: $blue;
+	font-family: $ubuntu;
+	font-weight: $light;
+	font-size: 14px;
 
 	a {
 		align-items: center;
-		color: $nbBlack;
 		display: inline-flex;
-		font-weight: 700;
+		color: inherit;
+		font-weight: $bold;
+		align-items: center;
 
 		@include hover {
 			color: $nbRed;
@@ -13,7 +18,8 @@
 
 		img {
 			height: 1rem;
-			margin-left: $nbGutterXsmall;
+			margin-left: 10px;
+			width: auto;
 		}
 	}
 }

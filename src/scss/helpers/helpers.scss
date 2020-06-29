@@ -3,27 +3,51 @@
 
 * {
 	box-sizing: border-box;
+
 	&::before,
 	&::after {
 		box-sizing: border-box;
 	}
 }
 
-html, body {
-	overflow-x: hidden;
+html,
+body {
+	// overflow-x: hidden;
 	font-family: $font-default;
 	width: 100%;
 	position: relative;
 	font-size: 16px;
 }
 
+.font-dots-bg {
+	width: 140px;
+	position: absolute;
+	height: 420px;
+	z-index: 1;
+
+	&::before {
+		color: $lime;
+		font-size: 400px;
+		top: 0;
+		position: absolute;
+	}
+	&.left {
+		left: 0;
+	}
+	&.right {
+		right: 0;
+	}
+}
+
 // Theming and colors iterator
 @each $colors-name in $site-colors {
 	$name: nth($colors-name, 1);
 	$color: nth($colors-name, 2);
+
 	.bg-#{$name} {
 		background-color: $color;
 	}
+
 	.color-#{$name} {
 		color: $color;
 	}
