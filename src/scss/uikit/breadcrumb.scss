@@ -15,7 +15,7 @@
 	>:nth-child(n+2):not(.uk-first-column)::before {
 		content: font-char($chevron-right);
 		font-family: 'svgicons';
-		font-size: 6px;
+		font-size: 9px;
 		color: $gray-light;
 		margin: 0 10px;
 	}

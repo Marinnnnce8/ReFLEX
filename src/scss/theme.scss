@@ -38,6 +38,11 @@
 @import 'modules/basic-block.scss';
 @import 'modules/slider.scss';
 @import 'modules/team-list.scss';
+@import 'modules/enquiry-section.scss';
+@import 'modules/news-section.scss';
+@import 'modules/latest-news.scss';
+@import "modules/ads.scss";
+@import "modules/process.scss";
 
 // Theme
 @import "theme/base.scss";
@@ -68,33 +73,6 @@
 	img {
 		width: 228px;
 	}
-}
-
-// uikit/form
-.uk-input:not(.uk-form-danger),
-.uk-select:not(.uk-form-danger),
-.uk-textarea:not(.uk-form-danger),
-.uk-checkbox:not(.uk-form-danger),
-.uk-radio:not(.uk-form-danger),
-.uk-checkbox:checked:not(.uk-form-danger),
-.uk-radio:checked:not(.uk-form-danger) {
-	border-color: rgba($blue, .2);
-	border-width: 2px;
-	border-radius: 50px;
-	font-size: 16px;
-	color: $blue;
-	font-family: $ubuntu;
-	min-height: 55px;
-	padding: 18px 35px;
-	&:focus {
-		border-color: rgba($blue, 1);
-	}
-}
-
-.uk-textarea:not(.uk-form-danger) {
-	min-height: 150px;
-	resize: none;
-	border-radius: 25px;
 }
 
 // theme/footer

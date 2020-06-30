@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang='en-gb' class='template-nb.styleguide section-nb.styleguide'>
+
+<head>
+
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta name='format-detection' content='telephone=no'>
+
+    <title>Enquiry | Site Name</title>
+    <meta name='description' content='This is a meta description'>
+
+    <link rel='shortcut icon' href='favicon.ico'>
+    <link rel='stylesheet' href='css/uikit.min.css' />
+    <link rel='stylesheet' href='css/theme.min.css' />
+</head>
+
+<body>
+
+    <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
+        <nav class='uk-navbar-container uk-navbar' data-uk-navbar>
+
+            <div class='uk-navbar-left'>
+                <a href='#' class='uk-navbar-item uk-logo'>
+                    <img src='img/logo.png' alt='Site Name Logo'>
+                </a>
+            </div>
+
+            <div class='uk-navbar-right'>
+                <div id='nav'>
+                    <ul class='uk-navbar-nav' data-uk-nb-nav>
+                        <li><a href='index.html'>Home</a></li>
+                        <li class='uk-active'><a href='styleguide.html'>About</a></li>
+                        <li><a href='styleguide.html'>Contact</a></li>
+                    </ul>
+                </div>
+                <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
+                    hidden>
+                    <span data-uk-navbar-toggle-icon></span>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class='nb-main uk-margin-large-bottom'>
+        <div
+            class='uk-position-fixed uk-position-center-right nb-fixed uk-visible@m nb-block-contact nb-block-contact-widget'>
+            <a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
+        </div>
+        <section class="banner">
+            <span class="font-dots-bg left" role="presentation"></span>
+            <div class="circle" role="presentation">
+                <span class="uk-background-cover" data-uk-img
+                    style="background-image: url('./img/enquiry-banner.jpg');"></span>
+            </div>
+            <div class='uk-container'>
+                <div class="banner-inner">
+                    <h1>Get in touch</h1>
+                    <ul class="uk-breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span>Get in touch</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="enquiry-section uk-position-relative">
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-between">
+                    <div class='nb-block nb-block-form uk-clearfix' data-nb-block='form'>
+
+                        <form id='nb-form-nb-styleguide' class='uk-form-stacked InputfieldForm' method='post'
+                            data-uk-nb-form novalidate data-colspacing='1'>
+                            <fieldset>
+                                <legend>Are you interested in ReFLEX for your home or business?</legend>
+                                <div class="uk-margin uk-flex uk-flex-column">
+                                    <label><input class="uk-checkbox" type="checkbox" checked>Home<span
+                                            class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">Business<span
+                                            class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">Both<span
+                                            class="checkmark"></span></label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Please select the services you are interested in:</legend>
+                                <div class="uk-margin uk-flex uk-flex-column">
+                                    <label><input class="uk-checkbox" type="checkbox" checked>Energy tariff<span
+                                            class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">Electric
+                                        vechicles<span class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">Electric vechicle
+                                        chargers<span class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">Batteries<span
+                                            class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">Heating<span
+                                            class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">Car Club<span
+                                            class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">All of the above<span
+                                            class="checkmark"></span></label>
+                                    <label><input class="uk-checkbox" type="checkbox">I don't know<span
+                                            class="checkmark"></span></label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Your details:</legend>
+                                <div class='uk-grid-small' data-uk-grid>
+                                    <div class='Selectfield SelectfieldText nb-form-required uk-width-1-2@m uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_opetion'>
+                                        <div class='nb-form-content'>
+                                            <div class='Selectfield SelectfieldText nb-form-required uk-width-1-1 uk-first-column'
+                                                id='wrap_nb-form-nb-styleguide_option'>
+                                                <div data-uk-form-custom="target: > * > span:first-child">
+                                                    <select>
+                                                        <option value="">- Select -</option>
+                                                        <option value="1">Option 01</option>
+                                                        <option value="2">Option 02</option>
+                                                        <option value="3">Option 03</option>
+                                                        <option value="4">Option 04</option>
+                                                    </select>
+                                                    <button class="uk-button uk-button-default" type="button"
+                                                        tabindex="-1">
+                                                        <span></span>
+                                                        <span class="font-chevron-down" role="presentation"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_first_name'>
+                                        <label class='uk-form-label' for='nb-form-nb-styleguide_first_name'>First
+                                            Name</label>
+                                        <div class='nb-form-content'>
+                                            <div role='alert'></div>
+                                            <input id='nb-form-nb-styleguide_first_name'
+                                                class='uk-input InputfieldMaxWidth' name='first_name' type='text'
+                                                maxlength='2048' aria-invalid='true' title='Please enter first name'
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_last_name'>
+                                        <label class='uk-form-label' for='nb-form-nb-styleguide_last_name'>Last
+                                            Name</label>
+                                        <div class='nb-form-content'>
+                                            <div role='alert'></div>
+                                            <input id='nb-form-nb-styleguide_last_name'
+                                                class='uk-input InputfieldMaxWidth' name='last_name' type='text'
+                                                maxlength='2048' aria-invalid='true' title='Please enter last name'
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class='Inputfield InputfieldText uk-width-1-2@s uk-grid-margin uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_tel'>
+                                        <label class='uk-form-label' for='nb-form-nb-styleguide_tel'>Phone
+                                            number</label>
+                                        <span class='nb-placeholder'>Optional</span>
+                                        <div class='nb-form-content'>
+                                            <div role='alert'></div>
+                                            <input id='nb-form-nb-styleguide_tel' class='uk-input InputfieldMaxWidth'
+                                                name='tel' type='tel' maxlength='2048'>
+                                        </div>
+                                    </div>
+                                    <div class='Inputfield InputfieldEmail nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_email'>
+                                        <label class='uk-form-label' for='nb-form-nb-styleguide_email'>Email
+                                            Address</label>
+                                        <div class='nb-form-content'>
+                                            <div role='alert'></div>
+                                            <input id='nb-form-nb-styleguide_email' name='email'
+                                                class='uk-input InputfieldMaxWidth' type='email' maxlength='512'
+                                                aria-invalid='true' title='Please enter a valid email address' required>
+                                        </div>
+                                    </div>
+                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_address'>
+                                        <label class='uk-form-label' for='nb-form-nb-styleguide_address'>Address</label>
+                                        <div class='nb-form-content'>
+                                            <div role='alert'></div>
+                                            <input id='nb-form-nb-styleguide_address' name='address'
+                                                class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
+                                                aria-invalid='true' title='Please enter a valid address' required>
+                                        </div>
+                                    </div>
+                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_town'>
+                                        <label class='uk-form-label' for='nb-form-nb-styleguide_town'>Town /
+                                            City</label>
+                                        <div class='nb-form-content'>
+                                            <div role='alert'></div>
+                                            <input id='nb-form-nb-styleguide_town' name='town'
+                                                class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
+                                                aria-invalid='true' title='Please enter a valid town / city' required>
+                                        </div>
+                                    </div>
+                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_country'>
+                                        <label class='uk-form-label' for='nb-form-nb-styleguide_country'>Country</label>
+                                        <span class='nb-placeholder'>Optional</span>
+                                        <div class='nb-form-content'>
+                                            <div role='alert'></div>
+                                            <input id='nb-form-nb-styleguide_country' name='country'
+                                                class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
+                                                aria-invalid='true' title='Please enter a valid country'>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>By submitting this form, I confirm I have read the <a href="#">privacy
+                                                policy</a>
+                                            and agree to be contacted by third parties on behalf of ReFLEX.</p>
+                                    </div>
+                                    <div class='Inputfield InputfieldSubmit uk-width-1-1 uk-grid-margin uk-first-column'
+                                        id='wrap_nb-form-nb-styleguide_submit'>
+                                        <div class='nb-form-content'>
+                                            <div role='alert'></div>
+                                            <button id='nb-form-nb-styleguide_submit'
+                                                class='uk-button uk-button-secondary' name='submit' value='Send'
+                                                type='submit'><span class='ui-button-text'>Send
+                                                    message</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" data-uk-sticky="offset: 100; bottom: true;">
+                            <h3 class="uk-card-title">Contact us</h3>
+                            <p>We're available Monday to Friday, 9am to 6pm (closed on bank holidays).</p>
+                            <h4>General enquiry</h4>
+                            <ul>
+                                <li><a href='mailto:info@reflexorkney.co.uk'
+                                        class='font-mail'>info@reflexorkney.co.uk</a></li>
+                                <li><a href="tel:+4401856480008" class="font-phone">+44(0)1856 48000</a></li>
+                            </ul>
+                            <h4>Media enquiry</h4>
+                            <p>Contact Lisa MacKenzie on:</p>
+                            <ul>
+                                <li><a href='mailto:lisa.mackenzie@emec.org.uk'
+                                        class='font-mail'>lisa.mackenzie@emec.org.uk</a></li>
+                                <li><a href="tel:+4401856 852207" class="font-phone">+44(0)1856 852207</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class='footer footer-news'>
+        <div class="footer-circle" role="presentation">
+            <span></span>
+        </div>
+        <div class="footer-top">
+            <div class='uk-container'>
+                <div data-uk-grid class="uk-child-width-1-2@m">
+                    <div class="uk-flex uk-flex-column uk-flex-between">
+                        <div class="uk-flex uk-flex-middle">
+                            <a href="#" class="logo" aria-label="Visit ReFLEX Orkney"><img src="./img/logo.png"
+                                    alt="ReFLEX Orkney Logo"></a>
+                            <ul class="uk-flex uk-flex-middle footer-socials">
+                                <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+                                <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+                                <li><a href="#" class="font-linkedin" aria-label="Visit our Linkedin page"></a></li>
+                                <li><a href="#" class="font-youtube" aria-label="Visit our Youtube page"></a></li>
+                            </ul>
+                        </div>
+                        <div class="uk-flex">
+                            <a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
+                            <a href="#" class="uk-button uk-button-default"><span>Newsletter sign up</span></a>
+                        </div>
+                    </div>
+                    <div class="uk-child-width-1-2@m" data-uk-grid>
+                        <div class="uk-flex uk-flex-column uk-flex-between footer-contact">
+                            <div>
+                                <h3>Contact us</h3>
+                                <strong>ReFLEX Orkney Limited</strong>
+                                <span>The Charles Clouston Building ORIC,</span>
+                                <span>Back Rd, Stromness KW16 3AW</span>
+                            </div>
+                            <ul>
+                                <li><a href='tel:+4401856480008' class="link"><span>T:</span> +44(0)1856 48000</a></li>
+                                <li><a href='mailto:info@reflexorkney.co.uk' class="link"><span>E:</span>
+                                        info@reflexorkney.co.uk</a></li>
+                            </ul>
+                        </div>
+                        <div class="uk-flex uk-flex-column uk-flex-between footer-contact">
+                            <div>
+                                <h3>Media center</h3>
+                                <ul>
+                                    <li><a href='#'>Image library</a></li>
+                                    <li><a href='#'>Video library</a></li>
+                                    <li><a href='#'>Press contacts</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="#" class="uk-button uk-button-default"><span>Your feedback</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class='uk-container'>
+                <div class="uk-child-width-1-2@m" data-uk-grid>
+                    <div class='nb-copyright uk-margin-small-bottom'>&copy; 2020 ReFLEX Orkney Limited. Company number
+                        SC648457.</div>
+                    <div class="uk-flex uk-flex-between uk-padding-remove">
+                        <div class='nb-legal uk-margin-small-bottom'>
+                            <ul>
+                                <li><a href='#'>Terms &amp; Conditions</a></li>
+                                <li><a href='#'>Privacy Policy</a></li>
+                                <li><a href='#'>Disclaimer</a></li>
+                            </ul>
+                        </div>
+
+                        <div class='nb-credit'>Website by
+                            <a href='https://www.nbcommunication.com/'
+                                title='NB Communication - Digital Marketing Agency'>
+                                NB <img
+                                    src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+                                    data-src='https://brand.nbcommunication.com/logo/web/nb.png'
+                                    alt='NB Communication Ltd Logo' data-uk-img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src='js/uikit.min.js'></script>
+    <script src='js/uikit-icons.min.js'></script>
+    <script src='js/nb.js'></script>
+    <script src='js/theme.js'></script>
+</body>
+
+</html>

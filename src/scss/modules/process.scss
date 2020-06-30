@@ -1,0 +1,122 @@
+.process {
+    background-color: $lime;
+    padding: 45px 70px 65px;
+    border-radius: 20px;
+
+    ul {
+        counter-reset: item;
+        position: relative;
+        padding-left: 0;
+
+        &::before {
+            position: absolute;
+            height: 1.7px;
+            background-color: $blue;
+            content: '';
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+        }
+    }
+
+    li {
+        box-shadow: 0 25px 35px 0 rgba($black, .2);
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color: $white;
+        border: 2px solid $blue;
+        position: relative;
+        padding: 30px 0 0;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            background-color: $blue;
+            content: '';
+            height: 12px;
+            width: 12px;
+            display: block;
+            border-radius: 50%;
+        }
+
+        &::before {
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &::after {
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+
+        &:first-of-type {
+            &::before {
+                display: none;
+            }
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
+            }
+        }
+
+        &:not(:first-of-type) {
+            .arrow {
+                position: absolute;
+                content: '';
+                top: 50%;
+                right: 126%;
+                transform: translate(0%, -50%);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 12.5px 0 12.5px 25px;
+                border-color: transparent transparent transparent $blue;
+            }
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: $bold;
+            color: $blue;
+
+            &:first-of-type {
+                background-color: $blue;
+                color: $white;
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+
+                &::before {
+                    content: counter(item);
+                    counter-increment: item;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    position: absolute;
+                    font-weight: inherit;
+                    font-family: inherit;
+                }
+            }
+        }
+
+        img {
+            max-width: 85px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .direction {
+            position: absolute;
+        }
+    }
+}

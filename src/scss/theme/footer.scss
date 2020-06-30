@@ -1,6 +1,7 @@
 .footer {
     position: relative;
     padding-top: 640px;
+    z-index: -1;
 
     .logo {
         max-width: 220px;
@@ -9,6 +10,9 @@
             width: 100%;
             height: auto;
         }
+    }
+    &.footer-enquiry {
+        margin-top: -310px;
     }
 }
 
@@ -19,7 +23,7 @@
     top: 0;
     width: 100%;
     overflow: hidden;
-    z-index: 0;
+    z-index: -1;
 
     >span {
         width: 940px;

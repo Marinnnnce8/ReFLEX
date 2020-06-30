@@ -1,0 +1,114 @@
+fieldset {
+    border: 0;
+    padding: 0;
+
+    legend {
+        font-size: 34px;
+        font-weight: $bold;
+        color: $blue;
+        line-height: 1.2;
+    }
+}
+
+// uikit/form
+.uk-input:not(.uk-form-danger),
+.uk-select:not(.uk-form-danger),
+.uk-textarea:not(.uk-form-danger) {
+    border-color: rgba($blue, .2);
+    border-width: 2px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: $blue;
+    font-family: $ubuntu;
+    min-height: 55px;
+    padding: 18px 35px;
+    border-style: solid;
+
+    &:focus {
+        border-color: rgba($blue, 1);
+    }
+}
+
+.uk-form-custom {
+    margin-top: 40px;
+    width: 100%;
+
+    option {
+        font-family: $ubuntu;
+        font-size: 16px;
+        font-weight: normal;
+        color: $blue;
+    }
+
+    .uk-button {
+        background-color: transparent;
+        border-color: rgba($blue, .2);
+        border-width: 2px;
+        width: 100%;
+        overflow: visible;
+        min-width: 0;
+        display: block;
+
+        >span {
+            z-index: auto;
+            font-family: $ubuntu;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .font-chevron-down {
+            position: absolute;
+            right: 30px;
+            top: 56%;
+            transform: translateY(-50%);
+
+            &::before {
+                font-size: 14px;
+            }
+        }
+
+        &::after,
+        &::before {
+            display: none;
+        }
+
+        @include hover {
+            >span {
+                color: $blue;
+            }
+        }
+    }
+}
+
+.uk-checkbox:not(.uk-form-danger),
+.uk-checkbox:checked:not(.uk-form-danger),
+.uk-radio:checked:not(.uk-form-danger),
+.uk-radio:not(.uk-form-danger) {
+    border: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    cursor: pointer;
+
+    &:checked {
+        background-color: $blue;
+        border-color: $blue;
+        background-image: none;
+
+        ~.checkmark {
+            background-color: $blue;
+            border-color: $blue;
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+}
+
+.uk-textarea:not(.uk-form-danger) {
+    min-height: 150px;
+    resize: none;
+    border-radius: 25px;
+}

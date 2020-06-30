@@ -7,7 +7,10 @@
 		ul {
 			background-color: $blue;
 			border-radius: 20px;
-			padding: 17px 150px;
+			padding: 17px 30px;
+			li:not(:first-of-type) {
+				margin-left: 10px;
+			}
 
 			a {
 				color: $white;
@@ -24,6 +27,15 @@
 				}
 			}
 		}
+	}
+}
+
+.nb-main-internal {
+	h2 {
+		font-size: 34px;
+	}
+	h3 {
+		font-size: 26px;
 	}
 }
 
@@ -73,9 +85,8 @@
 
 	&-content {
 
-		p,
-		li {
-			a:not(.uk-accordion-title) {
+		p, li {
+			>a:not(.uk-accordion-title) {
 				color: $blue;
 				font-weight: normal;
 				position: relative;
@@ -147,6 +158,9 @@
 					left: 24px;
 					width: calc(100% - 24px);
 				}
+			}
+			strong {
+				font-weight: $bold;
 			}
 		}
 
@@ -256,9 +270,9 @@
 				margin-top: 20px;
 			}
 
-			li {
+			>li {
 				background-color: $white;
-				box-shadow: 0 -1px 30px -13px rgba($blue, .1);
+				box-shadow: 0 -1px 30px -13px rgba($blue, .2);
 				border-radius: 10px;
 				position: relative;
 				padding-left: 4px;
@@ -292,6 +306,7 @@
 						float: none;
 						background-image: none;
 						font-weight: 100;
+						transition: $nbSec ease-in-out;
 					}
 				}
 
@@ -300,7 +315,7 @@
 						padding: 30px 35px 23px 40px;
 					}
 
-					a::before {
+					a:not(.uk-button)::before {
 						transform: rotate(180deg);
 					}
 				}
@@ -654,7 +669,7 @@
 
 		.uk-checkbox {
 
-			+span {
+			+span:not(.checkmark) {
 				display: inline-block;
 				margin-left: $nbGutterSmall;
 			}
@@ -684,6 +699,11 @@
 				position: relative;
 				top: -1px;
 			}
+		}
+
+		p {
+			font-size: 16px;
+			margin: 35px 0 10px;
 		}
 
 		.uk-button {

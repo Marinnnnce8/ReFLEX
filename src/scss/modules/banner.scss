@@ -12,17 +12,18 @@
 		left: 0;
 		width: 100%;
 		bottom: 0;
+		z-index: -1;
 
 		span {
 			position: absolute;
 			background-color: $lime;
 			content: '';
-			height: 840px;
-			width: 840px;
+			height: 950px;
+			width: 950px;
 			border: 57px solid $lime;
 			border-radius: 50%;
-			right: -65px;
-			bottom: -450px;
+			right: -150px;
+			top: 55px;
 			box-shadow: 0 0 0 200px $blue-lightest;
 			z-index: 0;
 		}
@@ -31,9 +32,59 @@
 	.font-dots-bg {
 		top: 295px;
 	}
+
+	.font-info {
+		position: absolute;
+		bottom: 40px;
+		right: 75px;
+
+		&::before {
+			color: $white;
+			font-size: 20px;
+		}
+	}
+
+	&.banner-large {
+		min-height: 650px;
+
+		.uk-container {
+			width: 100%;
+		}
+
+		.circle {
+			overflow-y: visible;
+			bottom: auto;
+			height: 1300px;
+		}
+	}
 }
 
 .banner-inner {
 	position: relative;
 	z-index: 1;
+}
+
+.banner-container {
+	position: absolute;
+	z-index: 2;
+	padding: 0 40px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	bottom: 0;
+	content: '';
+
+	.uk-background-cover {
+		border-radius: 20px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	h1 {
+		color: $white;
+		font-size: 54px;
+		margin-bottom: 55px;
+	}
 }

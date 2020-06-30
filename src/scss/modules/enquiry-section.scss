@@ -1,0 +1,121 @@
+.enquiry-section {
+    padding: 70px 0 0;
+
+    .uk-card {
+        border-radius: 20px;
+        max-width: 375px;
+        width: 100% !important;// sass-lint:disable-line no-important
+        .uk-card-title,
+        a {
+            color: $blue;
+        }
+
+        .uk-card-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-family: $ubuntu;
+            margin: 35px 0 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        h4+p {
+            margin: 10px 0 5px;
+        }
+
+        ul {
+            padding-left: 0;
+            margin-top: 5px;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+        a {
+            display: inline-block;
+            font-family: $ubuntu;
+            position: relative;
+            padding-left: 40px;
+            z-index: 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: calc(100% - 40px);
+                height: 2px;
+                left: 40px;
+                bottom: 0;
+                background-color: $lime-dark;
+                transition: inherit;
+            }
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 8px;
+                font-size: 20px;
+            }
+
+            @include hover {
+                color: $white;
+
+                &::before {
+                    color: $blue;
+                }
+
+                &::after {
+                    height: 100%;
+                }
+            }
+        }
+
+        &.uk-active {
+            left: 62%;
+            transform: translateX(-1%);
+        }
+    }
+
+    fieldset:not(:last-of-type) {
+        label {
+            text-transform: none;
+            font-size: 20px;
+            margin-bottom: 13px;
+            position: relative;
+            padding-left: 50px;
+            cursor: pointer;
+
+            .checkmark {
+                border: 2px solid $blue-pastel-light;
+                border-radius: 5px;
+                width: 32px;
+                height: 32px;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: none;
+                    left: 9px;
+                    top: 3px;
+                    width: 10px;
+                    height: 18px;
+                    border: solid $white;
+                    border-width: 0 4px 4px 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
