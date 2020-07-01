@@ -1,0 +1,80 @@
+.values {
+
+    .uk-card-title,
+    .uk-position-cover,
+    .uk-position-cover img {
+        transition: .5s;
+    }
+
+    .uk-card-title {
+        font-size: 26px;
+        color: $white;
+        font-family: $ubuntu;
+        margin: 0;
+    }
+
+    .uk-position-cover {
+        padding: 25px;
+        height: 100%;
+        background-color: $blue-mid;
+        top: auto;
+
+        .uk-flex {
+            padding: 25px;
+            height: 100%;
+        }
+    }
+
+    img {
+        max-width: 75px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .uk-card {
+        box-shadow: 0 -3px 44px 3px rgba($black, .1);
+        min-height: 200px;
+        border-radius: 20px;
+        padding: 25px 40px;
+        overflow: hidden;
+
+        p:first-of-type {
+            margin-top: 0;
+        }
+
+        @include hover {
+            .uk-position-cover {
+                height: 95px;
+                padding: 10px;
+
+                img {
+                    max-width: 40px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .uk-card-title {
+                font-size: 16px;
+            }
+        }
+    }
+
+    >div {
+        &:first-of-type .uk-position-cover {
+            background: linear-gradient(42deg, rgba(24, 42, 79, 1) 24%, rgba(38, 67, 123, 1) 100%);
+        }
+
+        &:nth-of-type(2) .uk-position-cover {
+            background: linear-gradient(42deg, rgba(147, 174, 41, 1) 24%, rgba(215, 255, 60, 1) 100%);
+
+            .uk-card-title {
+                color: $blue;
+            }
+        }
+
+        &:last-of-type .uk-position-cover {
+            background: linear-gradient(42deg, rgba(24, 42, 79, 1) 24%, rgba(38, 67, 123, 1) 100%);
+        }
+    }
+}

@@ -65,7 +65,7 @@
                 </div>
             </div>
         </section>
-        <nav>
+        <nav class="uk-margin-medium-bottom">
             <div class="uk-container">
                 <ul class="uk-flex uk-flex-center">
                     <li><a href="#">How it works</a></li>
@@ -76,6 +76,39 @@
                 </ul>
             </div>
         </nav>
+
+        <div class='uk-container uk-margin-large-bottom'>
+            <div class="values uk-text-center uk-grid-medium uk-child-width-1-3" data-uk-grid
+                data-uk-height-match='target: .uk-card'>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <div class="uk-position-cover uk-position-z-index">
+                            <img src="./img/exclusive.svg" alt="image" data-uk-img>
+                            <h3 class="uk-card-title">Orkney exclusive</h3>
+                        </div>
+                        <p>Bundle options (e.g. cars, charging, tariff).</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <div class="uk-position-cover uk-position-z-index">
+                            <img src="./img/great-deal.svg" alt="image" data-uk-img>
+                            <h3 class="uk-card-title">Great deal</h3>
+                        </div>
+                        <p>Bundle options (e.g. cars, charging, tariff).</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <div class="uk-position-cover uk-position-z-index">
+                            <img src="./img/integrated-offer.svg" alt="image" data-uk-img>
+                            <h3 class="uk-card-title">Complete integrated offer</h3>
+                        </div>
+                        <p>Bundle options (e.g. cars, charging, tariff).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class='uk-container uk-container-small uk-margin-large-bottom'>
             <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
@@ -97,38 +130,124 @@
         </div>
 
         <div class='uk-container uk-margin-large-bottom'>
-            <div class='nb-block nb-block-content uk-clearfix uk-text-center' data-nb-block='content'>
-                <div class="uk-container uk-container-small">
+            <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
+                <div class="uk-container uk-container-small uk-margin-medium-bottom">
                     <h2>How it works</h2>
                 </div>
-                <div class="process">
+                <div class="process uk-text-center">
                     <h3 class="uk-text-uppercase">Customer Journey</h3>
-                    <ul class="uk-child-width-1-4 uk-flex-between" data-uk-grid>
-                        <li class="uk-flex uk-flex-middle uk-flex-column">
-                            <span></span>
-                            <img src="./img/join.svg" data-uk-img>
-                            <span class="uk-text-uppercase">Join</span>
+                    <div class="process-inner">
+                        <div class="process-container uk-flex uk-flex-between uk-flex-wrap uk-flex-middle">
+                            <div class="process-box-wrap uk-flex uk-flex-left">
+                                <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                    <span></span>
+                                    <img src="./img/join.svg" data-uk-img>
+                                    <span class="uk-text-uppercase">Join</span>
+                                </div>
+                            </div>
+                            <span class="arrow" role="presentation"></span>
+                            <div class="process-box-wrap">
+                                <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                    <span></span>
+                                    <img src="./img/book.svg" data-uk-img>
+                                    <span class="uk-text-uppercase">Book</span>
+                                </div>
+                            </div>
+                            <span class="arrow" role="presentation"></span>
+                            <div class="process-box-wrap">
+                                <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                    <span></span>
+                                    <img src="./img/signup.svg" data-uk-img>
+                                    <span class="uk-text-uppercase">Sign Up</span>
+                                </div>
+                            </div>
+                            <span class="arrow" role="presentation"></span>
+                            <div class="process-box-wrap uk-flex uk-flex-right">
+                                <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                    <span></span>
+                                    <img src="./img/drive.svg" data-uk-img>
+                                    <span class="uk-text-uppercase">Drive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='uk-container uk-margin-large-bottom'>
+            <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
+                <div class="process process-extend uk-text-center">
+                    <h3 class="uk-text-uppercase">Customer Journey</h3>
+                    <div class="process-extend-inner">
+                        <div class="process-inner">
+                            <div class="process-container uk-flex uk-flex-between uk-flex-wrap uk-flex-middle">
+                                <div class="process-box-wrap uk-flex uk-flex-left">
+                                    <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                        <span></span>
+                                        <img src="./img/join.svg" data-uk-img>
+                                        <span class="uk-text-uppercase">Join</span>
+                                    </div>
+                                </div>
+                                <span class="arrow" role="presentation"></span>
+                                <div class="process-box-wrap">
+                                    <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                        <span></span>
+                                        <img src="./img/book.svg" data-uk-img>
+                                        <span class="uk-text-uppercase">Book</span>
+                                    </div>
+                                </div>
+                                <span class="arrow" role="presentation"></span>
+                                <div class="process-box-wrap">
+                                    <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                        <span></span>
+                                        <img src="./img/signup.svg" data-uk-img>
+                                        <span class="uk-text-uppercase">Sign Up</span>
+                                    </div>
+                                </div>
+                                <span class="arrow" role="presentation"></span>
+                                <div class="process-box-wrap uk-flex uk-flex-right">
+                                    <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                        <span></span>
+                                        <img src="./img/drive.svg" data-uk-img>
+                                        <span class="uk-text-uppercase">Drive</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process-middle">
                             <span class="arrow"></span>
-                        </li>
-                        <li class="uk-flex uk-flex-middle uk-flex-column">
                             <span></span>
-                            <img src="./img/book.svg" data-uk-img>
-                            <span class="uk-text-uppercase">Book</span>
-                            <span class="arrow"></span>
-                        </li>
-                        <li class="uk-flex uk-flex-middle uk-flex-column">
                             <span></span>
-                            <img src="./img/signup.svg" data-uk-img>
-                            <span class="uk-text-uppercase">Sign Up</span>
-                            <span class="arrow"></span>
-                        </li>
-                        <li class="uk-flex uk-flex-middle uk-flex-column">
-                            <span></span>
-                            <img src="./img/drive.svg" data-uk-img>
-                            <span class="uk-text-uppercase">Drive</span>
-                            <span class="arrow"></span>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="process-inner process-inner-half">
+                            <div class="process-container uk-flex uk-flex-between uk-flex-wrap uk-flex-middle">
+                                <div class="process-box-wrap uk-flex uk-flex-left">
+                                    <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                        <span></span>
+                                        <img src="./img/join.svg" data-uk-img>
+                                        <span class="uk-text-uppercase">Join</span>
+                                    </div>
+                                </div>
+                                <span class="arrow" role="presentation"></span>
+                                <div class="process-box-wrap">
+                                    <div class="process-box uk-flex uk-flex-middle uk-flex-column">
+                                        <span></span>
+                                        <img src="./img/book.svg" data-uk-img>
+                                        <span class="uk-text-uppercase">Book</span>
+                                    </div>
+                                </div>
+                                <span class="arrow uk-invisible" role="presentation"></span>
+                                <div class="process-box-wrap uk-invisible uk-flex uk-flex-left">
+                                    <div class="process-box uk-flex uk-flex-middle uk-flex-column"></div>
+                                </div>
+                                <span class="arrow uk-invisible" role="presentation"></span>
+                                <div class="process-box-wrap uk-invisible">
+                                    <div class="process-box uk-flex uk-flex-middle uk-flex-column"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -765,7 +884,7 @@
             </div>
         </div>
 
-        <div class='uk-container uk-margin-large-bottom'>
+        <div class='uk-container uk-margin-xlarge-bottom'>
             <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
                 <ul class='ads-info uk-grid-match uk-grid-small uk-child-width-1-1@m' data-uk-grid>
                     <li>
@@ -784,6 +903,125 @@
                 </ul>
             </div>
         </div>
+
+        <section class="latest-news latest-news-services">
+            <div class="uk-container">
+                <div class="latest-news-inner">
+                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                        <h2>More in news</h2>
+                        <a href="#" class="uk-button uk-button-text uk-button-large"><span>View all services</span></a>
+                    </div>
+                    <ul class='uk-grid-match uk-grid-small uk-child-width-1-3@m' data-uk-grid
+                        data-uk-height-match='target: .uk-card > .uk-card-body'>
+                        <li>
+                            <div class='uk-card'>
+                                <div class='uk-card-media-top uk-background-cover uk-position-cover'
+                                    style="background-image: url('./img/service-1.jpg')" data-uk-img>
+                                </div>
+                                <div class='uk-card-body'>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <img src="./img/lightbulb.svg" alt="image">
+                                        <h3 class='uk-card-title'>Electricity Supply</h3>
+                                    </div>
+                                    <div class="news-button-wrap">
+                                        <a href="#" class="uk-button uk-button-text"><span>Find Out More</span></a>
+                                    </div>
+                                </div>
+                                <a href='#' class='uk-position-cover' aria-label='Read More'></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='uk-card'>
+                                <div class='uk-card-media-top uk-background-cover uk-position-cover'
+                                    style="background-image: url('./img/service-2.jpg')" data-uk-img>
+                                </div>
+                                <div class='uk-card-body'>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <img src="./img/electric-vehicles.svg" alt="image">
+                                        <h3 class='uk-card-title'>Electric Vehicles</h3>
+                                    </div>
+                                    <div class="news-button-wrap">
+                                        <a href="#" class="uk-button uk-button-text"><span>Find Out More</span></a>
+                                    </div>
+                                </div>
+                                <a href='#' class='uk-position-cover' aria-label='Read More'></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='uk-card'>
+                                <div class='uk-card-media-top uk-background-cover uk-position-cover'
+                                    style="background-image: url('./img/service-3.jpg')" data-uk-img>
+                                </div>
+                                <div class='uk-card-body'>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <img src="./img/home-batteries.svg" alt="image">
+                                        <h3 class='uk-card-title'>Battery Storage</h3>
+                                    </div>
+                                    <div class="news-button-wrap">
+                                        <a href="#" class="uk-button uk-button-text"><span>Find Out More</span></a>
+                                    </div>
+                                </div>
+                                <a href='#' class='uk-position-cover' aria-label='Read More'></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class='uk-grid-match uk-grid-small uk-child-width-1-3@m' data-uk-grid
+                        data-uk-height-match='target: .uk-card > .uk-card-body'>
+                        <li>
+                            <div class='uk-card'>
+                                <div class='uk-card-media-top uk-background-cover uk-position-cover'
+                                    style="background-image: url('./img/service-4.jpg')" data-uk-img>
+                                </div>
+                                <div class='uk-card-body'>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <img src="./img/car-club.svg" alt="image">
+                                        <h3 class='uk-card-title'>Car Club</h3>
+                                    </div>
+                                    <div class="news-button-wrap">
+                                        <a href="#" class="uk-button uk-button-text"><span>Find Out More</span></a>
+                                    </div>
+                                </div>
+                                <a href='#' class='uk-position-cover' aria-label='Read More'></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='uk-card'>
+                                <div class='uk-card-media-top uk-background-cover uk-position-cover'
+                                    style="background-image: url('./img/service-5.jpg')" data-uk-img>
+                                </div>
+                                <div class='uk-card-body'>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <img src="./img/heating.svg" alt="image">
+                                        <h3 class='uk-card-title'>Heating Systems</h3>
+                                    </div>
+                                    <div class="news-button-wrap">
+                                        <a href="#" class="uk-button uk-button-text"><span>Find Out More</span></a>
+                                    </div>
+                                </div>
+                                <a href='#' class='uk-position-cover' aria-label='Read More'></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='uk-card'>
+                                <div class='uk-card-media-top uk-background-cover uk-position-cover'
+                                    style="background-image: url('./img/service-6.jpg')" data-uk-img>
+                                </div>
+                                <div class='uk-card-body'>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <img src="./img/bundle.svg" alt="image">
+                                        <h3 class='uk-card-title'>Bundles</h3>
+                                    </div>
+                                    <div class="news-button-wrap">
+                                        <a href="#" class="uk-button uk-button-text"><span>Find Out More</span></a>
+                                    </div>
+                                </div>
+                                <a href='#' class='uk-position-cover' aria-label='Read More'></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
     </main>
 
