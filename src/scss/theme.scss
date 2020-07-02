@@ -32,6 +32,7 @@
 @import "nb/legal.scss";
 @import "nb/credit.scss";
 @import "nb/json.scss";
+@import "nb/slideshow.scss";
 
 // Modules
 @import 'modules/banner.scss';
@@ -70,9 +71,14 @@
 
 // uikit/utility
 .uk-logo {
-
+	padding: 0;
 	img {
-		width: 228px;
+		width: 240px;
+	}
+	@media (max-width: $breakpointMobile) {
+		img {
+			width: 145px;
+		}
 	}
 }
 

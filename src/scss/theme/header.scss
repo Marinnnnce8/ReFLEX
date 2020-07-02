@@ -1,0 +1,94 @@
+.header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 15px;
+
+    .uk-container-large {
+        max-width: 1420px;
+    }
+
+    .uk-navbar-right {
+        flex-direction: column;
+    }
+
+    .navbar-top {
+        width: 100%;
+        padding: 0 40px 15px 0;
+        a {
+            font-size: 14px;
+            color: $blue;
+            &:not(:first-of-type) {
+                margin-left: 25px;
+            }
+        }
+        abbr {
+            text-decoration: none;
+        }
+    }
+
+    .navbar-bottom {
+        padding: 0 0 20px;
+
+        .uk-navbar-item {
+            min-height: 0;
+        }
+    }
+
+    .uk-button-secondary {
+        min-width: 215px;
+    }
+
+    .uk-navbar-toggle {
+        background-color: $blue;
+        border-radius: 50%;
+        width: 56px;
+        min-width: 56px;
+        height: 56px;
+        min-height: 56px;
+        color: $white;
+        padding: 0;
+        margin-left: 15px;
+    }
+
+    .uk-navbar-toggle {
+        z-index: 1002;
+
+        svg {
+            color: $white;
+            width: 18px;
+        }
+    }
+
+    @media (max-width: $breakpointXlarge) {
+
+        .nb-nav .uk-navbar-nav > li > a {
+            font-size: 18px;
+        }
+        .uk-button {
+            min-width: 200px;
+        }
+        .nb-nav.nb-nav-desktop {
+            padding-right: 3px;
+        }
+        .navbar-top {
+            padding-right: 18px;
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+
+        .navbar-top,
+        .navbar-bottom {
+            >.uk-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        .uk-flex-right {
+            justify-content: space-between;
+        }
+    }
+}

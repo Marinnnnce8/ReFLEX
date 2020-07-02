@@ -1,7 +1,5 @@
 .footer {
     position: relative;
-    padding-top: 640px;
-    z-index: -1;
 
     .logo {
         max-width: 220px;
@@ -17,7 +15,7 @@
 }
 
 .footer-circle {
-    min-height: 1045px;
+    min-height: 1250px;
     position: absolute;
     left: 0;
     top: 0;
@@ -26,8 +24,8 @@
     z-index: -1;
 
     >span {
-        width: 940px;
-        height: 940px;
+        width: calc(50vw + 160px);
+        height: calc(50vw + 160px);
         content: '';
         position: absolute;
         border: 55px solid $white;
@@ -39,6 +37,13 @@
         bottom: -200px;
         left: -160px;
     }
+}
+
+.footer-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 1250px;
 }
 
 .footer-top,
@@ -88,6 +93,10 @@
 
     .uk-button-primary {
         min-width: 200px;
+    }
+
+    .uk-grid>.uk-grid {
+        padding-left: 80px;
     }
 
     .uk-flex>.uk-button-default {
