@@ -35,8 +35,9 @@
 					<div class='navbar-bottom'>
 						<div class='uk-flex uk-flex-start uk-flex-between uk-flex-middle'>
 							<div id='nav' class='nav'>
+								<span class="circle" role="presentation"></span>
 								<ul class='uk-navbar-nav uk-flex-middle' data-uk-nb-nav='breakpoint:1200'>
-									<li class="mega-menu"><a href='#' class='font-chevron-down'>For home</a>
+									<li class="mega-menu uk-active"><a href='#' class='font-chevron-down'>For home</a>
 										<ul class='uk-nav-dropdown'>
 											<li><a href='#'><span><img src="./img/lightbulb.svg" data-uk-svg
 															alt="image"></span>Electricity Supply</a></li>
@@ -89,10 +90,11 @@
 									<li><a href="#">ReFLEX Map</a></li>
 									<li><a href="#">News</a></li>
 								</ul>
+								<span class="circle" role="presentation"></span>
 							</div>
 							<a href="#" class="uk-button uk-button-secondary"><span>Get in touch</span></a>
 							<a href='#nav' class='uk-navbar-toggle' aria-label='Open navigation menu'
-								data-uk-toggle='{"animation": "uk-animation-slide-left"}' hidden>
+								data-uk-toggle='{"animation": ""}' hidden>
 								<span data-uk-navbar-toggle-icon></span>
 							</a>
 						</div>
@@ -176,10 +178,12 @@
 				</ul>
 
 				<div class="uk-slidenav-container">
-					<a href="#" class="uk-position-center-left" data-uk-slidenav-previous
-						data-uk-slideshow-item="previous"></a>
-					<a href="#" class="uk-position-center-right" data-uk-slidenav-next
-						data-uk-slideshow-item="next"></a>
+					<div>
+						<a href="#" class="uk-position-center-left" data-uk-slidenav-previous
+							data-uk-slideshow-item="previous"></a>
+						<a href="#" class="uk-position-center-right" data-uk-slidenav-next
+							data-uk-slideshow-item="next"></a>
+					</div>
 				</div>
 
 			</div>
@@ -606,6 +610,23 @@
 		</div>
 	</footer>
 
+	<svg xmlns="http://www.w3.org/2000/svg" style='position:absolute;' height="0" width="0" viewBox="0 0 140 70">
+		<defs>
+			<clipPath id="slide-nav" clipPathUnits='objectBoundingBox'
+				transform='scale(0.00714285714, 0.01428571428)'>
+				<path class="st0"
+					d="M35,0h70c19.3,0,35,15.7,35,35c0,19.3-15.7,35-35,35H35C15.7,70,0,54.3,0,35C0,15.7,15.7,0,35,0z" />
+			</clipPath>
+		</defs>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" style='position:absolute;' height="0" width="0" viewBox="0 0 72 70">
+		<defs>
+			<clipPath id="slide-nav-left" clipPathUnits='objectBoundingBox' transform='scale(0.01388888888, 0.01428571428)'>
+				<path class="st0"
+					d="M35,0h37c0,0-2,15.7-2,35c0,19.3,2,35,2,35H35C15.7,70,0,54.3,0,35C0,15.7,15.7,0,35,0z" />
+			</clipPath>
+		</defs>
+	</svg>
 	<script src='js/uikit.min.js'></script>
 	<script src='js/uikit-icons.min.js'></script>
 	<script src='js/nb.js'></script>

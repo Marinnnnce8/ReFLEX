@@ -77,6 +77,12 @@
         }
     }
 
+    @media (max-width: $breakpointLarge) {
+        .navbar-bottom {
+            position: relative;
+        }
+    }
+
     @media (max-width: $breakpointXsmallMax) {
 
         .navbar-top,

@@ -8,6 +8,7 @@
 			background-color: $blue;
 			border-radius: 20px;
 			padding: 17px 30px;
+
 			li:not(:first-of-type) {
 				margin-left: 10px;
 			}
@@ -34,6 +35,7 @@
 	h2 {
 		font-size: 34px;
 	}
+
 	h3 {
 		font-size: 26px;
 	}
@@ -43,17 +45,33 @@
 	z-index: 3;
 
 	.uk-button {
-		overflow: hidden;
-		transform: rotate(-90deg) translateY(140%);
+		transform: rotate(-90deg) translateY(130%);
 		min-width: 215px;
+		font-size: 20px;
+		color: $blue-darker;
 
 		&::before {
-			content: font-char($join);
+			content: font-char($wpforms);
+			font-size: 22px;
+			transform: translateY(-58%) rotate(90deg);
+			color: $blue-darker;
+			backface-visibility: hidden;
+			font-weight: normal;
+		}
+
+		&::after {
+			display: none;
 		}
 
 		@include hover {
-			&::after {
-				width: 99.5%;
+			background-color: $blue-darker;
+
+			>span {
+				color: $white;
+			}
+
+			&::before {
+				color: $lime;
 			}
 		}
 	}
@@ -85,7 +103,8 @@
 
 	&-content {
 
-		p, li {
+		p,
+		li {
 			>a:not(.uk-accordion-title) {
 				color: $blue;
 				font-weight: normal;
@@ -159,6 +178,7 @@
 					width: calc(100% - 24px);
 				}
 			}
+
 			strong {
 				font-weight: $bold;
 			}

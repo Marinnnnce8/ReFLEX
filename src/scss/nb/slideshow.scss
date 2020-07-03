@@ -114,18 +114,25 @@
         height: 70px;
         height: 100vh;
         max-height: 945px;
-        top: 55px;
+        top: 103px;
         position: absolute;
-        right: 725px;
+        right: 729px;
+        >div {
+            clip-path: url(#slide-nav);
+            top: 50%;
+            transform: translateY(-50%);
+            height: 70px;
+            background-color: $white;
+            position: absolute;
+            width: 140px;
+        }
     }
 
     .uk-slidenav {
         background-color: $white;
-        height: 70px;
+        height: 100%;
         width: 70px;
         transition: $nbSec ease-in-out;
-        top: 50%;
-        transform: translateY(-50%);
 
         svg {
             display: none;
@@ -142,8 +149,8 @@
         }
 
         &:first-of-type {
-            border-bottom-left-radius: 50%;
-            border-top-left-radius: 50%;
+            clip-path: url(#slide-nav-left);
+            z-index: 2;
 
             &::after {
                 content: font-char($chevron-left);
@@ -151,19 +158,8 @@
         }
 
         &:last-of-type {
-            border-bottom-right-radius: 50%;
-            border-top-right-radius: 50%;
-
-            // &::before {
-            //     position: absolute;
-            //     content: '';
-            //     background-color: $white;
-            //     left: -3px;
-            //     top: 0;
-            //     bottom: 0;
-            //     width: 5px;
-            //     border-bottom-left-radius: 25px;
-            // }
+            width: 72px;
+            z-index: 0;
 
             &::after {
                 content: font-char($chevron-right);
@@ -184,21 +180,14 @@
             &::after {
                 color: $white;
             }
-
-            &:last-of-type {
-                background-color: $blue;
-            }
         }
     }
 
     @media (max-width: $breakpointXlarge) {
         .uk-slidenav-container {
-            right: calc(50vw - 75px);
+            right: calc(50vw - 67px);
             height: 50vw;
-        }
-
-        .uk-slidenav {
-            transform: translateY(50%);
+            top: 125px;
         }
     }
 }

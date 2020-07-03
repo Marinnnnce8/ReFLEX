@@ -36,137 +36,128 @@
 	@if $filename == briefcase {
 		$char: '\E003';
 	}
-	@if $filename == bundle {
+	@if $filename == calendar {
 		$char: '\E004';
 	}
-	@if $filename == calendar {
+	@if $filename == car-club {
 		$char: '\E005';
 	}
-	@if $filename == car-club {
+	@if $filename == charger {
 		$char: '\E006';
 	}
-	@if $filename == charger {
+	@if $filename == chevron-down {
 		$char: '\E007';
 	}
-	@if $filename == chevron-down {
+	@if $filename == chevron-left {
 		$char: '\E008';
 	}
-	@if $filename == chevron-left {
+	@if $filename == chevron-right {
 		$char: '\E009';
 	}
-	@if $filename == chevron-right {
+	@if $filename == comment {
 		$char: '\E00A';
 	}
-	@if $filename == comment {
+	@if $filename == dots-bg {
 		$char: '\E00B';
 	}
-	@if $filename == dots-bg {
+	@if $filename == drive {
 		$char: '\E00C';
 	}
-	@if $filename == drive {
+	@if $filename == electric-vehicles {
 		$char: '\E00D';
 	}
-	@if $filename == electric-vehicles {
+	@if $filename == envelope {
 		$char: '\E00E';
 	}
-	@if $filename == envelope {
+	@if $filename == external-link {
 		$char: '\E00F';
 	}
-	@if $filename == exclusive {
+	@if $filename == facebook {
 		$char: '\E010';
 	}
-	@if $filename == external-link {
+	@if $filename == FLEX-wifi-waves {
 		$char: '\E011';
 	}
-	@if $filename == facebook {
+	@if $filename == heating-smaller {
 		$char: '\E012';
 	}
-	@if $filename == FLEX-wifi-waves {
+	@if $filename == heating {
 		$char: '\E013';
 	}
-	@if $filename == great-deal {
+	@if $filename == home-batteries {
 		$char: '\E014';
 	}
-	@if $filename == heating-smaller {
+	@if $filename == info {
 		$char: '\E015';
 	}
-	@if $filename == heating {
+	@if $filename == instagram-logo {
 		$char: '\E016';
 	}
-	@if $filename == home-batteries {
+	@if $filename == join {
 		$char: '\E017';
 	}
-	@if $filename == home-visit {
+	@if $filename == lightbulb {
 		$char: '\E018';
 	}
-	@if $filename == info {
+	@if $filename == linkedin {
 		$char: '\E019';
 	}
-	@if $filename == instagram-logo {
+	@if $filename == mail {
 		$char: '\E01A';
 	}
-	@if $filename == integrated-offer {
+	@if $filename == newsletter {
 		$char: '\E01B';
 	}
-	@if $filename == join {
+	@if $filename == orkney-map-regions {
 		$char: '\E01C';
 	}
-	@if $filename == lightbulb {
+	@if $filename == phone {
 		$char: '\E01D';
 	}
-	@if $filename == linkedin {
+	@if $filename == play-button-arrowhead {
 		$char: '\E01E';
 	}
-	@if $filename == mail {
+	@if $filename == quote {
 		$char: '\E01F';
 	}
-	@if $filename == newsletter {
+	@if $filename == radius {
 		$char: '\E020';
 	}
-	@if $filename == orkney-map-regions {
+	@if $filename == road {
 		$char: '\E021';
 	}
-	@if $filename == phone {
+	@if $filename == rounded-corner-left {
 		$char: '\E022';
 	}
-	@if $filename == play-button-arrowhead {
+	@if $filename == rounded-corner-right {
 		$char: '\E023';
 	}
-	@if $filename == quote {
+	@if $filename == signup {
 		$char: '\E024';
 	}
-	@if $filename == road {
+	@if $filename == solar-energy {
 		$char: '\E025';
 	}
-	@if $filename == rounded-corner-left {
+	@if $filename == tachometer {
 		$char: '\E026';
 	}
-	@if $filename == rounded-corner-right {
+	@if $filename == turbine-tidal {
 		$char: '\E027';
 	}
-	@if $filename == signup {
+	@if $filename == turbine-wind {
 		$char: '\E028';
 	}
-	@if $filename == solar-energy {
+	@if $filename == twitter {
 		$char: '\E029';
 	}
-	@if $filename == tachometer {
+	@if $filename == user-home {
 		$char: '\E02A';
 	}
-	@if $filename == turbine-tidal {
+	@if $filename == wpforms {
 		$char: '\E02B';
 	}
-	@if $filename == turbine-wind {
-		$char: '\E02C';
-	}
-	@if $filename == twitter {
-		$char: '\E02D';
-	}
-	@if $filename == user-home {
-		$char: '\E02E';
-	}
 	@if $filename == youtube {
-		$char: '\E02F';
+		$char: '\E02C';
 	}
 
 	@return $char;
@@ -195,9 +186,6 @@
 }
 .font-briefcase {
 	@include font(briefcase);
-}
-.font-bundle {
-	@include font(bundle);
 }
 .font-calendar {
 	@include font(calendar);
@@ -232,9 +220,6 @@
 .font-envelope {
 	@include font(envelope);
 }
-.font-exclusive {
-	@include font(exclusive);
-}
 .font-external-link {
 	@include font(external-link);
 }
@@ -243,9 +228,6 @@
 }
 .font-FLEX-wifi-waves {
 	@include font(FLEX-wifi-waves);
-}
-.font-great-deal {
-	@include font(great-deal);
 }
 .font-heating-smaller {
 	@include font(heating-smaller);
@@ -256,17 +238,11 @@
 .font-home-batteries {
 	@include font(home-batteries);
 }
-.font-home-visit {
-	@include font(home-visit);
-}
 .font-info {
 	@include font(info);
 }
 .font-instagram-logo {
 	@include font(instagram-logo);
-}
-.font-integrated-offer {
-	@include font(integrated-offer);
 }
 .font-join {
 	@include font(join);
@@ -294,6 +270,9 @@
 }
 .font-quote {
 	@include font(quote);
+}
+.font-radius {
+	@include font(radius);
 }
 .font-road {
 	@include font(road);
@@ -324,6 +303,9 @@
 }
 .font-user-home {
 	@include font(user-home);
+}
+.font-wpforms {
+	@include font(wpforms);
 }
 .font-youtube {
 	@include font(youtube);

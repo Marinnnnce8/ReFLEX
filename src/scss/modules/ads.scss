@@ -154,6 +154,17 @@
         padding: 40px 40px 45px;
         min-height: 340px;
 
+        a.uk-position-cover {
+            z-index: 1;
+        }
+
+        @include hover {
+            .uk-button::after {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
         &.uk-flex {
             min-height: 145px;
 

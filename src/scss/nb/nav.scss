@@ -58,15 +58,19 @@
 			>a {
 				border-top-left-radius: 20px;
 				border-top-right-radius: 20px;
-				padding: 10px 30px 10px 17px;
+				padding: 8px 22px 11px 17px;
 				position: relative;
+
+				&.font-chevron-down {
+					padding-right: 30px;
+				}
 
 				@include hover {
 					background-color: $blue;
 					color: $white;
 
 					&::before {
-						transform: translateY(-68%) rotate(-180deg);
+						transform: translateY(-83%) rotate(-180deg);
 					}
 				}
 			}
@@ -146,21 +150,32 @@
 						flex-direction: column;
 						justify-content: space-around;
 						padding: 15px 15px 20px;
+						overflow: hidden;
+						z-index: 2;
+						position: relative;
 
 						@include hover {
-							background-color: $blue-lightest-4;
+							// background-color: $blue-lightest-4;
 							color: $blue;
 
 							span {
+
+								&::after,
+								&::before {
+									transform-origin: 50% 50%;
+									top: 50%;
+									transform: translate(-50%, -50%);
+								}
 
 								&::after {
 									width: 120px;
 									height: 120px;
 									background-color: $blue;
-									border-color: $blue;
-									transform-origin: 50% 50%;
-									top: 50%;
-									transform: translate(-50%, -50%);
+								}
+
+								&::before {
+									height: 350px;
+									width: 350px;
 								}
 							}
 						}
@@ -175,20 +190,30 @@
 						height: 155px;
 						align-items: center;
 						top: 5px;
+						z-index: -1;
 
-
-						&::after {
+						&::after,
+						&::before {
 							position: absolute;
 							content: '';
 							left: 50%;
 							transform: translateX(-50%);
 							border-radius: 50%;
 							transition: $nbSec ease-in-out;
-							width: 155px;
-							height: 155px;
-							background-color: $blue-lightest-2;
-							border: 30px solid $blue-lightest-3;
+						}
+
+						&::before {
+							background-color: $blue-lightest-3;
 							top: 0;
+							width: 100%;
+							height: 100%;
+						}
+
+						&::after {
+							background-color: $blue-lightest-2;
+							top: 30px;
+							width: 100px;
+							height: 100px;
 						}
 					}
 
@@ -223,9 +248,18 @@
 				}
 			}
 
-			// .uk-active>a {
-			// 	color: $yellow-active;
-			// }
+			.uk-active>a {
+				background-color: $blueish;
+				border-radius: 50px;
+
+				@include hover {
+					background-color: $blue;
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+					border-top-left-radius: 20px;
+					border-top-right-radius: 20px;
+				}
+			}
 		}
 
 		.uk-navbar-dropdown {
@@ -282,15 +316,33 @@
 	}
 
 	&.nb-nav-mobile {
-		background-color: $blue;
-		height: calc(100% - 70px);
-		left: 0;
-		overflow: auto;
-		position: fixed;
-		top: 70px;
-		width: 100%;
 		z-index: 1001;
-		padding-top: 50px;
+		height: 2px;
+		width: 19px;
+		background-color: $white;
+		position: absolute;
+		right: 18px;
+		top: 35%;
+		overflow: hidden;
+		transition: 4s ease;
+		left: auto;
+
+		&::after {
+			// transition: all 8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			position: absolute;
+			right: 0;
+			top: 0;
+			content: '';
+			height: 0;
+			width: 0;
+			opacity: 0;
+			animation: openingSecondCircle 8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+		}
+
+		&.nb-nav-mobile[aria-hidden="false"] {
+			animation: opening 4s ease forwards;
+			overflow: visible;
+		}
 
 		.uk-navbar-nav {
 			display: block;
@@ -400,5 +452,48 @@
 			// 	}
 			// }
 		}
+	}
+}
+
+
+@keyframes opening {
+	0% {
+		// height: 4px;
+		// width: 40px;
+		// right: 3px;
+		// top: 3px;
+		background-color: $white;
+	}
+
+	100% {
+		height: 1145px;
+		width: 1145px;
+		right: -355px;
+		top: -460px;
+		background-color: $blue;
+		border-radius: 50%;
+		z-index: 1002;
+	}
+}
+
+
+@keyframes openingSecondCircle {
+	0% {
+		width: 0;
+		height: 0;
+	}
+
+	10% {
+		z-index: -1;
+	}
+
+	100% {
+		width: 1230px;
+		height: 1230px;
+		top: 10px;
+		right: -80px;
+		border-radius: 50%;
+		background-color: $lime;
+		opacity: 1;
 	}
 }
