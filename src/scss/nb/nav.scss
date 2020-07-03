@@ -29,20 +29,6 @@
 
 .nb-nav {
 
-	.uk-parent {
-
-		>a {
-			position: relative;
-
-			.uk-icon {
-				position: absolute;
-				right: 0;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-		}
-	}
-
 	// Show nav after load
 	.uk-navbar-nav {
 		max-height: none;
@@ -87,17 +73,13 @@
 		}
 	}
 
-	.uk-navbar-dropdown-nav {
-		.uk-navbar-dropdown {
-			left: auto !important;
-			right: 50px !important;
-		}
-	}
-
 	&.nb-nav-desktop {
 		padding-right: 13px;
 
 		.uk-navbar-nav {
+			>li:last-of-type {
+				display: none;
+			}
 
 			.mega-menu {
 				position: relative;
@@ -226,28 +208,6 @@
 				}
 			}
 
-			>.uk-parent {
-
-				>a {
-					.uk-icon {
-						bottom: auto;
-						left: $nbGutterSmall;
-						position: relative;
-						right: auto;
-						top: auto;
-						transform: rotate(90deg);
-						transition: transform $nbSpeed;
-						width: 1em;
-					}
-
-					@include hover {
-						.uk-icon {
-							transform: rotate(270deg);
-						}
-					}
-				}
-			}
-
 			.uk-active>a {
 				background-color: $blueish;
 				border-radius: 50px;
@@ -318,88 +278,129 @@
 	&.nb-nav-mobile {
 		z-index: 1001;
 		height: 2px;
-		width: 19px;
-		background-color: $white;
+		width: 18px;
 		position: absolute;
-		right: 18px;
-		top: 35%;
+		right: 19px;
+		top: 56%;
 		overflow: hidden;
-		transition: 4s ease;
 		left: auto;
+		padding: 130px 30px 0;
 
+		&::before,
 		&::after {
-			// transition: all 8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 			position: absolute;
 			right: 0;
-			top: 0;
 			content: '';
 			height: 0;
+			top: 0;
 			width: 0;
 			opacity: 0;
-			animation: openingSecondCircle 8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			display: block;
+			z-index: -1;
+		}
+
+		&::after {
+			width: 100%;
+			bottom: 0;
 		}
 
 		&.nb-nav-mobile[aria-hidden="false"] {
-			animation: opening 4s ease forwards;
 			overflow: visible;
+			animation: opening 8s ease forwards;
+
+			&:after {
+				animation: openingBckg 8s ease forwards;
+			}
+
+			&::before {
+				animation: openingSecondCircle 12s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			}
 		}
 
 		.uk-navbar-nav {
 			display: block;
+			position: relative;
+			>li:last-of-type {
+				display: block;
+				a {
+					color: $lime;
+				}
+			}
 
-			>li {
-				padding: 0 $ukGutter $ukGutter;
+			li {
+				padding: 0 0 $ukGutter;
 				text-align: right;
 
-				>a {
+				a {
+					display: inline-block;
 					border-radius: 50px;
 					color: $white;
+					padding: 10px 50px;
 					font-size: 30px;
 					font-weight: $bold;
+					position: relative;
+
+					&.font-chevron-down {
+						padding-right: 60px;
+
+						&::before {
+							content: font-char($chevron-right);
+							bottom: auto;
+							left: auto;
+							right: 30px;
+							color: $lime;
+							transform: translateY(-33%);
+							font-size: 14px;
+							font-weight: $bold;
+						}
+					}
+
+					&.font-chevron-right::before {
+						display: none;
+					}
+
+					@include hover {
+						text-decoration: none;
+						background-color: $blue-lightest-5;
+					}
 				}
 			}
 		}
 
-		.uk-navbar-item,
-		.uk-navbar-nav>li>a,
-		.uk-navbar-toggle {
-			display: block;
-			min-height: 0;
-		}
-
-		li a {
-			display: inline-block;
-			position: relative;
-			padding: 10px 60px;
-
-			&.font-chevron-right::before {
-				display: none;
-			}
-
-			&.font-chevron-down::before {
-				content: font-char($chevron-right);
-				bottom: auto;
-				left: auto;
-				right: 30px;
-				top: 50%;
-				color: $lime;
-				transform: translateY(-50%);
-			}
-
-			@include hover {
-				text-decoration: none;
-				background-color: $blue-lightest-5;
-			}
+		.uk-navbar-toggle span {
+			background-color: $white;
 		}
 
 		.uk-navbar-dropdown {
-			background-color: $blue;
+			background-color: transparent;
+			border-radius: 50%;
 			box-shadow: none;
-			height: 100%;
+			height: 100vh;
 			left: 0 !important;
-			padding: 35px $ukGutter $ukGutter;
+			padding: 0 $ukGutter $ukGutter;
 			top: 0 !important;
 			width: 100%;
+			margin-top: 0;
+
+			li a {
+				font-size: 30px;
+				font-weight: normal;
+
+				span {
+					display: none;
+				}
+			}
+
+			&::before {
+				position: absolute;
+				border-radius: 50%;
+				background-color: $blue;
+				right: -345px;
+				top: -590px;
+				height: 1145px;
+				width: 1145px;
+				content: '';
+			}
 
 			.nb-nav-back {
 				font-size: 22px;
@@ -415,24 +416,18 @@
 					top: 56%;
 					transform: translateY(-50%);
 				}
+
+				@include hover {
+					background-color: transparent;
+					color: $lime;
+				}
 			}
 
 			.nb-nav-title {
 				font-size: 30px;
 				font-weight: $bold;
-				margin-top: 1em;
+				margin: 10px 0 5px;
 				text-transform: uppercase;
-			}
-
-			li {
-				a {
-					color: $white;
-					font-size: 22px;
-
-					span {
-						display: none;
-					}
-				}
 			}
 		}
 
@@ -440,17 +435,6 @@
 			li:not(:first-of-type):not(:nth-of-type(2)) {
 				padding-left: 25px;
 			}
-
-			// li:first-of-type {
-			// 	a::before {
-			// 		position: absolute;
-			// 		left: -15px;
-			// 		font-family: 'svgicons';
-			// 		content: font-char($chevron-left);
-			// 		color: inherit;
-			// 		font-size: inherit;
-			// 	}
-			// }
 		}
 	}
 }
@@ -458,21 +442,39 @@
 
 @keyframes opening {
 	0% {
-		// height: 4px;
-		// width: 40px;
-		// right: 3px;
-		// top: 3px;
-		background-color: $white;
+		opacity: 1;
+		z-index: 1003;
 	}
 
 	100% {
-		height: 1145px;
-		width: 1145px;
-		right: -355px;
-		top: -460px;
-		background-color: $blue;
+		height: 100vh;
+		width: calc(100% + 50px);
+		right: -40px;
+		top: 0;
 		border-radius: 50%;
 		z-index: 1002;
+	}
+}
+
+@keyframes openingBckg {
+	0% {
+		background-color: $white;
+		opacity: 1;
+	}
+
+	15% {
+		opacity: .5;
+	}
+
+	100% {
+		background-color: $blue;
+		right: -315px;
+		top: -460px;
+		height: 1145px;
+		width: 1145px;
+		background-color: $blue;
+		border-radius: 50%;
+		opacity: 1;
 	}
 }
 
@@ -483,15 +485,11 @@
 		height: 0;
 	}
 
-	10% {
-		z-index: -1;
-	}
-
 	100% {
 		width: 1230px;
 		height: 1230px;
-		top: 10px;
-		right: -80px;
+		top: -450px;
+		right: -340px;
 		border-radius: 50%;
 		background-color: $lime;
 		opacity: 1;

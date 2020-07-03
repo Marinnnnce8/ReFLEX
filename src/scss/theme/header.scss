@@ -1,5 +1,5 @@
 .header {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 100%;
     z-index: 100;
@@ -16,13 +16,16 @@
     .navbar-top {
         width: 100%;
         padding: 0 40px 15px 0;
+
         a {
             font-size: 14px;
             color: $blue;
+
             &:not(:first-of-type) {
                 margin-left: 25px;
             }
         }
+
         abbr {
             text-decoration: none;
         }
@@ -50,51 +53,128 @@
         color: $white;
         padding: 0;
         margin-left: 15px;
-    }
-
-    .uk-navbar-toggle {
+        position: relative;
         z-index: 1002;
 
-        svg {
-            color: $white;
+        span,
+        span::before,
+        span::after {
+            position: absolute;
+            display: block;
+            height: 2px;
+            transition: none;
+            background-color: $white;
+            animation: burgerIconAnimate 4s ease 3s forwards;
+        }
+
+        span {
+            left: 50%;
+            top: 50%;
             width: 18px;
+            transform: translate(-50%, -50%);
+
+            &::after,
+            &::before {
+                content: '';
+                width: 100%;
+                left: 0;
+            }
+
+            &::after {
+                top: -7px;
+            }
+
+            &::before {
+                top: 7px;
+            }
         }
     }
 
     @media (max-width: $breakpointXlarge) {
-
-        .nb-nav .uk-navbar-nav > li > a {
-            font-size: 18px;
+        .uk-container-large {
+            padding-left: 10px;
+            padding-right: 40px;
         }
+
         .uk-button {
             min-width: 200px;
         }
+
         .nb-nav.nb-nav-desktop {
             padding-right: 3px;
         }
+
         .navbar-top {
             padding-right: 18px;
         }
     }
 
-    @media (max-width: $breakpointLarge) {
-        .navbar-bottom {
-            position: relative;
+    // @media (max-width: $breakpointXsmallMax) {
+
+    //     .navbar-top,
+    //     .navbar-bottom {
+    //         >.uk-container {
+    //             padding-left: 15px;
+    //             padding-right: 15px;
+    //         }
+    //     }
+
+    //     .uk-flex-right {
+    //         justify-content: space-between;
+    //     }
+    // }
+}
+
+.nb-nav-open {
+    .uk-navbar-toggle {
+        animation: toogleAnimate 4s linear forwards;
+
+        span,
+        span::before,
+        span::after {
+            transition: 4s ease;
         }
-    }
 
-    @media (max-width: $breakpointXsmallMax) {
+        span {
+            background-color: transparent;
 
-        .navbar-top,
-        .navbar-bottom {
-            >.uk-container {
-                padding-left: 15px;
-                padding-right: 15px;
+            &::before,
+            &::after {
+                background-color: $lime;
+                top: 0;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
             }
         }
+    }
+}
 
-        .uk-flex-right {
-            justify-content: space-between;
-        }
+@keyframes burgerIconAnimate {
+    0% {
+        z-index: 1005;
+    }
+
+    100% {
+        z-index: 0;
+    }
+}
+
+@keyframes toogleAnimate {
+    0% {
+        background-color: rgba($blue, .9);
+    }
+
+    50% {
+        background-color: $white;
+    }
+
+    100% {
+        background-color: $blue;
     }
 }
