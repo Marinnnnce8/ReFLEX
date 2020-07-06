@@ -774,3 +774,69 @@
 	font-weight: $light;
 	font-size: 14px;
 }
+
+.nb-switcher {
+	margin-bottom: 70px;
+	h2 {
+		font-size: 54px;
+		margin-bottom: 55px;
+	}
+
+	.listings-nav {
+		margin-bottom: 0;
+
+		li {
+			&:first-of-type {
+				button {
+					padding: 29px 38px 28px 125px;
+					border-bottom-left-radius: 50px;
+					border-top-left-radius: 50px;
+
+					span::before {
+						left: 55px;
+					}
+				}
+			}
+
+			&:last-of-type {
+				button {
+					padding: 29px 125px 28px 38px;
+					border-bottom-right-radius: 50px;
+					border-top-right-radius: 50px;
+
+					span::before {
+						right: 55px;
+					}
+				}
+			}
+
+			button {
+				background-color: $white;
+				box-shadow: 0 5px 15px 0 rgba($black, .1);
+				color: $blue;
+				position: relative;
+				font-size: 20px;
+				font-weight: $bold;
+				text-transform: uppercase;
+
+				span::before {
+					color: inherit;
+					position: absolute;
+					top: 56%;
+					transform: translateY(-50%);
+					font-size: 36px;
+				}
+
+				@include hover {
+					background-color: $blue;
+					color: $white;
+				}
+			}
+
+			&.uk-active button {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+	}
+}

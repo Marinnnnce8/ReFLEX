@@ -1,0 +1,38 @@
+.newsletter {
+    margin-bottom: 85px;
+
+    .uk-card {
+        border-radius: 50px;
+        padding: 50px 55px 70px 50px;
+    }
+
+    h2 {
+        font-size: 34px;
+        padding: 0 40px 0 90px;
+        max-width: 31%;
+        width: 100%;
+        margin-bottom: 0;
+        position: relative;
+        line-height: 1;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: 60px;
+            height: auto;
+            margin-right: 25px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        margin: 12px 0 0;
+    }
+
+    .uk-button {
+        margin-left: 55px;
+        margin-top: 10px;
+        padding-left: 40px;
+    }
+}
