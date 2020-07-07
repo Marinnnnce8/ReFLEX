@@ -1,0 +1,130 @@
+.explore-section {
+    position: relative;
+    margin-top: -60px;
+    min-height: calc(50vw + 510px);
+
+    .circle,
+    .circle-bckg {
+        height: calc(50vw + 510px);
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+    }
+
+    .circle {
+        left: 0;
+        width: calc(50vw + 180px);
+
+        .uk-background-cover {
+            background-color: rgba($blue-mid, .9);
+            height: calc(50vw + 150px);
+            width: calc(50vw + 150px);
+            border: 55px solid $lime;
+            border-radius: 50%;
+            left: -150px;
+            top: 150px;
+            z-index: 1;
+            position: absolute;
+            content: '';
+        }
+    }
+
+    .circle-bckg {
+        z-index: -1;
+        width: calc(50vw + 510px);
+        height: calc(50vw + 510px);
+        left: -330px;
+        background-color: $blue-lightest;
+        border-radius: 50%;
+    }
+}
+
+.explore-map {
+    width: 54%;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-29%);
+    display: inline-block;
+
+    path {
+        fill: $white;
+        color: $white;
+        transition: $nbSec ease-in-out;
+    }
+
+    a {
+
+        @include hover {
+
+            path {
+                fill: $lime;
+                color: $lime;
+            }
+        }
+
+        // >* {
+        //     max-width: 200px;
+        //     padding: 15px 40px;
+        //     border-radius: 50px;
+        //     background-color: $lime !important;
+        //     color: $blue-darker !important;
+        //     font-size: 16px;
+
+        //     &::before {
+        //         position: absolute;
+        //         width: 0;
+        //         height: 0;
+        //         border-style: solid;
+        //         border-width: 14px 11px 0;
+        //         border-color: $lime transparent transparent;
+        //         left: 50%;
+        //         transform: translateX(-50%);
+        //         top: 100%;
+        //     }
+        // }
+    }
+
+    text {
+        // display: none;
+        background-color: $lime;
+    }
+}
+
+.explore-wrap {
+    >.uk-flex {
+        min-height: calc(50vw + 510px);
+    }
+}
+
+.explore-text {
+    left: 8px;
+    position: relative;
+    width: 50%;
+    padding-left: 24px;
+
+    h2 {
+        font-size: 54px;
+    }
+
+    .uk-text-lead {
+        margin-bottom: 40px;
+    }
+
+    p:last-of-type {
+        margin-bottom: 50px;
+    }
+
+    a {
+        padding-right: 82px;
+        padding-left: 35px;
+
+        &:first-of-type {
+            margin-right: 20px;
+
+            &::before {
+                content: font-char($map);
+            }
+        }
+    }
+}

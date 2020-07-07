@@ -18,8 +18,8 @@
 			position: absolute;
 			background-color: $lime;
 			content: '';
-			height: 950px;
-			width: 950px;
+			height: calc(50vw + 150px);
+			width: calc(50vw + 150px);
 			border: 57px solid $lime;
 			border-radius: 50%;
 			right: -150px;
@@ -37,10 +37,16 @@
 		position: absolute;
 		bottom: 40px;
 		right: 75px;
+		width: 20px;
+		height: 20px;
 
 		&::before {
+			position: absolute;
 			color: $white;
 			font-size: 20px;
+			top: 5px;
+			line-height: 1;
+			left: 0;
 		}
 	}
 

@@ -1,7 +1,5 @@
 .about-section {
     position: relative;
-    width: calc(100% - 40px);
-    margin: 0 auto;
 
     .uk-container {
         margin-top: -145px;
@@ -15,6 +13,8 @@
 .about-inner {
     height: 700px;
     border-radius: 50px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
 }
 
 .about-text {
@@ -55,7 +55,7 @@
     border-radius: 50px;
     min-height: 780px;
     position: relative;
-    padding: 90px 20px 125px;
+    padding: 80px 20px 125px;
 }
 
 .renewables,
@@ -64,14 +64,16 @@
 }
 
 .renewables {
+    background-color: $white;
     width: 180px;
     height: 180px;
     border-radius: 50%;
     box-shadow: 0 5px 22px 9px rgba($black, .1);
     border: 3px solid $lime;
     padding: 23px 17px 25px;
-    top: 55px;
+    top: 57px;
     left: 93px;
+    z-index: 1;
 
     img {
         max-width: calc(100% / 3);
@@ -111,16 +113,21 @@
         z-index: 5;
         padding-top: 60px;
 
-        span:not(.wifi-font) {
-            font-weight: $bold;
-            color: $blue;
+        span {
+            line-height: 1;
 
-            &:nth-of-type(2) {
-                font-size: 28px;
-            }
+            &:not(.wifi-font) {
+                font-weight: $bold;
+                color: $blue;
 
-            &:last-of-type {
-                font-size: 17px;
+                &:nth-of-type(2) {
+                    font-size: 28px;
+                    margin-bottom: 5px;
+                }
+
+                &:last-of-type {
+                    font-size: 17px;
+                }
             }
         }
     }
@@ -137,6 +144,59 @@
     width: 100%;
     border: 2px solid $lime;
     padding: 20px;
+    position: relative;
+
+    .triangle-left {
+        position: absolute;
+        content: '';
+        width: 79px;
+        height: 158px;
+        left: 2%;
+        z-index: 0;
+        bottom: 80%;
+        border-right: 2px solid $lime;
+        border-top: 2px solid $lime;
+        border-top-right-radius: 50px;
+        transform: rotate(-32deg);
+
+        &::after,
+        span,
+        span::before {
+            position: absolute;
+            content: '';
+        }
+
+        &::after {
+            background-color: $blue;
+            border-radius: 50%;
+            bottom: 0;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            transform: translateX(50%);
+        }
+
+        span {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 27px 16.5px 0;
+            border-color: $lime transparent transparent;
+            top: 50%;
+            left: 100%;
+            transform: translate(-48.5%, -25%);
+
+            &::before {
+                left: -11.5px;
+                top: -24px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 18.5px 11px 0;
+                border-color: $blue-ies-triangle transparent transparent;
+            }
+        }
+    }
 }
 
 .ies-box-inner {
@@ -446,7 +506,7 @@
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 11px 0 11px 19px;
+            border-width: 11px 0 11px 18.5px;
             border-color: transparent transparent transparent $blue-ies-triangle;
             z-index: -1;
         }
@@ -470,9 +530,9 @@
             transform: translate(-50%, -50%);
 
             &::before {
-                left: 5px;
+                left: 5.5px;
                 top: -11px;
-                border-width: 11px 19px 11px 0;
+                border-width: 11px 18.5px 11px 0;
                 border-color: transparent $blue-ies-triangle transparent transparent;
             }
         }
