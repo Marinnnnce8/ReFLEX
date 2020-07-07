@@ -75,6 +75,7 @@ input[type='submit'] {
 		position: relative;
 		transition: inherit;
 		z-index: 2;
+		font-family: $font-default;
 	}
 
 	&.uk-button-small {

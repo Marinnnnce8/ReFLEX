@@ -17,30 +17,92 @@
 
 <body>
 
-    <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
-        <nav class='uk-navbar-container uk-navbar' data-uk-navbar>
-
-            <div class='uk-navbar-left'>
-                <a href='#' class='uk-navbar-item uk-logo'>
-                    <img src='img/logo.png' alt='Site Name Logo'>
-                </a>
-            </div>
-
-            <div class='uk-navbar-right'>
-                <div id='nav'>
-                    <ul class='uk-navbar-nav' data-uk-nb-nav>
-                        <li><a href='index.html'>Home</a></li>
-                        <li class='uk-active'><a href='styleguide.html'>About</a></li>
-                        <li><a href='styleguide.html'>Contact</a></li>
-                    </ul>
+    <header class='header'>
+        <div class='uk-container uk-container-large'>
+            <nav class='uk-navbar' data-uk-navbar>
+                <div class='uk-navbar-left'>
+                    <a href='#' class='uk-navbar-item uk-logo'>
+                        <img src='img/logo.png' alt='ReFLEX Orkney Logo'>
+                    </a>
                 </div>
-                <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
-                    hidden>
-                    <span data-uk-navbar-toggle-icon></span>
-                </a>
-            </div>
-
-        </nav>
+                <div class='uk-navbar-right'>
+                    <div class='navbar-top'>
+                        <div class='uk-flex uk-flex-right uk-flex-middle'>
+                            <a href="#">Media centre</a>
+                            <a href='#'><abbr title="Frequently Asked Questions">FAQ</abbr></a>
+                        </div>
+                    </div>
+                    <div class='navbar-bottom'>
+                        <div class='uk-flex uk-flex-start uk-flex-between uk-flex-middle'>
+                            <div id='nav' class='nav'>
+                                <span class="circle" role="presentation"></span>
+                                <ul class='uk-navbar-nav uk-flex-middle' data-uk-nb-nav='breakpoint:1200'>
+                                    <li class="mega-menu uk-active"><a href='#' class='font-chevron-down'>For home</a>
+                                        <ul class='uk-nav-dropdown'>
+                                            <li><a href='#'><span><img src="./img/lightbulb.svg" data-uk-svg
+                                                            alt="image"></span>Electricity Supply</a></li>
+                                            <li><a href='#'><span><img src="./img/electric-vehicles.svg" data-uk-svg
+                                                            alt="image"></span>Electric Vehicles</a></li>
+                                            <li><a href='#'><span><img src="./img/home-batteries.svg" data-uk-svg
+                                                            alt="image"></span>Battery Storage</a></li>
+                                            <li><a href='#'><span><img src="./img/car-club.svg" data-uk-svg
+                                                            alt="image"></span>Car
+                                                    Club</a></li>
+                                            <li><a href='#'><span><img src="./img/heating.svg" data-uk-svg
+                                                            alt="image"></span>Heating
+                                                    Systems</a></li>
+                                            <li><a href='#'><span><img src="./img/bundle.svg" data-uk-svg
+                                                            alt="image"></span>Bundles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu"><a href='#' class='font-chevron-down'>For business</a>
+                                        <ul class='uk-nav-dropdown'>
+                                            <li><a href='#'><span><img src="./img/lightbulb.svg" data-uk-svg
+                                                            alt="image"></span>Electricity Supply</a></li>
+                                            <li><a href='#'><span><img src="./img/electric-vehicles.svg" data-uk-svg
+                                                            alt="image"></span>Electric Vehicles</a></li>
+                                            <li><a href='#'><span><img src="./img/home-batteries.svg" data-uk-svg
+                                                            alt="image"></span>Battery Storage</a></li>
+                                            <li><a href='#'><span><img src="./img/car-club.svg" data-uk-svg
+                                                            alt="image"></span>Car
+                                                    Club</a></li>
+                                            <li><a href='#'><span><img src="./img/heating.svg" data-uk-svg
+                                                            alt="image"></span>Heating
+                                                    Systems</a></li>
+                                            <li><a href='#'><span><img src="./img/bundle.svg" data-uk-svg
+                                                            alt="image"></span>Bundles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href='#' class='nb-open-lvl font-chevron-down'>About ReFLEX</a>
+                                        <ul class='uk-nav-dropdown'>
+                                            <li><a href='#'>Why Orkney</a></li>
+                                            <li><a href='#' class='font-chevron-right'>The Project</a>
+                                                <ul class='uk-nav-dropdown'>
+                                                    <li><a href='#'>Heat</a></li>
+                                                    <li><a href='#'>Transport</a></li>
+                                                    <li><a href='#'>Electricity</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href='#'>Funders & Partners</a></li>
+                                            <li><a href='#'>Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">ReFLEX Map</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#" class='font-chevron-down'>Get in touch</a></li>
+                                </ul>
+                                <span class="circle" role="presentation"></span>
+                            </div>
+                            <a href="#" class="uk-button uk-button-secondary"><span>Get in touch</span></a>
+                            <a href='#nav' class='uk-navbar-toggle' aria-label='Open navigation menu'
+                                data-uk-toggle='{"animation": ""}' hidden>
+                                <span role="presentation"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main class='nb-main uk-margin-large-bottom'>
@@ -67,7 +129,7 @@
         </section>
         <nav class="uk-margin-medium-bottom">
             <div class="uk-container">
-                <ul class="uk-flex uk-flex-center">
+                <ul class="uk-flex uk-flex-center uk-flex-wrap">
                     <li><a href="#">How it works</a></li>
                     <li><a href="#">Electric Vehicle leasing</a></li>
                     <li><a href="#">ReFLEX service package</a></li>
@@ -78,12 +140,12 @@
         </nav>
 
         <div class='uk-container uk-margin-large-bottom'>
-            <div class="values uk-text-center uk-grid-medium uk-child-width-1-3" data-uk-grid
+            <div class="values uk-text-center uk-grid-medium uk-child-width-1-3@s" data-uk-grid
                 data-uk-height-match='target: .uk-card'>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <div class="uk-position-cover uk-position-z-index">
-                            <img src="./img/exclusive.svg" alt="image" data-uk-img>
+                            <img src="./img/exclusive.svg" alt="image" data-uk-svg>
                             <h3 class="uk-card-title">Orkney exclusive</h3>
                         </div>
                         <p>Bundle options (e.g. cars, charging, tariff).</p>
@@ -92,7 +154,7 @@
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <div class="uk-position-cover uk-position-z-index">
-                            <img src="./img/great-deal.svg" alt="image" data-uk-img>
+                            <img src="./img/great-deal.svg" alt="image" data-uk-svg>
                             <h3 class="uk-card-title">Great deal</h3>
                         </div>
                         <p>Bundle options (e.g. cars, charging, tariff).</p>
@@ -101,7 +163,7 @@
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <div class="uk-position-cover uk-position-z-index">
-                            <img src="./img/integrated-offer.svg" alt="image" data-uk-img>
+                            <img src="./img/integrated-offer.svg" alt="image" data-uk-svg>
                             <h3 class="uk-card-title">Complete integrated offer</h3>
                         </div>
                         <p>Bundle options (e.g. cars, charging, tariff).</p>
@@ -175,7 +237,7 @@
             </div>
         </div>
 
-        <div class='uk-container uk-margin-large-bottom'>
+        <div class='uk-container uk-margin-medium-bottom'>
             <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
                 <div class="process process-extend uk-text-center">
                     <h3 class="uk-text-uppercase">Customer Journey</h3>
@@ -252,11 +314,42 @@
             </div>
         </div>
 
+        <div class='uk-container uk-margin-medium-bottom'>
+            <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
+                <div class="uk-container uk-container-small">
+                    <ol class="list-bold">
+                        <li><strong>Membership</strong> - Join</li>
+                        <li><strong>Contact us </strong>(phone/website/email)
+                            <ul class="uk-list-disc">
+                                <li>Discuss your options / deals with our electric vehicle specialists / tailor your
+                                    offer</li>
+                                <li>Book an electric vehicle test drive (Caveat – may not be the same car)</li>
+                                <li>Discuss bundle option
+                                    <ul class="uk-list-disc">
+                                        <li>Consider ReFLEX EV tariff</li>
+                                        <li>Consider chargers options</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Sign up to deal</strong>
+                            <ul class="uk-list-disc">
+                                <li>Lease details provided directly from DriveElectric</li>
+                                <li>Complete credit application</li>
+                                <li>Sign lease agreement </li>
+                            </ul>
+                        </li>
+                        <li><strong>Collect vehicle</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
         <div class='uk-container uk-margin-large-bottom'>
             <div class='nb-block nb-block-promo uk-clearfix' data-nb-block='promo'>
                 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
                     <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                        <img src="./img/promo-image.jpg" alt="" uk-cover>
+                        <img src="./img/promo-image-large.jpg" alt="" uk-cover>
                         <canvas width="600" height="400"></canvas>
                     </div>
                     <div>
@@ -275,7 +368,7 @@
                 </div>
                 <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
                     <div class="uk-card-media-left uk-cover-container">
-                        <img src="./img/promo-image.jpg" alt="" uk-cover>
+                        <img src="./img/promo-image-large.jpg" alt="" uk-cover>
                         <canvas width="600" height="400"></canvas>
                     </div>
                     <div>
@@ -294,7 +387,7 @@
                 </div>
                 <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
                     <div class="uk-card-media-left uk-cover-container">
-                        <img src="./img/promo-image.jpg" alt="" uk-cover>
+                        <img src="./img/promo-image-large.jpg" alt="" uk-cover>
                         <canvas width="600" height="400"></canvas>
                     </div>
                     <div>
@@ -325,10 +418,10 @@
             </div>
         </div>
 
-        <div class='uk-container uk-container-small uk-margin-large-bottom'>
+        <div class='uk-container uk-container-small uk-margin-bottom'>
             <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
                 <h2>ReFLEX service package</h2>
-                <p>ReFLEX leases come with the following services included:</p>
+                <p class="uk-padding-small uk-padding-remove-horizontal uk-padding-remove-bottom">ReFLEX leases come with the following services included:</p>
                 <ul class="uk-list-disc">
                     <li><strong>Easy trade-in for your existing car or van</strong></li>
                     <li><strong>Servicing</strong></li>
@@ -350,14 +443,14 @@
                 </div>
                 <ul data-uk-accordion data-uk-scrollspy='cls: uk-animation-fade; target: >li; delay: 350;'>
                     <li class='uk-open'>
-                        <a class='uk-accordion-title' href='#'>Mini/Small Hatch Range</a>
+                        <a class='uk-accordion-title large' href='#'>Mini/Small Hatch Range</a>
                         <div class='uk-accordion-content'>
                             <ul class='ads uk-grid-match uk-grid-small uk-child-width-1-3@m' data-uk-grid
                                 data-uk-height-match='target: .uk-card > .uk-card-body'>
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-1.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Smart fortwo Coupe EQ ‘Passion Advanced’</h3>
@@ -367,7 +460,7 @@
                                                 <li class="font-road">83 Miles WLTP Range</li>
                                             </ul>
                                             <a href="#" class="uk-button uk-button-primary uk-button-small"><span>Visit
-                                                    drive electric</span></a>
+                                                    Drive Electric</span></a>
                                         </div>
                                         <a href='#' class='uk-position-cover' aria-label='Read More'></a>
                                     </div>
@@ -375,7 +468,7 @@
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-2.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Polestar 2 ‘Pilot plus’</h3>
@@ -385,7 +478,7 @@
                                                 <li class="font-road">83 Miles WLTP Range</li>
                                             </ul>
                                             <a href="#" class="uk-button uk-button-primary uk-button-small"><span>Visit
-                                                    drive electric</span></a>
+                                                    Drive Electric</span></a>
                                         </div>
                                         <a href='#' class='uk-position-cover' aria-label='Read More'></a>
                                     </div>
@@ -393,7 +486,7 @@
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-3.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Smart forfour EQ ‘Prime Premium Plus’</h3>
@@ -403,7 +496,7 @@
                                                 <li class="font-road">83 Miles WLTP Range</li>
                                             </ul>
                                             <a href="#" class="uk-button uk-button-primary uk-button-small"><span>Visit
-                                                    drive electric</span></a>
+                                                    Drive Electric</span></a>
                                         </div>
                                         <a href='#' class='uk-position-cover' aria-label='Read More'></a>
                                     </div>
@@ -412,12 +505,12 @@
                         </div>
                     </li>
                     <li class='uk-open'>
-                        <a class='uk-accordion-title' href='#'>Mini/Small Hatch Range</a>
+                        <a class='uk-accordion-title large' href='#'>Mini/Small Hatch Range</a>
                         <div class='uk-accordion-content'>
                             <div class='ads'>
                                 <div class='uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin' data-uk-grid>
                                     <div class="uk-card-media-left uk-background-cover"
-                                        style="background-image: url('./img/promo-image.jpg')" data-uk-img></div>
+                                        style="background-image: url('./img/promo-image-4.jpg')" data-uk-img></div>
                                     <div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Polestar 2 ‘Pilot plus’</h3>
@@ -439,14 +532,14 @@
                         </div>
                     </li>
                     <li>
-                        <a class='uk-accordion-title' href='#'>Mini/Family Range</a>
+                        <a class='uk-accordion-title large' href='#'>Mini/Family Range</a>
                         <div class='uk-accordion-content'>
                             <ul class='ads uk-grid-match uk-grid-small uk-child-width-1-3@m' data-uk-grid
                                 data-uk-height-match='target: .uk-card > .uk-card-body'>
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-5.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Smart fortwo Coupe EQ ‘Passion Advanced’</h3>
@@ -464,7 +557,7 @@
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-6.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Polestar 2 ‘Pilot plus’</h3>
@@ -482,7 +575,7 @@
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-7.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Smart forfour EQ ‘Prime Premium Plus’</h3>
@@ -501,12 +594,12 @@
                         </div>
                     </li>
                     <li>
-                        <a class='uk-accordion-title' href='#'>Large Family/SUV</a>
+                        <a class='uk-accordion-title large' href='#'>Large Family/SUV</a>
                         <div class='uk-accordion-content'>
                             <div class='ads'>
                                 <div class='uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin' data-uk-grid>
                                     <div class="uk-card-media-left uk-background-cover"
-                                        style="background-image: url('./img/promo-image.jpg')" data-uk-img></div>
+                                        style="background-image: url('./img/promo-image-8.jpg')" data-uk-img></div>
                                     <div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Polestar 2 ‘Pilot plus’</h3>
@@ -528,12 +621,12 @@
                         </div>
                     </li>
                     <li>
-                        <a class='uk-accordion-title' href='#'>Premium/Luxury</a>
+                        <a class='uk-accordion-title large' href='#'>Premium/Luxury</a>
                         <div class='uk-accordion-content'>
                             <div class='ads'>
                                 <div class='uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin' data-uk-grid>
                                     <div class="uk-card-media-left uk-background-cover"
-                                        style="background-image: url('./img/promo-image.jpg')" data-uk-img></div>
+                                        style="background-image: url('./img/promo-image-8.jpg')" data-uk-img></div>
                                     <div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Polestar 2 ‘Pilot plus’</h3>
@@ -565,14 +658,14 @@
                 </div>
                 <ul data-uk-accordion data-uk-scrollspy='cls: uk-animation-fade; target: >li; delay: 350;'>
                     <li>
-                        <a class='uk-accordion-title' href='#'>Small Vans</a>
+                        <a class='uk-accordion-title large' href='#'>Small Vans</a>
                         <div class='uk-accordion-content'>
                             <ul class='ads uk-grid-match uk-grid-small uk-child-width-1-3@m' data-uk-grid
                                 data-uk-height-match='target: .uk-card > .uk-card-body'>
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-1.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Smart fortwo Coupe EQ ‘Passion Advanced’</h3>
@@ -590,7 +683,7 @@
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-2.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Polestar 2 ‘Pilot plus’</h3>
@@ -608,7 +701,7 @@
                                 <li>
                                     <div class='uk-card'>
                                         <div class='uk-card-media-top uk-background-cover'
-                                            style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                            style="background-image: url('./img/promo-image-3.jpg')" data-uk-img>
                                         </div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Smart forfour EQ ‘Prime Premium Plus’</h3>
@@ -627,12 +720,12 @@
                         </div>
                     </li>
                     <li>
-                        <a class='uk-accordion-title' href='#'>Large Vans</a>
+                        <a class='uk-accordion-title large' href='#'>Large Vans</a>
                         <div class='uk-accordion-content'>
                             <div class='ads'>
                                 <div class='uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin' data-uk-grid>
                                     <div class="uk-card-media-left uk-background-cover"
-                                        style="background-image: url('./img/promo-image.jpg')" data-uk-img></div>
+                                        style="background-image: url('./img/promo-image-8.jpg')" data-uk-img></div>
                                     <div>
                                         <div class='uk-card-body'>
                                             <h3 class='uk-card-title'>Polestar 2 ‘Pilot plus’</h3>
@@ -658,49 +751,6 @@
         </div>
 
         <div class='uk-container uk-margin-large-bottom'>
-            <div class='nb-block nb-block-promo uk-clearfix' data-nb-block='promo'>
-                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
-                    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                        <img src="./img/promo-image.jpg" alt="" uk-cover>
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Electric Vehicle leasing</h3>
-                            <p>ReFLEX leases are designed to make electric cars and vans more affordable. Our
-                                high-quality second-hand and new vehicles are available for lease from:
-                            </p>
-                            <ul class="uk-list-disc">
-                                <li><span>£XXXX a month</span> – second-hand, or</li>
-                                <li><span>£XXXX a month</span> – new.</li>
-                            </ul>
-                            <a href="#" class="uk-button uk-button-secondary"><span>Get in touch</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
-                    <div class="uk-card-media-left uk-cover-container">
-                        <img src="./img/promo-image.jpg" alt="" uk-cover>
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title">Electric Vehicle leasing</h3>
-                            <p>ReFLEX leases are designed to make electric cars and vans more affordable. Our
-                                high-quality second-hand and new vehicles are available for lease from:
-                            </p>
-                            <ul class="uk-list-disc">
-                                <li><span>£XXXX a month</span> – second-hand, or</li>
-                                <li><span>£XXXX a month</span> – new.</li>
-                            </ul>
-                            <a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class='uk-container uk-margin-large-bottom'>
             <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
                 <div class='uk-container uk-container-small uk-margin-medium-bottom'>
                     <h2 class="uk-margin-remove-top">Electric vehicles for sale</h2>
@@ -711,7 +761,7 @@
                     <li>
                         <div class='uk-card'>
                             <div class='uk-card-media-top uk-background-cover'
-                                style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                style="background-image: url('./img/promo-image-5.jpg')" data-uk-img>
                             </div>
                             <div class='uk-card-body'>
                                 <h3 class='uk-card-title'>Nissan Leaf</h3>
@@ -722,7 +772,7 @@
                     <li>
                         <div class='uk-card'>
                             <div class='uk-card-media-top uk-background-cover'
-                                style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                style="background-image: url('./img/promo-image-6.jpg')" data-uk-img>
                             </div>
                             <div class='uk-card-body'>
                                 <h3 class='uk-card-title'>BMW i3</h3>
@@ -733,7 +783,7 @@
                     <li>
                         <div class='uk-card'>
                             <div class='uk-card-media-top uk-background-cover'
-                                style="background-image: url('./img/promo-image.jpg')" data-uk-img>
+                                style="background-image: url('./img/promo-image-7.jpg')" data-uk-img>
                             </div>
                             <div class='uk-card-body'>
                                 <h3 class='uk-card-title'>Renault Zoe</h3>
@@ -753,47 +803,32 @@
             <div class='nb-block nb-block-promo uk-clearfix' data-nb-block='promo'>
                 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
                     <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                        <img src="./img/promo-image.jpg" alt="" uk-cover>
+                        <img src="./img/promo-image-8.jpg" alt="" uk-cover>
                         <canvas width="600" height="400"></canvas>
                     </div>
                     <div>
                         <div class="uk-card-body">
-                            <h3 class="uk-card-title">Electric Vehicle leasing</h3>
-                            <p>ReFLEX leases are designed to make electric cars and vans more affordable. Our
-                                high-quality second-hand and new vehicles are available for lease from:
-                            </p>
-                            <ul class="uk-list-disc">
-                                <li><span>£XXXX a month</span> – second-hand, or</li>
-                                <li><span>£XXXX a month</span> – new.</li>
-                            </ul>
-                            <a href="#" class="uk-button uk-button-secondary"><span>Book a test drive today</span></a>
+                            <h3 class="uk-card-title">Book a test drive</h3>
+                            <p>We have a selection of small, mid-sized and SUV model electric vehicles available for test-drive in Orkney.</p>
+                            <p>Get in touch with us to <a href="#">book a test drive today</a>.</p>
+                            <a href="#" class="uk-button uk-button-large uk-button-secondary"><span>Book a test drive today</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
                     <div class="uk-card-media-left uk-cover-container">
-                        <img src="./img/promo-image.jpg" alt="" uk-cover>
+                        <img src="./img/promo-image-8.jpg" alt="" uk-cover>
                         <canvas width="600" height="400"></canvas>
                     </div>
                     <div>
                         <div class="uk-card-body">
-                            <h3 class="uk-card-title">Electric Vehicle leasing</h3>
-                            <p>ReFLEX leases are designed to make electric cars and vans more affordable. Our
-                                high-quality second-hand and new vehicles are available for lease from:
-                            </p>
-                            <ul class="uk-list-disc">
-                                <li><span>£XXXX a month</span> – second-hand, or</li>
-                                <li><span>£XXXX a month</span> – new.</li>
-                            </ul>
-                            <a href="#" class="uk-button uk-button-primary"><span>Book a test drive today</span></a>
+                            <h3 class="uk-card-title">Book a test drive</h3>
+                            <p>We have a selection of small, mid-sized and SUV model electric vehicles available for test-drive in Orkney.</p>
+                            <p>Get in touch with us to <a href="#">book a test drive today</a>.</p>
+                            <a href="#" class="uk-button uk-button-large uk-button-primary"><span>Book a test drive today</span></a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class='uk-container uk-container-small uk-margin-medium-bottom'>
-                <p>You can get discounts if you lease or buy an electric vehicle and sign up to our 100% renewable <a
-                        href="#">energy tariff</a>.</p>
-                <a href="#" class="uk-button uk-button-primary uk-margin-small-top"><span>Get discounts</span></a>
             </div>
         </div>
 
@@ -859,7 +894,7 @@
                     data-uk-height-match='target: .uk-card > .uk-card-body'>
                     <li>
                         <div class="uk-card uk-card-default">
-                             <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <div class='uk-card-media-top'>
                                 <img src="./img/drive-electric.jpg" alt="Drive Electric Logo" data-uk-img>
                             </div>
@@ -873,7 +908,7 @@
                     </li>
                     <li>
                         <div class="uk-card uk-card-default">
-                             <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <div class='uk-card-media-top'>
                                 <img src="./img/drive-electric.jpg" alt="Drive Electric Logo" data-uk-img>
                             </div>
@@ -891,7 +926,7 @@
 
         <div class='uk-container uk-margin-xlarge-bottom'>
             <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
-                <ul class='ads-info uk-grid-match uk-grid-small uk-child-width-1-1@m' data-uk-grid>
+                <ul class='ads-info ads-info-single uk-grid-match uk-grid-small uk-child-width-1-1@m' data-uk-grid>
                     <li>
                         <div class="uk-card uk-card-default uk-flex uk-flex-between uk-flex-middle">
                             <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
@@ -1035,78 +1070,82 @@
         <div class="footer-circle" role="presentation">
             <span></span>
         </div>
-        <div class="footer-top">
-            <div class='uk-container'>
-                <div data-uk-grid class="uk-child-width-1-2@m">
-                    <div class="uk-flex uk-flex-column uk-flex-between">
-                        <div class="uk-flex uk-flex-middle">
-                            <a href="#" class="logo" aria-label="Visit ReFLEX Orkney"><img src="./img/white-logo.png"
-                                    alt="ReFLEX Orkney Logo"></a>
-                            <ul class="uk-flex uk-flex-middle footer-socials">
-                                <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
-                                <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
-                                <li><a href="#" class="font-linkedin" aria-label="Visit our Linkedin page"></a></li>
-                                <li><a href="#" class="font-youtube" aria-label="Visit our Youtube page"></a></li>
-                            </ul>
-                        </div>
-                        <div class="uk-flex">
-                            <a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
-                            <a href="#" class="uk-button uk-button-default"><span>Newsletter sign up</span></a>
-                        </div>
-                    </div>
-                    <div class="uk-child-width-1-2@m" data-uk-grid>
-                        <div class="uk-flex uk-flex-column uk-flex-between footer-contact">
-                            <div>
-                                <h3>Contact us</h3>
-                                <strong>ReFLEX Orkney Limited</strong>
-                                <span>The Charles Clouston Building ORIC,</span>
-                                <span>Back Rd, Stromness KW16 3AW</span>
-                            </div>
-                            <ul>
-                                <li><a href='tel:+4401856480008' class="link"><span>T:</span> +44(0)1856 48000</a></li>
-                                <li><a href='mailto:info@reflexorkney.co.uk' class="link"><span>E:</span>
-                                        info@reflexorkney.co.uk</a></li>
-                            </ul>
-                        </div>
-                        <div class="uk-flex uk-flex-column uk-flex-between footer-contact">
-                            <div>
-                                <h3>Media centre</h3>
-                                <ul>
-                                    <li><a href='#'>Image library</a></li>
-                                    <li><a href='#'>Video library</a></li>
-                                    <li><a href='#'>Press contacts</a></li>
+        <div class="footer-wrap">
+            <div class="footer-top">
+                <div class='uk-container'>
+                    <div data-uk-grid class="uk-child-width-1-2@m">
+                        <div class="uk-flex uk-flex-column uk-flex-between">
+                            <div class="uk-flex uk-flex-middle">
+                                <a href="#" class="logo" aria-label="Visit ReFLEX Orkney"><img
+                                        src="./img/white-logo.png" alt="ReFLEX Orkney Logo"></a>
+                                <ul class="uk-flex uk-flex-middle footer-socials">
+                                    <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+                                    <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+                                    <li><a href="#" class="font-linkedin" aria-label="Visit our Linkedin page"></a></li>
+                                    <li><a href="#" class="font-youtube" aria-label="Visit our Youtube page"></a></li>
                                 </ul>
                             </div>
-                            <div>
-                                <a href="#" class="uk-button uk-button-default"><span>Your feedback</span></a>
+                            <div class="uk-flex">
+                                <a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
+                                <a href="#" class="uk-button uk-button-default"><span>Newsletter sign up</span></a>
+                            </div>
+                        </div>
+                        <div class="uk-child-width-1-2@m" data-uk-grid>
+                            <div class="uk-flex uk-flex-column uk-flex-between footer-contact">
+                                <div>
+                                    <h3>Contact us</h3>
+                                    <strong>ReFLEX Orkney Limited</strong>
+                                    <span>The Charles Clouston Building ORIC,</span>
+                                    <span>Back Rd, Stromness KW16 3AW</span>
+                                </div>
+                                <ul>
+                                    <li><a href='tel:+4401856480008' class="link"><span>T:</span> +44(0)1856 48000</a>
+                                    </li>
+                                    <li><a href='mailto:info@reflexorkney.co.uk' class="link"><span>E:</span>
+                                            info@reflexorkney.co.uk</a></li>
+                                </ul>
+                            </div>
+                            <div class="uk-flex uk-flex-column uk-flex-between footer-contact">
+                                <div>
+                                    <h3>Media centre</h3>
+                                    <ul>
+                                        <li><a href='#'>Image library</a></li>
+                                        <li><a href='#'>Video library</a></li>
+                                        <li><a href='#'>Press contacts</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="#" class="uk-button uk-button-default"><span>Your feedback</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <div class='uk-container'>
-                <div class="uk-child-width-1-2@m" data-uk-grid>
-                    <div class='nb-copyright uk-margin-small-bottom'>&copy; 2020 ReFLEX Orkney Limited. Company number
-                        SC648457.</div>
-                    <div class="uk-flex uk-flex-between uk-padding-remove">
-                        <div class='nb-legal uk-margin-small-bottom'>
-                            <ul>
-                                <li><a href='#'>Terms &amp; Conditions</a></li>
-                                <li><a href='#'>Privacy Policy</a></li>
-                                <li><a href='#'>Disclaimer</a></li>
-                            </ul>
-                        </div>
+            <div class="footer-bottom">
+                <div class='uk-container'>
+                    <div class="uk-child-width-1-2@m" data-uk-grid>
+                        <div class='nb-copyright uk-margin-small-bottom'>&copy; 2020 ReFLEX Orkney Limited. Company
+                            number
+                            SC648457.</div>
+                        <div class="uk-flex uk-flex-between uk-padding-remove">
+                            <div class='nb-legal uk-margin-small-bottom'>
+                                <ul>
+                                    <li><a href='#'>Terms &amp; Conditions</a></li>
+                                    <li><a href='#'>Privacy Policy</a></li>
+                                    <li><a href='#'>Disclaimer</a></li>
+                                </ul>
+                            </div>
 
-                        <div class='nb-credit'>Website by
-                            <a href='https://www.nbcommunication.com/'
-                                title='NB Communication - Digital Marketing Agency'>
-                                NB <img
-                                    src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-                                    data-src='https://brand.nbcommunication.com/logo/web/nb.png'
-                                    alt='NB Communication Ltd Logo' data-uk-img>
-                            </a>
+                            <div class='nb-credit'>Website by
+                                <a href='https://www.nbcommunication.com/'
+                                    title='NB Communication - Digital Marketing Agency'>
+                                    NB <img
+                                        src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+                                        data-src='https://brand.nbcommunication.com/logo/web/nb.png'
+                                        alt='NB Communication Ltd Logo' data-uk-img>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

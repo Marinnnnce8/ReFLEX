@@ -73,6 +73,9 @@
 
     .uk-card-title {
         margin-top: 25px;
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 15px;
     }
 
     .uk-card-body {
@@ -81,6 +84,7 @@
 
         ul {
             padding-left: 0;
+            margin-top: 10px;
 
             li {
                 color: $blue-darker;
@@ -113,6 +117,66 @@
             bottom: 10px;
             position: absolute;
             left: 0;
+            padding-right: 55px;
+            padding-left: 33px;
+
+            &::before {
+                right: 28px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointLarge) and (min-width: $breakpointMedium) {
+        .uk-card-body ul {
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                margin-bottom: 10px;
+
+                &:not(:first-of-type) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        >li .uk-card-media-top {
+            border-radius: 20px;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        .uk-card-body ul {
+
+            li {
+                padding-left: 30px;
+
+                &::before {
+                    font-size: 18px;
+                }
+
+                &:not(:first-of-type) {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointMobileSmall) {
+        .uk-card-body ul {
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                margin-bottom: 10px;
+                padding-left: 26px;
+
+                &:not(:first-of-type) {
+                    margin-left: 0;
+                }
+            }
         }
     }
 }
@@ -202,5 +266,37 @@
 
     .uk-card-media-left {
         padding-right: 60px;
+    }
+
+    @media (max-width: $breakpointMedium) {
+        >li .uk-card {
+            border-radius: 20px;
+        }
+
+        &.ads-info-single {
+            .uk-card.uk-flex .uk-button {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        &.ads-info-single {
+
+            .uk-card,
+            .uk-card-body {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .uk-card.uk-flex .uk-button {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            img {
+                margin-bottom: 10px;
+            }
+        }
     }
 }

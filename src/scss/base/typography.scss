@@ -82,6 +82,7 @@ p {
 			}
 		}
 	}
+
 	a[target='_blank'] {
 		padding-right: 20px;
 
@@ -159,9 +160,13 @@ ol {
 	color: $blue;
 	font-weight: $light;
 
-	li {
+	>li {
 		padding-left: 15px;
 		margin-bottom: 15px;
+
+		strong {
+			font-weight: $bold;
+		}
 
 		&::before {
 			content: counter(item) '. ';
@@ -169,6 +174,18 @@ ol {
 			right: 8px;
 			position: relative;
 			font-weight: normal;
+		}
+
+		ul, .uk-list-disc, ol {
+			margin-top: 15px;
+			margin-left: 10px;
+		}
+	}
+
+	&.list-bold {
+		>li::before {
+			font-weight: $bold;
+			right: 0;
 		}
 	}
 }

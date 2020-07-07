@@ -2,7 +2,7 @@
 
     .uk-card-title,
     .uk-position-cover,
-    .uk-position-cover img {
+    .uk-position-cover .uk-svg {
         transition: .5s;
     }
 
@@ -25,7 +25,7 @@
         }
     }
 
-    img {
+    .uk-svg {
         max-width: 75px;
         width: 100%;
         height: auto;
@@ -48,7 +48,7 @@
                 height: 95px;
                 padding: 10px;
 
-                img {
+                .uk-svg {
                     max-width: 40px;
                     margin-bottom: 0;
                 }
@@ -61,20 +61,78 @@
     }
 
     >div {
-        &:first-of-type .uk-position-cover {
-            background: linear-gradient(42deg, rgba(24, 42, 79, 1) 24%, rgba(38, 67, 123, 1) 100%);
-        }
+        &:first-of-type {
+            .uk-position-cover {
+                background: linear-gradient(42deg, rgba(24, 42, 79, 1) 24%, rgba(38, 67, 123, 1) 100%);
+            }
 
-        &:nth-of-type(2) .uk-position-cover {
-            background: linear-gradient(42deg, rgba(147, 174, 41, 1) 24%, rgba(215, 255, 60, 1) 100%);
+            .uk-svg,
+            .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+                &:first-of-type {
+                    fill: $lime;
+                }
 
-            .uk-card-title {
-                color: $blue;
+                &:last-of-type {
+                    fill: $white;
+                }
             }
         }
 
-        &:last-of-type .uk-position-cover {
-            background: linear-gradient(42deg, rgba(24, 42, 79, 1) 24%, rgba(38, 67, 123, 1) 100%);
+        &:nth-of-type(2) {
+            .uk-position-cover {
+                background: linear-gradient(42deg, rgba(147, 174, 41, 1) 24%, rgba(215, 255, 60, 1) 100%);
+
+                .uk-card-title {
+                    color: $blue;
+                }
+            }
+
+            .uk-svg,
+            .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+                .st1 {
+                    fill: $white;
+                }
+
+                &:last-of-type {
+                    fill: $blue-mid;
+                }
+            }
+        }
+
+        &:last-of-type {
+            .uk-position-cover {
+                background: linear-gradient(42deg, rgba(24, 42, 79, 1) 24%, rgba(38, 67, 123, 1) 100%);
+            }
+
+            .uk-svg,
+            .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+                &:first-of-type {
+                    fill: $lime;
+                }
+
+                .st1 {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointMedium) {
+
+        .uk-card {
+            padding: 15px 20px;
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .uk-svg,
+        .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+            margin-bottom: 5px;
+        }
+
+        .uk-card-title {
+            font-size: 18px;
         }
     }
 }
