@@ -1,0 +1,137 @@
+.nb-switcher {
+    margin-bottom: 70px;
+
+    h2 {
+        font-size: 54px;
+        margin-bottom: 50px;
+    }
+
+    .listings-nav {
+        margin-bottom: 0;
+        padding-left: 0;
+
+        li {
+            &:first-of-type {
+                button {
+                    padding: 29px 38px 28px 125px;
+                    border-bottom-left-radius: 50px;
+                    border-top-left-radius: 50px;
+
+                    span::before {
+                        left: 55px;
+                        font-size: 48px;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                button {
+                    padding: 29px 125px 28px 38px;
+                    border-bottom-right-radius: 50px;
+                    border-top-right-radius: 50px;
+
+                    span::before {
+                        right: 55px;
+                        font-size: 58px;
+                    }
+                }
+            }
+
+            button {
+                background-color: $white;
+                box-shadow: 0 5px 15px 0 rgba($black, .1);
+                color: $blue;
+                position: relative;
+                font-size: 20px;
+                font-weight: $bold;
+                text-transform: uppercase;
+                font-family: $font-default;
+                height: 100%;
+
+                span::before {
+                    color: inherit;
+                    position: absolute;
+                    top: 60%;
+                    transform: translateY(-50%);
+                    font-size: 36px;
+                }
+
+                @include hover {
+                    background-color: $blue;
+                    color: $white;
+                }
+            }
+
+            &.uk-active button {
+                background-color: $blue;
+                color: $white;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        h2 {
+            font-size: 44px;
+        }
+        .listings-nav li {
+            max-width: 325px;
+            width: 100%;
+            &:first-of-type {
+                button {
+                    padding: 29px 35px 28px 80px;
+
+                    span::before {
+                        font-size: 46px;
+                        left: 25px;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                button {
+                    padding: 29px 80px 28px 35px;
+
+                    span::before {
+                        font-size: 50px;
+                        right: 25px;
+                    }
+                }
+            }
+            button {
+                font-size: 18px;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+
+        .listings-nav li {
+            max-width: 140px;
+            width: 100%;
+            &:first-of-type {
+                button {
+                    padding: 10px 20px 10px 60px;
+
+                    span::before {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                button {
+                    padding: 10px 60px 10px 20px;
+
+                    span::before {
+                        font-size: 24px;
+                    }
+                }
+            }
+            button {
+                font-size: 10.8px;
+                text-align: left;
+            }
+        }
+    }
+}

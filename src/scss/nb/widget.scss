@@ -1,0 +1,59 @@
+.nb-widget {
+	z-index: 3;
+
+	.uk-button {
+		transform: rotate(-90deg) translateY(130%);
+		min-width: 215px;
+		font-size: 20px;
+		color: $blue-darker;
+
+		&::before {
+			content: font-char($wpforms);
+			font-size: 22px;
+			transform: translateY(-58%) rotate(90deg);
+			color: $blue-darker;
+			backface-visibility: hidden;
+			font-weight: normal;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		@include hover {
+			background-color: $blue-darker;
+
+			>span {
+				color: $white;
+			}
+
+			&::before {
+				color: $lime;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointMedium) and (min-width: $breakpointSmall) {
+		display: none;
+	}
+
+	@media (max-width: $breakpointSmall) {
+		bottom: 0;
+		top: auto;
+		left: 0;
+		width: 100%;
+		transform: none;
+
+		.uk-button {
+			transform: rotate(0) translateY(0);
+			width: 100%;
+			border-radius: 0;
+			padding: 4px 15px 7px 20px;
+
+			&::before {
+				transform: translateY(-50%) rotate(0);
+				right: 15px;
+			}
+		}
+	}
+}

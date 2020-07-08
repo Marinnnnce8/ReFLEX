@@ -5,10 +5,6 @@ button {
 	appearance: none;
 	outline: none;
 	transition: $nbSec ease-in-out;
-
-	// @include hover {
-	// 	outline: 1px dashed rgba($orange, .2);
-	// }
 }
 
 a {
@@ -35,7 +31,6 @@ input[type='submit'] {
 	padding-right: 50px;
 	border-radius: 50px;
 	overflow: hidden;
-	// min-width: 230px;
 	text-align: left;
 	border: 0;
 	padding: 7px 80px 10px 35px;
@@ -215,6 +210,86 @@ input[type='submit'] {
 		&::after {
 			width: 48px;
 			height: 48px;
+		}
+	}
+}
+
+.scroll-button {
+	.uk-button {
+		background-color: $blue-up;
+		border-radius: 50%;
+		width: 55px;
+		height: 55px;
+		padding: 0;
+		margin-right: 9px;
+		margin-bottom: 8px;
+
+		&::before {
+			content: font-char($chevron-up);
+			transform: translate(-50%, -50%);
+			top: 57%;
+			left: 40%;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		@include hover {
+			background-color: $blue;
+
+			&::before {
+				color: $white;
+			}
+		}
+	}
+	@media (max-width: $breakpointSmall) {
+		.uk-button {
+			width: 48px;
+			height: 48px;
+
+			&::before {
+				top: 54%;
+				left: 38%;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.cta-buttons {
+	.uk-button {
+		padding-right: 70px;
+
+		&:not(:first-of-type) {
+			margin-left: 35px;
+		}
+	}
+
+	@media (max-width: $breakpointMedium) {
+		flex-direction: column;
+
+		.uk-button {
+			min-width: 200px;
+			max-width: 400px;
+
+			&:not(:first-of-type) {
+				margin-left: 0;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		.uk-button {
+			padding-right: 35px;
+			padding-left: 30px;
+			font-size: 18px;
+
+			&::before {
+				right: 20px;
+				font-size: 16px;
+			}
 		}
 	}
 }

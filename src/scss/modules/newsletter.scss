@@ -2,7 +2,7 @@
     margin-bottom: 85px;
 
     .uk-card {
-        border-radius: 50px;
+        border-radius: 40px;
         padding: 50px 55px 70px 50px;
     }
 
@@ -34,5 +34,77 @@
         margin-left: 55px;
         margin-top: 10px;
         padding-left: 40px;
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        .uk-card {
+            padding: 75px 40px 45px 45px;
+
+            >.uk-flex-between {
+                flex-direction: column;
+            }
+        }
+
+        h2 {
+            max-width: 100%;
+            margin-bottom: 20px;
+            padding-right: 0;
+
+            img {
+                margin-right: 0;
+                top: -28px;
+            }
+        }
+
+        p {
+            margin-right: 60px;
+        }
+
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+        .uk-card {
+            padding: 30px 20px;
+            text-align: center;
+
+            >.uk-flex {
+                flex-direction: column;
+                justify-content: flex-start;
+
+                >.uk-flex-between {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        h2 {
+            max-width: 100%;
+            margin-bottom: 15px;
+            padding-left: 0;
+            flex-direction: column;
+            span {
+                display: block;
+            }
+
+            img {
+                top: auto;
+                left: auto;
+                position: relative;
+                margin: 0 auto;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            margin-bottom: 25px;
+            margin-right: 0;
+        }
+
+        .uk-button {
+            margin-left: 0;
+            max-width: 220px;
+            width: 100%;
+        }
     }
 }

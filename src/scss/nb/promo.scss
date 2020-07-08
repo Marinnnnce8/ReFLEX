@@ -1,0 +1,170 @@
+.nb-block-promo {
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    .uk-card {
+        border-radius: 40px;
+        overflow: hidden;
+
+        &:not(:last-of-type) {
+            margin-bottom: 80px;
+        }
+    }
+
+    ul {
+        margin-bottom: 30px;
+    }
+
+    li {
+        padding-left: 7px;
+    }
+
+    .uk-card-default .uk-card-body {
+        background-color: $lime;
+
+        p,
+        li,
+        h3 {
+            color: $blue;
+        }
+
+        p {
+            a {
+                &::after {
+                    background-color: $blue;
+                }
+
+                @include hover {
+                    color: $lime;
+                }
+            }
+        }
+    }
+
+    .uk-card-primary .uk-card-body {
+        background-color: $blue;
+
+        p,
+        li,
+        h3 {
+            color: $lime;
+        }
+
+        p {
+            a {
+                color: $lime;
+
+                &::after {
+                    background-color: $lime;
+                }
+
+                @include hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    .uk-card-secondary .uk-card-body {
+        background-color: $blue;
+
+        p,
+        li,
+        h3 {
+            color: $white;
+        }
+    }
+
+    .uk-card-body {
+        padding: 65px 60px 60px;
+
+        li {
+            font-family: $ubuntu;
+            font-weight: $light;
+            font-size: 20px;
+            margin-bottom: 15px;
+
+            span {
+                font-weight: $bold;
+            }
+        }
+
+        .uk-button {
+            min-width: 200px;
+        }
+
+        .uk-button-primary {
+            background-color: $lime;
+            color: $blue;
+        }
+
+        .uk-button-large {
+            margin-top: 10px;
+            padding-right: 65px;
+            padding-left: 35px;
+            line-height: 37px;
+
+            &::before {
+                font-weight: 100;
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .uk-card-title {
+        font-weight: $bold;
+        font-size: 44px;
+        line-height: 1.2;
+    }
+
+    @media (max-width: $breakpointLarge) {
+        .uk-card-body {
+            padding: 45px 40px 40px;
+        }
+    }
+
+    @media (max-width: $breakpointMedium) {
+        .uk-card-body {
+            padding: 35px 20px;
+
+            p,
+            li {
+                font-size: 18px;
+            }
+
+            .uk-button-large {
+                margin-top: 10px;
+                padding-right: 45px;
+                padding-left: 20px;
+                line-height: 37px;
+
+                &::before {
+                    right: 15px;
+                }
+            }
+        }
+
+        .uk-card-title {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        .uk-card:not(:last-of-type) {
+            margin-bottom: 40px;
+        }
+
+        .uk-card-body {
+            padding: 20px 20px 35px;
+        }
+
+        .uk-card-title {
+            font-size: 38px;
+        }
+    }
+}

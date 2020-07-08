@@ -7,6 +7,8 @@
 
     h3 {
         margin: 50px 0 35px;
+        font-size: 26px;
+        font-family: $ubuntu;
     }
 }
 
@@ -27,7 +29,12 @@
     font-size: 26px;
     color: $blue;
     font-weight: $bold;
-    margin-bottom: 40px;
+    margin: 65px 0 35px;
+
+    ul {
+        margin-top: 10px;
+        padding-left: 0;
+    }
 
     a {
         background-color: $lime;
@@ -58,6 +65,14 @@
 }
 
 .news-tabs {
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        margin-top: 10px;
+    }
+
     a {
         background-color: $blue;
         color: $white;
@@ -66,6 +81,7 @@
         padding: 9px 25px;
         font-weight: $bold;
         border: 2px solid $blue;
+
         @include hover {
             background-color: $white;
             border-color: $blue;

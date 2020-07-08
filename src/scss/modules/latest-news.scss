@@ -13,6 +13,16 @@
     &.home {
         margin-top: -50px;
     }
+
+    h2 {
+        line-height: 1;
+    }
+
+    @media (max-width: $breakpointSmall) {
+        .uk-button-large {
+            padding-left: 0;
+        }
+    }
 }
 
 .latest-news-inner {
@@ -60,6 +70,14 @@
             }
         }
     }
+
+    @media (max-width: $breakpointSmall) {
+        >.uk-flex-middle {
+            padding: 0;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 }
 
 .latest-news:not(.latest-news-services) .latest-news-inner {
@@ -68,7 +86,7 @@
         overflow: hidden;
         position: relative;
         box-shadow: none;
-        z-index: 0;
+        z-index: 1;
 
         h3,
         p,
@@ -87,7 +105,6 @@
             transition: $nbSec ease-in-out;
             position: absolute;
             height: auto;
-            // height: 255px;
             width: 100%;
             left: 0;
             top: 0;
@@ -114,7 +131,7 @@
             right: 0;
             bottom: 0;
             backface-visibility: hidden;
-            padding: 25px 20px 80px;
+            padding: 25px 20px 80px 35px;
             min-height: 1px;
             transition: min-height .35s;
 
@@ -125,7 +142,7 @@
                 font-family: 'svgicons';
                 line-height: 1;
                 transform: translateY(-5%);
-                transition: inherit;
+                transition: $nbSec ease-in-out;
             }
         }
 
@@ -156,7 +173,7 @@
         }
 
         .uk-button {
-            left: 25px;
+            left: 35px;
             bottom: 60px;
             z-index: 101;
             position: absolute;
@@ -209,9 +226,36 @@
             }
         }
     }
+
+    @media (max-width: $breakpointSmallMax) {
+
+        ul li {
+            .uk-card {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            .uk-card-body::after {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        .uk-card {
+            .uk-card-body {
+                padding: 25px 20px 80px 15px;
+            }
+
+            .uk-button {
+                left: 15px;
+            }
+        }
+    }
 }
 
 .latest-news-services .latest-news-inner {
+    padding: 20px;
 
     *+.uk-grid-margin-small,
     .uk-grid+.uk-grid-small,
@@ -219,58 +263,62 @@
         margin-top: 2px;
     }
 
-    ul {
-        &:first-of-type li {
-            &:first-of-type {
-                .uk-card {
-                    border-top-left-radius: 20px;
-                }
+    li {
+        overflow: hidden;
+
+        &:first-of-type {
+            .uk-card {
+                border-top-left-radius: 20px;
             }
 
-            &:last-of-type {
-                .uk-card {
-                    border-top-right-radius: 20px;
-                }
+            svg path:last-of-type {
+                fill: $lime;
+            }
+        }
+
+        &:nth-of-type(2) {
+            svg path:last-of-type {
+                fill: $lime;
+            }
+        }
+
+        &:nth-of-type(3) {
+            .uk-card {
+                border-top-right-radius: 20px;
             }
 
-            svg path:last-of-type,
             path.st1 {
                 fill: $lime;
             }
         }
 
-        &:last-of-type li {
-            &:first-of-type {
-                .uk-card {
-                    border-bottom-left-radius: 20px;
-                    border-top-left-radius: 0;
-                }
-
-                svg path.st0 {
-                    fill: $lime;
-                }
+        &:nth-of-type(4) {
+            .uk-card {
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 0;
             }
 
-            &:nth-of-type(2) svg path:first-of-type {
+            svg path.st0 {
                 fill: $lime;
             }
+        }
 
-            &:last-of-type {
-                .uk-card {
-                    border-bottom-right-radius: 20px;
-                    border-top-right-radius: 0;
-                }
-
-                svg path:last-of-type,
-                svg path:nth-of-type(2) {
-                    fill: $lime;
-                }
+        &:nth-of-type(5) {
+            svg path:first-of-type {
+                fill: $lime;
             }
         }
-    }
 
-    li {
-        overflow: hidden;
+        &:last-of-type {
+            .uk-card {
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 0;
+            }
+
+            svg .st1 {
+                fill: $lime;
+            }
+        }
     }
 
     .uk-card {
@@ -383,19 +431,63 @@
         z-index: 2;
     }
 
-    @media (max-width: $breakpointSmallMax) {
+    @media (max-width: $breakpointMediumMax) {
+        li {
+            &:first-of-type .uk-card {
+                border-top-left-radius: 20px;
+            }
+
+            &:nth-of-type(2) .uk-card {
+                border-top-right-radius: 20px;
+            }
+
+            &:nth-of-type(3) .uk-card {
+                border-top-right-radius: 0;
+            }
+
+            &:nth-of-type(4) .uk-card {
+                border-bottom-left-radius: 0;
+            }
+
+            &:nth-of-type(5) .uk-card {
+                border-bottom-left-radius: 20px;
+            }
+        }
+        .uk-card-body {
+            .uk-svg {
+                max-height: 50px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
         .uk-card {
             border-radius: 20px;
         }
 
-        ul:last-of-type li {
-            &:first-of-type .uk-card {
+        li {
+            &:nth-of-type(3) .uk-card {
+                border-top-right-radius: 20px;
+            }
+
+            &:nth-of-type(4) .uk-card {
                 border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
             }
 
             &:last-of-type .uk-card {
                 border-top-right-radius: 20px;
             }
+        }
+        .uk-card-body {
+            padding: 5px 20px;
+            .uk-svg {
+                max-height: 38px;
+                top: 0;
+            }
+        }
+        .uk-card-title {
+            font-size: 16px;
         }
     }
 }

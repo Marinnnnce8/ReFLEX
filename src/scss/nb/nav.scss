@@ -124,6 +124,21 @@
 							border-left-color: $gray-mid;
 							border-right-color: $gray-mid;
 						}
+
+						&:first-of-type svg path:last-of-type,
+						&:nth-of-type(2) svg path:last-of-type,
+						&:nth-of-type(3) svg .st1,
+						&:nth-of-type(4) svg .st0,
+						&:nth-of-type(5) svg path:first-of-type,
+						&:last-of-type svg .st1 {
+							fill: $lime;
+						}
+
+						@include hover {
+							svg path {
+								fill: $white;
+							}
+						}
 					}
 
 					a {
@@ -137,7 +152,6 @@
 						position: relative;
 
 						@include hover {
-							// background-color: $blue-lightest-4;
 							color: $blue;
 
 							span {
@@ -204,6 +218,11 @@
 						width: auto;
 						position: relative;
 						z-index: 1;
+
+						path {
+							fill: $blue;
+							transition: $nbSec ease-in-out;
+						}
 					}
 				}
 			}
@@ -320,8 +339,10 @@
 		.uk-navbar-nav {
 			display: block;
 			position: relative;
+
 			>li:last-of-type {
 				display: block;
+
 				a {
 					color: $lime;
 				}

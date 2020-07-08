@@ -33,6 +33,9 @@
 @import "nb/credit.scss";
 @import "nb/json.scss";
 @import "nb/slideshow.scss";
+@import "nb/switcher.scss";
+@import "nb/widget.scss";
+@import "nb/promo.scss";
 
 // Modules
 @import 'modules/banner.scss';
@@ -77,9 +80,11 @@
 // uikit/utility
 .uk-logo {
 	padding: 0;
+
 	img {
 		width: 240px;
 	}
+
 	@media (max-width: $breakpointMobile) {
 		img {
 			width: 145px;
@@ -100,3 +105,14 @@
 	max-width: 790px;
 }
 
+.uk-container {
+	@media (max-width: $breakpointMediumMax) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@media (max-width: $breakpointXsmallMax) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

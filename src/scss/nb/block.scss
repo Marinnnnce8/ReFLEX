@@ -60,84 +60,6 @@
 	}
 }
 
-.nb-block-contact-widget {
-	z-index: 3;
-
-	.uk-button-primary {
-		transform: rotate(-90deg) translateY(130%);
-		min-width: 215px;
-		font-size: 20px;
-		color: $blue-darker;
-
-		&::before {
-			content: font-char($wpforms);
-			font-size: 22px;
-			transform: translateY(-58%) rotate(90deg);
-			color: $blue-darker;
-			backface-visibility: hidden;
-			font-weight: normal;
-		}
-
-		&::after {
-			display: none;
-		}
-
-		@include hover {
-			background-color: $blue-darker;
-
-			>span {
-				color: $white;
-			}
-
-			&::before {
-				color: $lime;
-			}
-		}
-	}
-
-	.uk-button:not(.uk-button-primary) {
-		background-color: $blue-up;
-		border-radius: 50%;
-		width: 55px;
-		height: 55px;
-		padding: 0;
-		margin-right: 9px;
-		margin-bottom: 8px;
-
-		&::before {
-			content: font-char($chevron-up);
-			transform: translate(-50%, -50%);
-			top: 57%;
-			left: 40%;
-		}
-
-		&::after {
-			display: none;
-		}
-
-		@include hover {
-			background-color: $blue;
-
-			&::before {
-				color: $white;
-			}
-		}
-	}
-
-	@media (max-width: $breakpointSmall) {
-		.uk-button:not(.uk-button-primary) {
-			width: 48px;
-			height: 48px;
-
-			&::before {
-				top: 54%;
-				left: 38%;
-				font-size: 14px;
-			}
-		}
-	}
-}
-
 .uk-text-lead {
 	font-family: $ubuntu;
 	font-weight: $light;
@@ -341,43 +263,6 @@
 						height: 14px;
 						top: 50%;
 						transform: translateY(-50%);
-					}
-				}
-			}
-		}
-
-		.cta-buttons {
-			.uk-button {
-				padding-right: 70px;
-
-				&:not(:first-of-type) {
-					margin-left: 35px;
-				}
-			}
-
-			@media (max-width: $breakpointMedium) {
-				flex-direction: column;
-
-				.uk-button {
-					min-width: 200px;
-					max-width: 400px;
-
-					&:not(:first-of-type) {
-						margin-left: 0;
-						margin-top: 15px;
-					}
-				}
-			}
-
-			@media (max-width: $breakpointSmall) {
-				.uk-button {
-					padding-right: 35px;
-					padding-left: 30px;
-					font-size: 18px;
-
-					&::before {
-						right: 20px;
-						font-size: 16px;
 					}
 				}
 			}
@@ -691,179 +576,9 @@
 		}
 	}
 
-	&-promo {
-		h2 {
-			margin-bottom: 50px;
-		}
-
-		.uk-card {
-			border-radius: 40px;
-			overflow: hidden;
-
-			&:not(:last-of-type) {
-				margin-bottom: 80px;
-			}
-		}
-
-		ul {
-			margin-bottom: 30px;
-		}
-
-		li {
-			padding-left: 7px;
-		}
-
-		.uk-card-default .uk-card-body {
-			background-color: $lime;
-
-			p,
-			li,
-			h3 {
-				color: $blue;
-			}
-
-			p {
-				a {
-					&::after {
-						background-color: $blue;
-					}
-
-					@include hover {
-						color: $lime;
-					}
-				}
-			}
-		}
-
-		.uk-card-primary .uk-card-body {
-			background-color: $blue;
-
-			p,
-			li,
-			h3 {
-				color: $lime;
-			}
-
-			p {
-				a {
-					color: $lime;
-
-					&::after {
-						background-color: $lime;
-					}
-
-					@include hover {
-						color: $blue;
-					}
-				}
-			}
-		}
-
-		.uk-card-secondary .uk-card-body {
-			background-color: $blue;
-
-			p,
-			li,
-			h3 {
-				color: $white;
-			}
-		}
-
-		.uk-card-body {
-			padding: 65px 60px 60px;
-
-			li {
-				font-family: $ubuntu;
-				font-weight: $light;
-				font-size: 20px;
-				margin-bottom: 15px;
-
-				span {
-					font-weight: $bold;
-				}
-			}
-
-			.uk-button {
-				min-width: 200px;
-			}
-
-			.uk-button-primary {
-				background-color: $lime;
-				color: $blue;
-			}
-
-			.uk-button-large {
-				margin-top: 10px;
-				padding-right: 65px;
-				padding-left: 35px;
-				line-height: 37px;
-
-				&::before {
-					font-weight: 100;
-					font-size: 18px;
-				}
-
-				span {
-					font-size: 18px;
-				}
-			}
-		}
-
-		.uk-card-title {
-			font-weight: $bold;
-			font-size: 44px;
-			line-height: 1.2;
-		}
-
-		@media (max-width: $breakpointLarge) {
-			.uk-card-body {
-				padding: 45px 40px 40px;
-			}
-		}
-
-		@media (max-width: $breakpointMedium) {
-			.uk-card-body {
-				padding: 35px 20px;
-
-				p,
-				li {
-					font-size: 18px;
-				}
-
-				.uk-button-large {
-					margin-top: 10px;
-					padding-right: 45px;
-					padding-left: 20px;
-					line-height: 37px;
-
-					&::before {
-						right: 15px;
-					}
-				}
-			}
-
-			.uk-card-title {
-				font-size: 40px;
-			}
-		}
-
-		@media (max-width: $breakpointSmall) {
-			.uk-card:not(:last-of-type) {
-				margin-bottom: 40px;
-			}
-
-			.uk-card-body {
-				padding: 20px 20px 35px;
-			}
-
-			.uk-card-title {
-				font-size: 38px;
-			}
-		}
-	}
-
 	&-form {
-		max-width: 585px;
+		max-width: 730px;
+		padding-right: 20px;
 
 		h2 {
 			margin-bottom: 5px;
@@ -902,6 +617,10 @@
 		.nb-placeholder {
 			color: $blue;
 			padding-left: 20px;
+		}
+
+		.nb-placeholder {
+			margin-bottom: 5px;
 		}
 
 		label {
@@ -968,6 +687,14 @@
 		.g-recaptcha {
 			margin-bottom: 1rem;
 		}
+
+		@media (max-width: $breakpointLarge) {
+			max-width: 510px;
+		}
+
+		@media (max-width: $breakpointMedium) {
+			max-width: 100%;
+		}
 	}
 
 	&-embed {
@@ -1008,71 +735,4 @@
 	font-family: $ubuntu;
 	font-weight: $light;
 	font-size: 14px;
-}
-
-.nb-switcher {
-	margin-bottom: 70px;
-
-	h2 {
-		font-size: 54px;
-		margin-bottom: 55px;
-	}
-
-	.listings-nav {
-		margin-bottom: 0;
-
-		li {
-			&:first-of-type {
-				button {
-					padding: 29px 38px 28px 125px;
-					border-bottom-left-radius: 50px;
-					border-top-left-radius: 50px;
-
-					span::before {
-						left: 55px;
-					}
-				}
-			}
-
-			&:last-of-type {
-				button {
-					padding: 29px 125px 28px 38px;
-					border-bottom-right-radius: 50px;
-					border-top-right-radius: 50px;
-
-					span::before {
-						right: 55px;
-					}
-				}
-			}
-
-			button {
-				background-color: $white;
-				box-shadow: 0 5px 15px 0 rgba($black, .1);
-				color: $blue;
-				position: relative;
-				font-size: 20px;
-				font-weight: $bold;
-				text-transform: uppercase;
-
-				span::before {
-					color: inherit;
-					position: absolute;
-					top: 56%;
-					transform: translateY(-50%);
-					font-size: 36px;
-				}
-
-				@include hover {
-					background-color: $blue;
-					color: $white;
-				}
-			}
-
-			&.uk-active button {
-				background-color: $blue;
-				color: $white;
-			}
-		}
-	}
 }

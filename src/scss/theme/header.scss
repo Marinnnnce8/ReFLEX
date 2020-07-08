@@ -16,14 +16,33 @@
 
     .navbar-top {
         width: 100%;
-        padding: 0 40px 15px 0;
+        padding: 0 40px 12px 0;
 
         a {
             font-size: 14px;
             color: $blue;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $blue;
+                content: '';
+                transition: $nbSec ease-in-out;
+                opacity: 0;
+                bottom: 2px;
+            }
 
             &:not(:first-of-type) {
                 margin-left: 25px;
+            }
+
+            @include hover {
+                &::before {
+                    opacity: 1;
+                }
             }
         }
 

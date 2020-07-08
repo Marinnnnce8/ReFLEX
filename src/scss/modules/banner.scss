@@ -3,7 +3,7 @@
 .banner {
 	min-height: 500px;
 	position: relative;
-	padding-top: 295px;
+	// padding-top: 295px;
 
 	.circle {
 		overflow: hidden;
@@ -29,6 +29,13 @@
 		}
 	}
 
+	h1 {
+		margin-bottom: 0;
+		+ * {
+			margin-top: 25px;
+		}
+	}
+
 	.font-dots-bg {
 		top: 295px;
 	}
@@ -51,6 +58,7 @@
 	}
 
 	&.banner-large {
+		margin-top: 142px;
 		min-height: 650px;
 
 		.uk-container {
@@ -58,9 +66,13 @@
 		}
 
 		.circle {
-			overflow-y: visible;
+			overflow: visible;
 			bottom: auto;
 			height: 1300px;
+
+			span {
+				top: -85px;
+			}
 		}
 	}
 
@@ -68,20 +80,33 @@
 		padding-top: 0;
 
 		.banner-inner {
-			min-height: 500px;
+			// min-height: 500px;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+
 			.uk-breadcrumb {
 				margin-top: 5px;
 			}
 		}
 	}
+
+	@media (max-width: $breakpointSmall) {
+		.font-info {
+			bottom: 30px;
+			right: 40px;
+		}
+	}
 }
 
 .banner-inner {
+	min-height: 500px;
 	position: relative;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 55px;
 }
 
 .banner-container {
@@ -105,6 +130,23 @@
 	h1 {
 		color: $white;
 		font-size: 54px;
-		margin-bottom: 55px;
+	}
+
+	@media (max-width: $breakpointSmallMax) {
+		.uk-container {
+			max-width: calc(100% - 60px);
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		padding: 0 15px;
+
+		.uk-container {
+			max-width: calc(100% - 30px);
+		}
+
+		h1 {
+			font-size: 40px;
+		}
 	}
 }
