@@ -69,6 +69,7 @@
 
     .uk-card-media-left {
         border-radius: 20px;
+        min-height: 260px;
     }
 
     .uk-card-title {
@@ -118,7 +119,6 @@
             position: absolute;
             left: 0;
             padding-right: 55px;
-            padding-left: 33px;
 
             &::before {
                 right: 28px;
@@ -144,6 +144,16 @@
     @media (max-width: $breakpointSmallMax) {
         >li .uk-card-media-top {
             border-radius: 20px;
+        }
+
+        .uk-card.uk-grid-collapse .uk-card-body {
+            padding-left: 0;
+            .uk-card-title {
+                margin-top: 25px;
+            }
+            .uk-button {
+                left: 0;
+            }
         }
     }
 
@@ -268,7 +278,7 @@
         padding-right: 60px;
     }
 
-    @media (max-width: $breakpointMedium) {
+    @media (max-width: $breakpointSmallMax) {
         >li .uk-card {
             border-radius: 20px;
         }

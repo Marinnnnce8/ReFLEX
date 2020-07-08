@@ -43,10 +43,14 @@
 		</nav>
 	</header> -->
 
-	<main class='nb-main nb-main-internal uk-margin-large-bottom'>
+	<main class='nb-main nb-main-internal uk-margin-large-bottom' id="scroll-target">
 		<div
 			class='uk-position-fixed uk-position-center-right uk-position-fixed uk-visible@m nb-block-contact nb-block-contact-widget'>
 			<a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
+		</div>
+		<div
+			class='uk-position-fixed uk-position-bottom-right uk-position-fixed nb-block-contact nb-block-contact-widget'>
+			<a href="#scroll-target" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
 		</div>
 		<div class="banner">
 			<span class="font-dots-bg left" role="presentation"></span>
@@ -61,7 +65,7 @@
 		</div>
 		<nav>
 			<div class="uk-container">
-				<ul class="uk-flex uk-flex-center">
+				<ul class="uk-flex uk-flex-between uk-flex-wrap">
 					<li><a href="./index.html">Home</a></li>
 					<li><a href="#">Jump link two</a></li>
 					<li><a href="#">Jump link three</a></li>
@@ -717,88 +721,93 @@
 		</div>
 	</main>
 
-	<footer class='footer'>
-		<div class="footer-circle" role="presentation">
-			<span></span>
-		</div>
-		<div class="footer-top">
-			<div class='uk-container'>
-				<div data-uk-grid class="uk-child-width-1-2@m">
-					<div class="uk-flex uk-flex-column uk-flex-between">
-						<div class="uk-flex uk-flex-middle">
-							<a href="#" class="logo" aria-label="Visit ReFLEX Orkney"><img src="./img/white-logo.png"
-									alt="ReFLEX Orkney Logo"></a>
-							<ul class="uk-flex uk-flex-middle footer-socials">
-								<li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
-								<li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
-								<li><a href="#" class="font-linkedin" aria-label="Visit our Linkedin page"></a></li>
-								<li><a href="#" class="font-youtube" aria-label="Visit our Youtube page"></a></li>
-							</ul>
-						</div>
-						<div class="uk-flex">
-							<a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
-							<a href="#" class="uk-button uk-button-default"><span>Newsletter sign up</span></a>
-						</div>
-					</div>
-					<div class="uk-child-width-1-2@m" data-uk-grid>
-						<div class="uk-flex uk-flex-column uk-flex-between footer-contact">
-							<div>
-								<h3>Contact us</h3>
-								<strong>ReFLEX Orkney Limited</strong>
-								<span>The Charles Clouston Building ORIC,</span>
-								<span>Back Rd, Stromness KW16 3AW</span>
-							</div>
-							<ul>
-								<li><a href='tel:+4401856480008' class="link"><span>T:</span> +44(0)1856 48000</a></li>
-								<li><a href='mailto:info@reflexorkney.co.uk' class="link"><span>E:</span>
-										info@reflexorkney.co.uk</a></li>
-							</ul>
-						</div>
-						<div class="uk-flex uk-flex-column uk-flex-between footer-contact">
-							<div>
-								<h3>Media centre</h3>
-								<ul>
-									<li><a href='#'>Image library</a></li>
-									<li><a href='#'>Video library</a></li>
-									<li><a href='#'>Press contacts</a></li>
-								</ul>
-							</div>
-							<div>
-								<a href="#" class="uk-button uk-button-default"><span>Your feedback</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class='uk-container'>
-				<div class="uk-child-width-1-2@m" data-uk-grid>
-					<div class='nb-copyright uk-margin-small-bottom'>&copy; 2020 ReFLEX Orkney Limited. Company number
-						SC648457.</div>
-					<div class="uk-flex uk-flex-between uk-padding-remove">
-						<div class='nb-legal uk-margin-small-bottom'>
-							<ul>
-								<li><a href='#'>Terms &amp; Conditions</a></li>
-								<li><a href='#'>Privacy Policy</a></li>
-								<li><a href='#'>Disclaimer</a></li>
-							</ul>
-						</div>
 
-						<div class='nb-credit'>Website by
-							<a href='https://www.nbcommunication.com/'
-								title='NB Communication - Digital Marketing Agency'>
-								NB <img
-									src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-									data-src='https://brand.nbcommunication.com/logo/web/nb.png'
-									alt='NB Communication Ltd Logo' data-uk-img>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <footer class='footer footer-enquiry'>
+        <div class="footer-circle" role="presentation">
+            <span></span>
+        </div>
+        <div class="footer-wrap">
+            <div class="footer-top">
+                <div class='uk-container'>
+                    <div data-uk-grid class="uk-child-width-1-2@m">
+                        <div class="uk-flex uk-flex-column uk-flex-between">
+                            <div class="uk-flex uk-flex-middle">
+                                <a href="#" class="logo" aria-label="Visit ReFLEX Orkney"><img
+                                        src="./img/white-logo.png" alt="ReFLEX Orkney Logo"></a>
+                                <ul class="uk-flex uk-flex-middle footer-socials">
+                                    <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+                                    <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+                                    <li><a href="#" class="font-linkedin" aria-label="Visit our Linkedin page"></a></li>
+                                    <li><a href="#" class="font-youtube" aria-label="Visit our Youtube page"></a></li>
+                                </ul>
+                            </div>
+                            <div class="uk-flex">
+                                <a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
+                                <a href="#" class="uk-button uk-button-default"><span>Newsletter sign up</span></a>
+                            </div>
+                        </div>
+                        <div class="uk-child-width-1-2@m" data-uk-grid>
+                            <div class="uk-flex uk-flex-column uk-flex-between footer-contact">
+                                <div>
+                                    <h3>Contact us</h3>
+                                    <strong>ReFLEX Orkney Limited</strong>
+                                    <span>The Charles Clouston Building ORIC,</span>
+                                    <span>Back Rd, Stromness KW16 3AW</span>
+                                </div>
+                                <ul>
+                                    <li><a href='tel:+4401856480008' class="link"><span>T:</span> +44(0)1856 48000</a>
+                                    </li>
+                                    <li><a href='mailto:info@reflexorkney.co.uk' class="link"><span>E:</span>
+                                            info@reflexorkney.co.uk</a></li>
+                                </ul>
+                            </div>
+                            <div class="uk-flex uk-flex-column uk-flex-between footer-contact">
+                                <div>
+                                    <h3>Media centre</h3>
+                                    <ul>
+                                        <li><a href='#'>Image library</a></li>
+                                        <li><a href='#'>Video library</a></li>
+                                        <li><a href='#'>Press contacts</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="#" class="uk-button uk-button-default"><span>Your feedback</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class='uk-container'>
+                    <div class="uk-child-width-1-2@m" data-uk-grid>
+                        <div class='nb-copyright uk-margin-small-bottom'>&copy; 2020 ReFLEX Orkney Limited. Company
+                            number
+                            SC648457.</div>
+                        <div class="uk-flex uk-flex-between uk-padding-remove">
+                            <div class='nb-legal uk-margin-small-bottom'>
+                                <ul>
+                                    <li><a href='#'>Terms &amp; Conditions</a></li>
+                                    <li><a href='#'>Privacy Policy</a></li>
+                                    <li><a href='#'>Disclaimer</a></li>
+                                </ul>
+                            </div>
+
+                            <div class='nb-credit'>Website by
+                                <a href='https://www.nbcommunication.com/'
+                                    title='NB Communication - Digital Marketing Agency'>
+                                    NB <img
+                                        src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+                                        data-src='https://brand.nbcommunication.com/logo/web/nb.png'
+                                        alt='NB Communication Ltd Logo' data-uk-img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 	<script src='js/uikit.min.js'></script>
 	<script src='js/uikit-icons.min.js'></script>

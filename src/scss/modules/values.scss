@@ -1,4 +1,9 @@
 .values {
+    margin-left: -45px;
+
+    >* {
+        padding-left: 45px;
+    }
 
     .uk-card-title,
     .uk-position-cover,
@@ -33,7 +38,7 @@
     }
 
     .uk-card {
-        box-shadow: 0 -3px 44px 3px rgba($black, .1);
+        box-shadow: 0 19px 45px 20px rgba($black, .1);
         min-height: 200px;
         border-radius: 20px;
         padding: 25px 40px;
@@ -118,9 +123,16 @@
     }
 
     @media (max-width: $breakpointMedium) {
+        margin-left: -25px;
+
+        >* {
+            padding-left: 25px;
+        }
+
 
         .uk-card {
             padding: 15px 20px;
+
             p {
                 font-size: 18px;
             }

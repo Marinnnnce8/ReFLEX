@@ -18,7 +18,7 @@
 				border-radius: 25px;
 				font-weight: $bold;
 				font-size: 18px;
-				padding: 9px 20px;
+				padding: 7px 20px 10px;
 				text-align: center;
 				display: inline-block;
 
@@ -27,6 +27,12 @@
 					color: $blue-darker;
 				}
 			}
+		}
+	}
+
+	@media (max-width: $breakpointLarge) {
+		nav ul {
+			justify-content: center;
 		}
 	}
 
@@ -57,7 +63,7 @@
 .nb-block-contact-widget {
 	z-index: 3;
 
-	.uk-button {
+	.uk-button-primary {
 		transform: rotate(-90deg) translateY(130%);
 		min-width: 215px;
 		font-size: 20px;
@@ -85,6 +91,48 @@
 
 			&::before {
 				color: $lime;
+			}
+		}
+	}
+
+	.uk-button:not(.uk-button-primary) {
+		background-color: $blue-up;
+		border-radius: 50%;
+		width: 55px;
+		height: 55px;
+		padding: 0;
+		margin-right: 9px;
+		margin-bottom: 8px;
+
+		&::before {
+			content: font-char($chevron-up);
+			transform: translate(-50%, -50%);
+			top: 57%;
+			left: 40%;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		@include hover {
+			background-color: $blue;
+
+			&::before {
+				color: $white;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		.uk-button:not(.uk-button-primary) {
+			width: 48px;
+			height: 48px;
+
+			&::before {
+				top: 54%;
+				left: 38%;
+				font-size: 14px;
 			}
 		}
 	}
@@ -306,6 +354,33 @@
 					margin-left: 35px;
 				}
 			}
+
+			@media (max-width: $breakpointMedium) {
+				flex-direction: column;
+
+				.uk-button {
+					min-width: 200px;
+					max-width: 400px;
+
+					&:not(:first-of-type) {
+						margin-left: 0;
+						margin-top: 15px;
+					}
+				}
+			}
+
+			@media (max-width: $breakpointSmall) {
+				.uk-button {
+					padding-right: 35px;
+					padding-left: 30px;
+					font-size: 18px;
+
+					&::before {
+						right: 20px;
+						font-size: 16px;
+					}
+				}
+			}
 		}
 
 		.uk-accordion {
@@ -377,7 +452,6 @@
 				margin-top: 0;
 
 				p {
-					font-weight: $light;
 					font-size: 18px;
 					color: $blue;
 				}
@@ -423,7 +497,7 @@
 				}
 
 				.uk-accordion-content {
-					padding: 0 20px 45px 40px;
+					padding: 0 20px 15px 40px;
 				}
 			}
 		}
@@ -606,9 +680,12 @@
 			.uk-slidenav {
 				width: 48px;
 				height: 48px;
+				margin: 5px;
+				max-width: calc(100% - (5px * 2));
+				transform: translateY(-50%) translateY(-5px);
 
 				&::before {
-					font-size: 24px;
+					font-size: 20px;
 				}
 			}
 		}
@@ -644,6 +721,18 @@
 			h3 {
 				color: $blue;
 			}
+
+			p {
+				a {
+					&::after {
+						background-color: $blue;
+					}
+
+					@include hover {
+						color: $lime;
+					}
+				}
+			}
 		}
 
 		.uk-card-primary .uk-card-body {
@@ -653,6 +742,20 @@
 			li,
 			h3 {
 				color: $lime;
+			}
+
+			p {
+				a {
+					color: $lime;
+
+					&::after {
+						background-color: $lime;
+					}
+
+					@include hover {
+						color: $blue;
+					}
+				}
 			}
 		}
 
@@ -726,7 +829,7 @@
 				li {
 					font-size: 18px;
 				}
-				
+
 				.uk-button-large {
 					margin-top: 10px;
 					padding-right: 45px;
@@ -734,7 +837,7 @@
 					line-height: 37px;
 
 					&::before {
-						right: 12px;
+						right: 15px;
 					}
 				}
 			}
@@ -745,8 +848,12 @@
 		}
 
 		@media (max-width: $breakpointSmall) {
+			.uk-card:not(:last-of-type) {
+				margin-bottom: 40px;
+			}
+
 			.uk-card-body {
-				padding: 20px;
+				padding: 20px 20px 35px;
 			}
 
 			.uk-card-title {

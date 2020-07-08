@@ -16,6 +16,10 @@ h1 {
 	font-size: 67px;
 	color: $blue;
 	line-height: 1.05;
+
+	@media (max-width: $breakpointSmall) {
+		font-size: 54px;
+	}
 }
 
 h2 {
@@ -145,6 +149,19 @@ blockquote {
 			height: 50px;
 		}
 	}
+
+	@media (max-width: $breakpointSmall) {
+		padding: 25px 0 10px 50px;
+
+		.font-quote {
+			width: 120px;
+			height: 120px;
+
+			&::before {
+				font-size: 68px;
+			}
+		}
+	}
 }
 
 ul:not(.uk-list-disc) {
@@ -176,7 +193,9 @@ ol {
 			font-weight: normal;
 		}
 
-		ul, .uk-list-disc, ol {
+		ul,
+		.uk-list-disc,
+		ol {
 			margin-top: 15px;
 			margin-left: 10px;
 		}

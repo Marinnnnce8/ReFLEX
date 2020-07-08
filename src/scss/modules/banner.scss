@@ -63,6 +63,20 @@
 			height: 1300px;
 		}
 	}
+
+	&.services {
+		padding-top: 0;
+
+		.banner-inner {
+			min-height: 500px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			.uk-breadcrumb {
+				margin-top: 5px;
+			}
+		}
+	}
 }
 
 .banner-inner {
