@@ -91,6 +91,8 @@ $breakpointXsmallMax: ($breakpointSmall - 1);
 $breakpointSmallMax: ($breakpointMedium - 1);
 $breakpointMediumMax: ($breakpointLarge - 1);
 $breakpointLargeMax: ($breakpointXlarge - 1);
+$breakpointTabletPortrait: 768px;
+$breakpointTabletPortraitMin: ($breakpointTabletPortrait - 1);
 $breakpointMobile: 479px;
 $breakpointMobileSmall: 374px;
 

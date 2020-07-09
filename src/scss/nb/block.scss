@@ -578,7 +578,8 @@
 
 	&-form {
 		max-width: 730px;
-		padding-right: 20px;
+		padding-right: 5px;
+		padding-bottom: 280px;
 
 		h2 {
 			margin-bottom: 5px;
@@ -690,10 +691,12 @@
 
 		@media (max-width: $breakpointLarge) {
 			max-width: 510px;
+			padding-right: 20px;
 		}
 
 		@media (max-width: $breakpointMedium) {
 			max-width: 100%;
+			padding-right: 0;
 		}
 	}
 
@@ -735,4 +738,21 @@
 	font-family: $ubuntu;
 	font-weight: $light;
 	font-size: 14px;
+	margin-top: 10px;
+
+	@media (max-width: $breakpointLarge) {
+		&.desc {
+			display: none;
+		}
+	}
+
+	@media (max-width: $breakpointTabletPortraitMin) {
+		max-width: 260px;
+		text-align: center;
+		padding: 0 20px;
+		margin-top: 0;
+	}
+	@media (max-width: $breakpointXsmallMax) {
+		max-width: 300px;
+	}
 }

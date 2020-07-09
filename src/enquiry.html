@@ -105,7 +105,7 @@
         </div>
     </header>
 
-    <main class='nb-main uk-margin-large-bottom'>
+    <main class='nb-main'>
         <div class='uk-position-fixed uk-position-center-right nb-widget'>
             <a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
         </div>
@@ -130,217 +130,189 @@
         </section>
 
         <section class="enquiry-section uk-position-relative">
-            <div class="uk-container">
-                <!-- <div class="uk-flex uk-flex-between"> -->
-                <div>
-                    <div class='nb-block nb-block-form uk-clearfix' data-nb-block='form'>
-
-                        <form id='nb-form-nb-styleguide' class='uk-form-stacked InputfieldForm' method='post'
-                            data-uk-nb-form novalidate data-colspacing='1'>
-                            <fieldset>
-                                <legend>Are you interested in ReFLEX for your home or business?</legend>
-                                <div class="uk-margin uk-flex uk-flex-column">
-                                    <label><input class="uk-checkbox" type="checkbox" checked>Home<span
-                                            class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">Business<span
-                                            class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">Both<span
-                                            class="checkmark"></span></label>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Please select the services you are interested in:</legend>
-                                <div class="uk-margin uk-flex uk-flex-column">
-                                    <label><input class="uk-checkbox" type="checkbox" checked>Energy tariff<span
-                                            class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">Electric
-                                        vechicles<span class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">Electric vechicle
-                                        chargers<span class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">Batteries<span
-                                            class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">Heating<span
-                                            class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">Car Club<span
-                                            class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">All of the above<span
-                                            class="checkmark"></span></label>
-                                    <label><input class="uk-checkbox" type="checkbox">I don't know<span
-                                            class="checkmark"></span></label>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Your details:</legend>
-                                <div class='uk-grid-small' data-uk-grid>
-                                    <div class='Selectfield SelectfieldText nb-form-required uk-width-1-2@m uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_opetion'>
-                                        <div class='nb-form-content'>
-                                            <div class='Selectfield SelectfieldText nb-form-required uk-width-1-1 uk-first-column'
-                                                id='wrap_nb-form-nb-styleguide_option'>
-                                                <div data-uk-form-custom="target: > * > span:first-child">
-                                                    <select>
-                                                        <option value="">- Select -</option>
-                                                        <option value="1">Option 01</option>
-                                                        <option value="2">Option 02</option>
-                                                        <option value="3">Option 03</option>
-                                                        <option value="4">Option 04</option>
-                                                    </select>
-                                                    <button class="uk-button uk-button-default" type="button"
-                                                        tabindex="-1">
-                                                        <span></span>
-                                                        <span class="font-chevron-down" role="presentation"></span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_first_name'>
-                                        <label class='uk-form-label' for='nb-form-nb-styleguide_first_name'>First
-                                            Name</label>
-                                        <div class='nb-form-content'>
-                                            <div role='alert'></div>
-                                            <input id='nb-form-nb-styleguide_first_name'
-                                                class='uk-input InputfieldMaxWidth' name='first_name' type='text'
-                                                maxlength='2048' aria-invalid='true' title='Please enter first name'
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_last_name'>
-                                        <label class='uk-form-label' for='nb-form-nb-styleguide_last_name'>Last
-                                            Name</label>
-                                        <div class='nb-form-content'>
-                                            <div role='alert'></div>
-                                            <input id='nb-form-nb-styleguide_last_name'
-                                                class='uk-input InputfieldMaxWidth' name='last_name' type='text'
-                                                maxlength='2048' aria-invalid='true' title='Please enter last name'
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class='Inputfield InputfieldText uk-width-1-2@s uk-grid-margin uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_tel'>
-                                        <label class='uk-form-label' for='nb-form-nb-styleguide_tel'>Phone
-                                            number</label>
-                                        <span class='nb-placeholder'>Optional</span>
-                                        <div class='nb-form-content'>
-                                            <div role='alert'></div>
-                                            <input id='nb-form-nb-styleguide_tel' class='uk-input InputfieldMaxWidth'
-                                                name='tel' type='tel' maxlength='2048'>
-                                        </div>
-                                    </div>
-                                    <div class='Inputfield InputfieldEmail nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_email'>
-                                        <label class='uk-form-label' for='nb-form-nb-styleguide_email'>Email
-                                            Address</label>
-                                        <div class='nb-form-content'>
-                                            <div role='alert'></div>
-                                            <input id='nb-form-nb-styleguide_email' name='email'
-                                                class='uk-input InputfieldMaxWidth' type='email' maxlength='512'
-                                                aria-invalid='true' title='Please enter a valid email address' required>
-                                        </div>
-                                    </div>
-                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_address'>
-                                        <label class='uk-form-label' for='nb-form-nb-styleguide_address'>Address</label>
-                                        <div class='nb-form-content'>
-                                            <div role='alert'></div>
-                                            <input id='nb-form-nb-styleguide_address' name='address'
-                                                class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
-                                                aria-invalid='true' title='Please enter a valid address' required>
-                                        </div>
-                                    </div>
-                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_town'>
-                                        <label class='uk-form-label' for='nb-form-nb-styleguide_town'>Town /
-                                            City</label>
-                                        <div class='nb-form-content'>
-                                            <div role='alert'></div>
-                                            <input id='nb-form-nb-styleguide_town' name='town'
-                                                class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
-                                                aria-invalid='true' title='Please enter a valid town / city' required>
-                                        </div>
-                                    </div>
-                                    <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_country'>
-                                        <label class='uk-form-label' for='nb-form-nb-styleguide_country'>Country</label>
-                                        <span class='nb-placeholder'>Optional</span>
-                                        <div class='nb-form-content'>
-                                            <div role='alert'></div>
-                                            <input id='nb-form-nb-styleguide_country' name='country'
-                                                class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
-                                                aria-invalid='true' title='Please enter a valid country'>
-                                        </div>
-                                    </div>
-                                    <div class="uk-margin-remove-top uk-margin-small-bottom">
-                                        <p>By submitting this form, I confirm I have read the <a href="#">privacy
-                                                policy</a>
-                                            and agree to be contacted by third parties on behalf of ReFLEX.</p>
-                                    </div>
-                                    <div class='Inputfield InputfieldSubmit uk-width-1-1 uk-grid-margin uk-first-column'
-                                        id='wrap_nb-form-nb-styleguide_submit'>
-                                        <div class='nb-form-content'>
-                                            <div role='alert'></div>
-                                            <button id='nb-form-nb-styleguide_submit'
-                                                class='uk-button uk-button-secondary' name='submit' value='Send'
-                                                type='submit'><span class='ui-button-text'>Send
-                                                    message</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <!-- <div>
-                        <div class="uk-container" data-uk-sticky="offset: 100; bottom: true;">
-                            <div class="uk-card uk-card-default uk-card-body">
-                                <h3 class="uk-card-title">Contact us</h3>
-                                <p>We're available Monday to Friday, 9am to 6pm (closed on bank holidays).</p>
-                                <h4>General enquiry</h4>
-                                <ul>
-                                    <li><a href='mailto:info@reflexorkney.co.uk'
-                                            class='font-mail'>info@reflexorkney.co.uk</a></li>
-                                    <li><a href="tel:+4401856480008" class="font-phone">+44(0)1856 48000</a></li>
-                                </ul>
-                                <h4>Media enquiry</h4>
-                                <p>Contact Lisa MacKenzie on:</p>
-                                <ul>
-                                    <li><a href='mailto:lisa.mackenzie@emec.org.uk'
-                                            class='font-mail'>lisa.mackenzie@emec.org.uk</a></li>
-                                    <li><a href="tel:+4401856 852207" class="font-phone">+44(0)1856 852207</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <div class="uk-container" data-uk-sticky="offset: 100; bottom: true;">
+            <div class="uk-container" data-uk-sticky="bottom: #sticky-border;">
                 <div class="uk-card uk-card-default uk-card-body">
                     <h3 class="uk-card-title">Contact us</h3>
                     <p>We're available Monday to Friday, 9am to 6pm (closed on bank holidays).</p>
                     <h4>General enquiry</h4>
                     <ul>
-                        <li><a href='mailto:info@reflexorkney.co.uk'
-                                class='font-mail'>info@reflexorkney.co.uk</a></li>
+                        <li><a href='mailto:info@reflexorkney.co.uk' class='font-mail'>info@reflexorkney.co.uk</a></li>
                         <li><a href="tel:+4401856480008" class="font-phone">+44(0)1856 48000</a></li>
                     </ul>
                     <h4>Media enquiry</h4>
                     <p>Contact Lisa MacKenzie on:</p>
                     <ul>
-                        <li><a href='mailto:lisa.mackenzie@emec.org.uk'
-                                class='font-mail'>lisa.mackenzie@emec.org.uk</a></li>
+                        <li><a href='mailto:lisa.mackenzie@emec.org.uk' class='font-mail'>lisa.mackenzie@emec.org.uk</a>
+                        </li>
                         <li><a href="tel:+4401856 852207" class="font-phone">+44(0)1856 852207</a></li>
                     </ul>
+                </div>
+            </div>
+            <div class="uk-container">
+                <div class='nb-block nb-block-form uk-clearfix' data-nb-block='form'>
+
+                    <form id='nb-form-nb-styleguide' class='uk-form-stacked InputfieldForm' method='post'
+                        data-uk-nb-form novalidate data-colspacing='1'>
+                        <fieldset>
+                            <legend>Are you interested in ReFLEX for your home or business?</legend>
+                            <div class="uk-margin uk-flex uk-flex-column">
+                                <label><input class="uk-checkbox" type="checkbox" checked>Home<span
+                                        class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">Business<span
+                                        class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">Both<span
+                                        class="checkmark"></span></label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Please select the services you are interested in:</legend>
+                            <div class="uk-margin uk-flex uk-flex-column">
+                                <label><input class="uk-checkbox" type="checkbox" checked>Energy tariff<span
+                                        class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">Electric
+                                    vechicles<span class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">Electric vechicle
+                                    chargers<span class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">Batteries<span
+                                        class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">Heating<span
+                                        class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">Car Club<span
+                                        class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">All of the above<span
+                                        class="checkmark"></span></label>
+                                <label><input class="uk-checkbox" type="checkbox">I don't know<span
+                                        class="checkmark"></span></label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Your details:</legend>
+                            <div class='uk-grid-small' data-uk-grid>
+                                <div class='Selectfield SelectfieldText nb-form-required uk-width-1-2@m uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_opetion'>
+                                    <div class='nb-form-content'>
+                                        <div class='Selectfield SelectfieldText nb-form-required uk-width-1-1 uk-first-column'
+                                            id='wrap_nb-form-nb-styleguide_option'>
+                                            <div data-uk-form-custom="target: > * > span:first-child">
+                                                <select>
+                                                    <option value="">- Select -</option>
+                                                    <option value="1">Option 01</option>
+                                                    <option value="2">Option 02</option>
+                                                    <option value="3">Option 03</option>
+                                                    <option value="4">Option 04</option>
+                                                </select>
+                                                <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                                    <span></span>
+                                                    <span class="font-chevron-down" role="presentation"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_first_name'>
+                                    <label class='uk-form-label' for='nb-form-nb-styleguide_first_name'>First
+                                        Name</label>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_first_name' class='uk-input InputfieldMaxWidth'
+                                            name='first_name' type='text' maxlength='2048' aria-invalid='true'
+                                            title='Please enter first name' required>
+                                    </div>
+                                </div>
+                                <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_last_name'>
+                                    <label class='uk-form-label' for='nb-form-nb-styleguide_last_name'>Last
+                                        Name</label>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_last_name' class='uk-input InputfieldMaxWidth'
+                                            name='last_name' type='text' maxlength='2048' aria-invalid='true'
+                                            title='Please enter last name' required>
+                                    </div>
+                                </div>
+                                <div class='Inputfield InputfieldText uk-width-1-2@s uk-grid-margin uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_tel'>
+                                    <label class='uk-form-label' for='nb-form-nb-styleguide_tel'>Phone
+                                        number</label>
+                                    <span class='nb-placeholder'>Optional</span>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_tel' class='uk-input InputfieldMaxWidth'
+                                            name='tel' type='tel' maxlength='2048'>
+                                    </div>
+                                </div>
+                                <div class='Inputfield InputfieldEmail nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_email'>
+                                    <label class='uk-form-label' for='nb-form-nb-styleguide_email'>Email
+                                        Address</label>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_email' name='email'
+                                            class='uk-input InputfieldMaxWidth' type='email' maxlength='512'
+                                            aria-invalid='true' title='Please enter a valid email address' required>
+                                    </div>
+                                </div>
+                                <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_address'>
+                                    <label class='uk-form-label' for='nb-form-nb-styleguide_address' id="sticky-border">Address</label>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_address' name='address'
+                                            class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
+                                            aria-invalid='true' title='Please enter a valid address' required>
+                                    </div>
+                                </div>
+                                <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_town'>
+                                    <label class='uk-form-label' for='nb-form-nb-styleguide_town'>Town /
+                                        City</label>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_town' name='town'
+                                            class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
+                                            aria-invalid='true' title='Please enter a valid town / city' required>
+                                    </div>
+                                </div>
+                                <div class='Inputfield InputfieldText nb-form-required uk-width-1-2@s uk-grid-margin uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_country'>
+                                    <label class='uk-form-label' for='nb-form-nb-styleguide_country'>Country</label>
+                                    <span class='nb-placeholder'>Optional</span>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_country' name='country'
+                                            class='uk-input InputfieldMaxWidth' type='text' maxlength='512'
+                                            aria-invalid='true' title='Please enter a valid country'>
+                                    </div>
+                                </div>
+                                <div class="uk-margin-remove-top uk-margin-small-bottom">
+                                    <p class="uk-margin-small-left">By submitting this form, I confirm I have read the
+                                        <a href="#">privacy
+                                            policy</a>
+                                        and agree to be contacted by third parties on behalf of ReFLEX.</p>
+                                </div>
+                                <div class='Inputfield InputfieldSubmit uk-width-1-1 uk-grid-margin uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_submit'>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <button id='nb-form-nb-styleguide_submit' class='uk-button uk-button-secondary'
+                                            name='submit' value='Send' type='submit'><span class='ui-button-text'>Send
+                                                message</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class='footer footer-enquiry'>
-        <div class="footer-circle" role="presentation">
-            <span></span>
-        </div>
+    <div class="page-bottom-circle" role="presentation">
+        <span></span>
+    </div>
+    <footer class='footer'>
         <div class="footer-wrap">
             <div class="footer-top">
                 <div class='uk-container'>

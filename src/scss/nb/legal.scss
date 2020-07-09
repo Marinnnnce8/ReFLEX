@@ -1,5 +1,6 @@
 .nb-legal {
 	padding: $nbGutterSmall 0;
+	margin-bottom: 10px;
 
 	ul {
 		margin: 0;
@@ -43,5 +44,9 @@
 				display: block;
 			}
 		}
+	}
+	@media (max-width: $breakpointLarge) {
+		padding: 0;
+		margin: 0;
 	}
 }

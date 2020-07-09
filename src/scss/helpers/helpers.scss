@@ -31,9 +31,11 @@ body {
 		top: 0;
 		position: absolute;
 	}
+
 	&.left {
 		left: 0;
 	}
+
 	&.right {
 		right: 0;
 	}
@@ -42,6 +44,65 @@ body {
 .multiply {
 	background-blend-mode: multiply;
 	mix-blend-mode: multiply;
+}
+
+
+.page-bottom-circle {
+	min-height: calc(50vw + 450px);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: -1;
+
+	>span {
+		width: calc(50vw + 160px);
+		height: calc(50vw + 160px);
+		content: '';
+		position: absolute;
+		border: 55px solid $white;
+		border-radius: 50%;
+		background: linear-gradient(75deg, $blue-circle 24%, $blue-circle-light 100%);
+		box-shadow: 0 0 0 300px $blue-lightest;
+		z-index: 0;
+		left: -160px;
+		bottom: -210px;
+	}
+
+	@media (max-width: $breakpointLarge) and (min-width: $breakpointMedium) {
+		>span {
+			width: calc(50vw + 225px);
+			height: calc(50vw + 225px);
+			bottom: -95px;
+		}
+	}
+
+	@media (max-width: $breakpointMedium) and (min-width: $breakpointSmall) {
+		min-height: calc(100vw + 630px);
+
+		>span {
+			bottom: 430px;
+			width: calc(100vw - 40px);
+			height: calc(100vw - 40px);
+			box-shadow: 0 0 0 220px $blue-lightest;
+			left: 20px;
+			border: 0;
+			background: $blue-lightest;
+		}
+	}
+
+	@media (max-width: $breakpointXsmallMax) {
+		min-height: 1610px;
+		>span {
+			width: 735px;
+			height: 735px;
+			bottom: 620px;
+			left: 50%;
+			box-shadow: 0 0 0 230px $blue-lightest;
+			transform: translateX(-50%);
+		}
+	}
 }
 
 // Theming and colors iterator

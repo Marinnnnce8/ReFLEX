@@ -22,4 +22,7 @@
 			width: auto;
 		}
 	}
+	@media (max-width: $breakpointLarge) {
+		margin-left: 50px;
+	}
 }

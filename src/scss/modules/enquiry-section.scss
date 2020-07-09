@@ -1,5 +1,9 @@
 .enquiry-section {
-    padding: 70px 0 0;
+    padding: 65px 0 0;
+
+    .nb-block-form {
+        padding-bottom: 335px;
+    }
 
     .uk-card {
         border-radius: 20px;
@@ -88,7 +92,7 @@
         label {
             text-transform: none;
             font-size: 20px;
-            margin-bottom: 13px;
+            margin-bottom: 15px;
             position: relative;
             padding-left: 50px;
             cursor: pointer;
@@ -158,12 +162,12 @@
     }
 
     @media (max-width: $breakpointMedium) {
-        position: relative;
-        left: auto;
+        position: relative !important; // sass-lint:disable-line no-important
+        left: auto !important; // sass-lint:disable-line no-important
         transform: none;
         padding-left: 40px;
         padding-right: 40px;
-        top: auto;
+        top: auto !important; // sass-lint:disable-line no-important
 
         .uk-card-body {
             position: relative;
