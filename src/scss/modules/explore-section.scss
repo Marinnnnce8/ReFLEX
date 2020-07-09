@@ -37,6 +37,57 @@
         background-color: $blue-lightest;
         border-radius: 50%;
     }
+
+    @media (max-width: $breakpointMedium) {
+        margin-top: 155px;
+        min-height: 0;
+        padding-bottom: 935px;
+
+        .circle {
+            width: 100%;
+            top: auto;
+            bottom: 160px;
+
+            .uk-background-cover {
+                width: 735px;
+                height: 735px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 45px;
+                bottom: 0;
+                top: auto;
+            }
+        }
+
+        .circle-bckg {
+            width: 1010px;
+            height: 1010px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            top: auto;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        padding-bottom: 530px;
+        margin-top: 80px;
+
+        .circle {
+            bottom: 90px;
+
+            .uk-background-cover {
+                width: 425px;
+                height: 425px;
+                border-width: 25px;
+            }
+        }
+
+        .circle-bckg {
+            width: 580px;
+            height: 580px;
+        }
+    }
 }
 
 .explore-map {
@@ -87,11 +138,29 @@
         // display: none;
         background-color: $lime;
     }
+
+    @media (max-width: $breakpointMedium) {
+        width: 100%;
+        max-width: 66%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        top: 50%;
+    }
+
+    @media (max-width: $breakpointSmall) {
+        max-width: 70%;
+    }
 }
 
 .explore-wrap {
     >.uk-flex {
         min-height: calc(50vw + 510px);
+    }
+
+    @media (max-width: $breakpointMedium) {
+        >.uk-flex {
+            min-height: 0;
+        }
     }
 }
 
@@ -103,6 +172,7 @@
 
     h2 {
         font-size: 54px;
+        line-height: 1;
     }
 
     .uk-text-lead {
@@ -122,6 +192,81 @@
 
             &::before {
                 content: font-char($map);
+            }
+        }
+    }
+
+    @media (max-width: $breakpointLarge) and (min-width: $breakpointMedium) {
+        a {
+            padding-right: 30px;
+            padding-left: 15px;
+
+            &::before {
+                font-size: 12px;
+                right: 10px;
+            }
+
+            &:first-of-type {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointMedium) {
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+
+        >.uk-flex {
+            justify-content: center;
+        }
+
+        h2 {
+            font-size: 44px;
+            margin-bottom: 15px;
+        }
+
+        .uk-text-lead {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 18px;
+
+            &:last-of-type {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        h2 {
+            font-size: 34px;
+        }
+
+        .uk-text-lead {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        >.uk-flex {
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                padding: 4px 40px 6px 30px;
+                max-width: 280px;
+                width: 100%;
+
+                &:first-of-type {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
             }
         }
     }

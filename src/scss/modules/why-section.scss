@@ -11,6 +11,23 @@
         position: absolute;
         top: 0;
     }
+
+    @media (max-width: $breakpointMedium) {
+        padding-bottom: 700px;
+        margin-top: -40px;
+
+        .circle {
+            width: 100%;
+            height: 100%;
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        padding-bottom: 590px;
+        margin-top: 0;
+    }
 }
 
 .circle-bckg {
@@ -23,6 +40,21 @@
     z-index: -1;
     position: absolute;
     content: '';
+
+    @media (max-width: $breakpointMedium) {
+        width: 735px;
+        height: 735px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 0;
+    }
+
+    @media (max-width: $breakpointSmall) {
+        width: 605px;
+        height: 605px;
+    }
 }
 
 .why-colab {
@@ -75,12 +107,106 @@
 
     img {
         width: auto;
+        max-width: 235px;
+    }
+
+    @media (max-width: $breakpointXlarge) {
+        padding: 20px 100px 0;
+
+        >div {
+            &:first-of-type {
+                margin-bottom: 35px;
+
+                ul {
+                    margin-top: 35px;
+                }
+            }
+        }
+
+        img {
+            max-width: 160px;
+        }
+    }
+
+    @media (max-width: $breakpointLarge) {
+        width: calc(50vw + 50px);
+        height: calc(50vw + 50px);
+        padding: 30px 100px 0;
+
+        img {
+            max-width: 120px;
+        }
+    }
+
+    @media (max-width: $breakpointMedium) {
+        padding: 30px 80px 0;
+        width: 510px;
+        height: 510px;
+        left: 50%;
+        top: auto;
+        bottom: 110px;
+        transform: translate(-50%, 0);
+
+        span {
+            font-size: 10.84px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        padding: 25px 50px 0;
+        width: 420px;
+        height: 420px;
+        bottom: 90px;
+
+        >div {
+            &:first-of-type {
+                margin-bottom: 20px;
+
+                ul {
+                    margin-top: 30px;
+
+                    &:not(:first-of-type) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                ul {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        img {
+            max-height: 40px;
+            width: auto;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 10px;
+        }
     }
 }
 
 .why-wrap {
     >.uk-flex {
         min-height: calc(50vw + 255px);
+    }
+
+    @media (max-width: $breakpointMedium) {
+        >.uk-flex {
+            flex-direction: row;
+            min-height: 0;
+        }
     }
 }
 
@@ -89,6 +215,7 @@
     position: relative;
     width: 39%;
     padding-right: 24px;
+    z-index: 1;
 
     h2 {
         font-size: 54px;
@@ -105,5 +232,51 @@
     a {
         padding-right: 82px;
         padding-left: 35px;
+    }
+
+    @media (max-width: $breakpointMedium) {
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+
+        h2 {
+            font-size: 44px;
+        }
+
+        .uk-text-lead {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+
+        h2 {
+            font-size: 34px;
+        }
+
+        .uk-text-lead {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        p+p {
+            margin-top: 15px;
+        }
+
+        .uk-button {
+            width: 100%;
+            max-width: 280px;
+            padding: 4px 20px 6px 30px;
+        }
     }
 }
