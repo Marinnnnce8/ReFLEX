@@ -3,7 +3,6 @@
 .banner {
 	min-height: 500px;
 	position: relative;
-	// padding-top: 295px;
 
 	.circle {
 		overflow: hidden;
@@ -31,7 +30,8 @@
 
 	h1 {
 		margin-bottom: 0;
-		+ * {
+
+		+* {
 			margin-top: 25px;
 		}
 	}
@@ -80,7 +80,6 @@
 		padding-top: 0;
 
 		.banner-inner {
-			// min-height: 500px;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
@@ -91,10 +90,47 @@
 		}
 	}
 
+	@media (max-width: $breakpointLarge) {
+		.circle {
+			span {
+				box-shadow: 0 0 0 115px $blue-lightest;
+				border: 30px solid $lime;
+				top: 90px;
+				right: -170px;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointMedium) {
+		&.banner-large {
+			min-height: 500px;
+		}
+	}
+
 	@media (max-width: $breakpointSmall) {
 		.font-info {
 			bottom: 30px;
 			right: 40px;
+		}
+		&.banner-large {
+			min-height: 340px;
+		}
+	}
+
+	@media (max-width: $breakpointMobile) {
+		h1 {
+			font-size: 44px;
+		}
+
+		.circle {
+			span {
+				box-shadow: 0 0 0 75px $blue-lightest;
+				border: 15px solid $lime;
+				top: 60px;
+				right: auto;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 	}
 }
@@ -107,6 +143,11 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	padding-bottom: 55px;
+
+	@media (max-width: $breakpointMobile) {
+		min-height: 550px;
+		padding-bottom: 30px;
+	}
 }
 
 .banner-container {
@@ -136,6 +177,10 @@
 		.uk-container {
 			max-width: calc(100% - 60px);
 		}
+		h1 {
+			font-size: 44px;
+			max-width: 85%;
+		}
 	}
 
 	@media (max-width: $breakpointSmall) {
@@ -146,7 +191,7 @@
 		}
 
 		h1 {
-			font-size: 40px;
+			font-size: 34px;
 		}
 	}
 }
