@@ -1,5 +1,7 @@
 .nb-switcher {
-    margin-bottom: 70px;
+    margin: -150px 0 70px;
+    position: relative;
+    z-index: 1;
 
     h2 {
         font-size: 54px;
@@ -70,6 +72,7 @@
     }
 
     @media (max-width: $breakpointMediumMax) {
+        margin: -20px 0 70px;
         h2 {
             font-size: 44px;
         }
