@@ -16,14 +16,22 @@ $black: #000;
 $lime: #b8ef00;
 $lime-mid: #96c300;
 $lime-dark: #a2d200;
+$lime-map: #cbfa2c;
+$lime-pastel: #aad237;
+$lime-pastel-2: #9fce00;
+$lime-shiny: #b7ee00;
 $lime-success: #e3f2b1;
 $blue: #003b73;
+$blue-sea: #225b91;
 $blue-ies-icon: #003a71;
 $blue-ies-triangle: #003675;
 $blue-ies-text: #003a72;
 $blue-circle: #00264e;
 $blue-circle-light: #003f79;
 $blue-mid: #004583;
+$blue-navy: #012c57;
+$blue-navy-2: #1b4268;
+$blue-navy-3: #496886;
 $blue-pastel: #63819e;
 $blueish: #dde7f4;
 $blue-pastel-light: #cad7e4;
@@ -34,12 +42,14 @@ $blue-lightest-2: #eaeff4;
 $blue-lightest-3: #f7f9fb;
 $blue-lightest-4: #f5f8fa;
 $blue-lightest-5: #194d7f;
+$blue-map: #0a4985;
 $blue-up: #e5eaf2;
 $blue-table-light: #f2f5f8;
 $gray-light: #c8cdd2;
 $gray-mid: #ededed;
 $orange-warning: #f5e0c8;
 $red-danger: #fbcccb;
+$lilac: #c2e0ff;
 
 $site-colors: (
 	'black': $black,
@@ -148,4 +158,4 @@ $rounded-corner-right: 'rounded-corner-right';
 $radius: 'radius';
 $map: 'map';
 $chevron-up: 'chevron-up';
-
+$close: 'close';

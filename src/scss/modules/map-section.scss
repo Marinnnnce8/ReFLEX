@@ -1,0 +1,773 @@
+.map-section {
+    padding-top: 50px;
+    @media (max-width: $breakpointSmallMax) {
+        .uk-container:last-of-type {
+            padding: 0;
+        }
+    }
+}
+
+.map-box {
+    background-color: $lime-map;
+    border-radius: 50px;
+    margin-top: 50px;
+    overflow: hidden;
+
+    >.uk-grid .uk-switcher {
+        background-color: $lime-map;
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        border-radius: 0;
+    }
+}
+
+.map-switch {
+    button {
+        background-color: $lime-map;
+        color: $blue-map;
+        font-size: 20px;
+        font-weight: $bold;
+        position: relative;
+        font-family: $font-default;
+
+        @include hover {
+            background-color: $blue-map;
+            color: $lime-map;
+        }
+    }
+
+    li {
+        &:first-of-type button {
+            border-top-left-radius: 50px;
+            padding: 27px 36px 28px 75px;
+
+            &::before {
+                position: absolute;
+                left: 42px;
+                font-size: 18px;
+                top: 50%;
+                transform: translateY(-36%);
+            }
+        }
+
+        &:last-of-type button {
+            padding: 27px 36px 28px 70px;
+            border-right: 1px solid $lime-pastel;
+
+            &::before {
+                position: absolute;
+                left: 34px;
+                font-size: 20px;
+                top: 50%;
+                transform: translateY(-30%);
+            }
+        }
+
+        &.uk-active button {
+            background-color: $blue-map;
+            color: $lime-map;
+        }
+
+        &.uk-active:last-of-type button {
+            border-right: 1px solid $blue-map;
+        }
+    }
+
+    @media (max-width: $breakpointXlarge) {
+        button {
+            font-size: 18px;
+            max-width: 290px;
+            width: 100%;
+        }
+
+        li {
+            &:first-of-type button::before {
+                font-size: 16px;
+            }
+
+            &:last-of-type button::before {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointLarge) {
+        button {
+            font-size: 16px;
+        }
+
+        li {
+            &:first-of-type button {
+                padding: 27px 25px 28px 35px;
+
+                &::before {
+                    font-size: 14px;
+                    left: 15px;
+                }
+            }
+
+            &:last-of-type button {
+                padding: 27px 25px 28px 35px;
+
+                &::before {
+                    font-size: 14px;
+                    left: 15px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        button {
+            font-size: 14px;
+            max-width: 100%;
+        }
+
+        li {
+            &:first-of-type {
+                width: 50%;
+                button {
+                    padding: 18px;
+                    border-radius: 0;
+
+                    &::before {
+                        font-size: 24px;
+                        position: relative;
+                        display: block;
+                        left: auto;
+                        top: auto;
+                        transform: none;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                width: 50%;
+                button {
+                    padding: 17px;
+                    border: 0;
+
+                    &::before {
+                        font-size: 26px;
+                        position: relative;
+                        display: block;
+                        left: auto;
+                        top: auto;
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map-filter {
+    padding-right: 40px;
+
+    span,
+    button {
+        color: $blue-mid;
+        font-size: 16px;
+        font-weight: $bold;
+    }
+
+    .uk-button {
+        border-color: $blue-mid;
+        padding: 0 50px 2px 25px;
+        overflow: visible;
+
+        &::before {
+            content: font-char($chevron-down);
+            top: 60%;
+            right: 20px;
+            font-size: 12px;
+            font-weight: $bold;
+        }
+
+        &::after {
+            width: calc(100% + 4px);
+            top: 100%;
+            background-color: $blue-map;
+            height: 20px;
+            left: -2px;
+            opacity: 0;
+            transition: .1s;
+
+        }
+
+        @include hover {
+            background-color: $blue-map;
+            color: $white;
+        }
+
+        &.uk-open {
+            background-color: $blue-map;
+            color: $white;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+            &::before {
+                transform: translateY(-66%) rotate(180deg);
+            }
+
+            &::after {
+                opacity: 1;
+                transition: $nbSec ease-in-out;
+            }
+        }
+    }
+
+    .uk-inline {
+        padding-left: 15px;
+
+        &:last-of-type .uk-dropdown {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 0;
+
+            button {
+                padding: 15px;
+            }
+        }
+    }
+
+    .uk-dropdown {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: $blue-map;
+        padding: 25px 8px;
+
+        button {
+            font-weight: normal;
+            color: $white;
+            border-radius: 50px;
+            padding: 15px 15px 15px 70px;
+            position: relative;
+            width: 100%;
+            text-align: left;
+
+            &::after {
+                width: 9px;
+                height: 14px;
+                border: solid $white;
+                border-width: 0 3px 3px 0;
+                position: absolute;
+                content: '';
+                right: 25px;
+                top: 50%;
+                transform: translateY(-65%) rotate(45deg);
+                opacity: 0;
+            }
+
+            @include hover {
+                background-color: $blue-sea;
+            }
+
+            &.checked::after {
+                opacity: 1;
+            }
+        }
+
+        .uk-svg {
+            max-height: 30px;
+            width: auto;
+            position: absolute;
+            left: 23px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    @media (max-width: $breakpointSmallMax) {
+        background-color: $blue-map;
+        justify-content: center;
+        padding: 10px 20px;
+        .uk-button {
+            border-color: $lime-map;
+            color: $lime-map;
+            width: 100%;
+        }
+        .uk-inline {
+            padding: 0;
+            max-width: 130px;
+            width: 100%;
+            &:last-of-type {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.map {
+    background-color: $blue-map;
+    height: 740px;
+    max-height: 740px;
+    overflow-y: auto;
+    position: relative;
+    border-bottom: 40px solid $lime-map;
+}
+
+.map-info-boxes {
+    position: relative;
+    z-index: 1;
+}
+
+.map-info {
+    box-shadow: 0 6px 11px 1px rgba($blue-map, .5);
+    border: 2px solid $lime-shiny;
+    background-color: $blue-map;
+    border-radius: 20px;
+    max-width: 395px;
+
+    &::before {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 16px 15px 0;
+        border-color: $lime-shiny transparent transparent;
+    }
+
+    .uk-card-media-top {
+        min-height: 185px;
+        position: relative;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        button {
+            width: 40px;
+            height: 40px;
+            background-color: $blue-map;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+            &::before {
+                position: absolute;
+                color: $white;
+                font-size: 16px;
+                top: 57%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                content: font-char($close);
+                font-family: 'svgicons';
+                display: block;
+            }
+        }
+    }
+
+    .uk-card-body {
+        padding: 25px;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    span,
+    p,
+    .uk-card-title {
+        color: $white;
+    }
+
+    .uk-card-title {
+        font-size: 20px;
+        position: relative;
+        padding-left: 45px;
+
+        .uk-svg {
+            max-height: 29px;
+            position: absolute;
+            left: 0;
+            width: auto;
+        }
+    }
+
+    span {
+        font-size: 10px;
+        max-width: 100px;
+        width: 100%;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: $bold;
+        margin: 0;
+        font-family: $font-default;
+        line-height: 1.2;
+
+        >a {
+            font-weight: $bold;
+            color: $lime-map;
+        }
+    }
+
+    .uk-card-footer {
+        padding: 0;
+
+        a {
+            padding: 0 25px 0 0;
+            position: relative;
+            font-weight: $bold;
+            color: $white;
+            z-index: 0;
+
+            &::before,
+            &::after {
+                position: absolute;
+            }
+
+            &::before {
+                right: 0;
+                font-size: 12px;
+                color: $lime-map;
+                content: font-char($arrow-right);
+                font-family: 'svgicons';
+                top: 5px;
+            }
+
+            &::after {
+                left: 0;
+                height: 2px;
+                background-color: $lime-map;
+                width: calc(100% - 25px);
+                bottom: 0;
+                content: '';
+                z-index: -1;
+                transition: $nbSec ease-in-out;
+            }
+
+            abbr {
+                text-decoration: none;
+            }
+
+            @include hover {
+                color: $white;
+
+                &::after {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.map-pins {
+
+    //needs to be deleted - just li style
+    li {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        &:nth-of-type(2) {
+            left: 75%;
+            top: 75%;
+        }
+    }
+
+    //needs to be deleted - just li style
+
+    button {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        background-color: $lime;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        box-shadow: 0 6px 11px 1px rgba($blue, .1);
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            top: 83%;
+            border-width: 23px 18px 0;
+            border-color: $lime transparent transparent;
+            border-style: solid;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+        }
+
+        @include hover {
+            box-shadow: 0 6px 11px 1px rgba($blue, .3);
+        }
+
+        &.lilac {
+            background-color: $lilac;
+
+            &::after {
+                border-color: $lilac transparent transparent;
+            }
+        }
+    }
+
+    .uk-svg {
+        max-height: 22px;
+        top: 13px;
+        left: 50%;
+        width: auto;
+    }
+}
+
+.map-keys {
+    border-radius: 15px;
+    background-color: $blue-map;
+    box-shadow: 0 6px 11px 1px $blue;
+    padding: 20px 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    max-width: 200px;
+    width: 100%;
+
+    span,
+    button {
+        color: $white;
+    }
+
+    >span {
+        font-size: 14px;
+        font-weight: $bold;
+    }
+
+    ul {
+        padding-left: 0;
+        margin: 5px 0 0;
+    }
+
+    li {
+        width: 50%;
+
+        button {
+            font-size: 12px;
+            font-family: $font-default;
+            padding-top: 40px;
+            position: relative;
+            max-width: 70px;
+
+            span {
+                border-radius: 50%;
+                width: 26px;
+                height: 25px;
+                display: block;
+                box-shadow: 0 16px 12px 1px rgba($blue-darker, .2);
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    top: 77%;
+                    border-width: 15px 11px 0;
+                    border-style: solid;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: block;
+                }
+            }
+        }
+
+        &:first-of-type {
+            button span {
+                background-color: $lime;
+
+                &::after {
+                    border-color: $lime transparent transparent;
+                }
+            }
+        }
+
+        &:last-of-type {
+            button span {
+                background-color: $lilac;
+
+                &::after {
+                    border-color: $lilac transparent transparent;
+                }
+            }
+        }
+    }
+}
+
+.map-region {
+    position: relative;
+    .map {
+        max-width: 880px;
+        width: 100%;
+    }
+}
+
+.map-sidebar {
+    background-color: $blue-navy;
+    width: 100%;
+    max-width: 320px;
+    padding: 40px 13px;
+    position: relative;
+
+    >button {
+        width: 40px;
+        height: 40px;
+        background-color: $blue-map;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 50%;
+
+        &::before {
+            font-size: 12px;
+            color: $white;
+            font-family: 'svgicons';
+            content: font-char($close);
+            font-weight: $bold;
+            position: absolute;
+            left: 50%;
+            top: 57%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    h3 {
+        margin: 0;
+        color: $white;
+    }
+    @media (max-width: $breakpointSmallMax) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        z-index: 1;
+    }
+}
+
+.map-sidebar-nav {
+    padding: 0;
+    margin-bottom: 0;
+
+    button {
+        background-color: $blue-navy-2;
+        font-family: $font-default;
+        font-size: 13px;
+        font-weight: $bold;
+        color: $white;
+        padding: 16px 8px;
+        width: 100%;
+
+        @include hover {
+            background-color: $blue-navy-3;
+        }
+    }
+
+    li {
+        width: 50%;
+
+        &:first-of-type button {
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        &:last-of-type button {
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        &.uk-active button {
+            background-color: $blue-navy-3;
+        }
+    }
+}
+
+.map-assets {
+    .uk-grid li {
+        padding-bottom: 5px;
+        margin-top: 30px;
+    }
+
+    span {
+        &:first-of-type {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background-color: $blue-navy-2;
+            position: relative;
+        }
+
+        &:nth-of-type(2),
+        &:last-of-type {
+            color: $white;
+            font-weight: $bold;
+            line-height: 1;
+        }
+    }
+
+    .number {
+        font-size: 44px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .uk-svg {
+        max-height: 37px;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .chargers .uk-svg path {
+        &:last-of-type {
+            fill: $lime;
+        }
+    }
+
+    .car-clubs .uk-svg path {
+        &.st0 {
+            fill: $lime;
+        }
+
+        &.st1 {
+            fill: $white;
+        }
+    }
+}
+
+.map-total {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    background-color: $white;
+    border: 3px solid $lime-pastel-2;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: $bold;
+    line-height: 40px;
+    color: $blue;
+    box-shadow: 0 2px 15px 10px rgba($blue-darker, .5);
+}

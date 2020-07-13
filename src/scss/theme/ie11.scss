@@ -1,3 +1,21 @@
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    .process-container::before {
+        width: calc(100% - 50px);
+        left: 50px;
+    }
+    .process-middle {
+        display: none;
+    }
 
+    .values .uk-svg {
+        height: 75px;
+        display: inline-block;
+    }
+    .values .uk-card {
+        @include hover {
+            .uk-svg {
+                height: 40px;
+            }
+        }
+    }
 }

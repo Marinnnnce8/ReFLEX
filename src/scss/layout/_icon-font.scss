@@ -39,131 +39,137 @@
 	@if $filename == calendar {
 		$char: '\E004';
 	}
-	@if $filename == car-club {
+	@if $filename == car-battery {
 		$char: '\E005';
 	}
-	@if $filename == charger {
+	@if $filename == car-club {
 		$char: '\E006';
 	}
-	@if $filename == chevron-down {
+	@if $filename == charger {
 		$char: '\E007';
 	}
-	@if $filename == chevron-left {
+	@if $filename == chevron-down {
 		$char: '\E008';
 	}
-	@if $filename == chevron-right {
+	@if $filename == chevron-left {
 		$char: '\E009';
 	}
-	@if $filename == chevron-up {
+	@if $filename == chevron-right {
 		$char: '\E00A';
 	}
-	@if $filename == comment {
+	@if $filename == chevron-up {
 		$char: '\E00B';
 	}
-	@if $filename == dots-bg {
+	@if $filename == close {
 		$char: '\E00C';
 	}
-	@if $filename == drive {
+	@if $filename == comment {
 		$char: '\E00D';
 	}
-	@if $filename == electric-vehicles {
+	@if $filename == dots-bg {
 		$char: '\E00E';
 	}
-	@if $filename == envelope {
+	@if $filename == drive {
 		$char: '\E00F';
 	}
-	@if $filename == external-link {
+	@if $filename == electric-vehicles {
 		$char: '\E010';
 	}
-	@if $filename == facebook {
+	@if $filename == envelope {
 		$char: '\E011';
 	}
-	@if $filename == FLEX-wifi-waves {
+	@if $filename == external-link {
 		$char: '\E012';
 	}
-	@if $filename == heating-smaller {
+	@if $filename == facebook {
 		$char: '\E013';
 	}
-	@if $filename == heating {
+	@if $filename == FLEX-wifi-waves {
 		$char: '\E014';
 	}
-	@if $filename == home-batteries {
+	@if $filename == heating-smaller {
 		$char: '\E015';
 	}
-	@if $filename == info {
+	@if $filename == heating {
 		$char: '\E016';
 	}
-	@if $filename == instagram-logo {
+	@if $filename == home-batteries {
 		$char: '\E017';
 	}
-	@if $filename == join {
+	@if $filename == info {
 		$char: '\E018';
 	}
-	@if $filename == lightbulb {
+	@if $filename == instagram-logo {
 		$char: '\E019';
 	}
-	@if $filename == linkedin {
+	@if $filename == join {
 		$char: '\E01A';
 	}
-	@if $filename == mail {
+	@if $filename == lightbulb {
 		$char: '\E01B';
 	}
-	@if $filename == map {
+	@if $filename == linkedin {
 		$char: '\E01C';
 	}
-	@if $filename == newsletter {
+	@if $filename == mail {
 		$char: '\E01D';
 	}
-	@if $filename == orkney-map-regions {
+	@if $filename == map {
 		$char: '\E01E';
 	}
-	@if $filename == phone {
+	@if $filename == newsletter {
 		$char: '\E01F';
 	}
-	@if $filename == play-button-arrowhead {
+	@if $filename == orkney-map-regions {
 		$char: '\E020';
 	}
-	@if $filename == quote {
+	@if $filename == phone {
 		$char: '\E021';
 	}
-	@if $filename == radius {
+	@if $filename == play-button-arrowhead {
 		$char: '\E022';
 	}
-	@if $filename == road {
+	@if $filename == quote {
 		$char: '\E023';
 	}
-	@if $filename == rounded-corner-left {
+	@if $filename == radius {
 		$char: '\E024';
 	}
-	@if $filename == rounded-corner-right {
+	@if $filename == road {
 		$char: '\E025';
 	}
-	@if $filename == signup {
+	@if $filename == rounded-corner-left {
 		$char: '\E026';
 	}
-	@if $filename == solar-energy {
+	@if $filename == rounded-corner-right {
 		$char: '\E027';
 	}
-	@if $filename == tachometer {
+	@if $filename == signup {
 		$char: '\E028';
 	}
-	@if $filename == turbine-tidal {
+	@if $filename == solar-energy {
 		$char: '\E029';
 	}
-	@if $filename == turbine-wind {
+	@if $filename == tachometer {
 		$char: '\E02A';
 	}
-	@if $filename == twitter {
+	@if $filename == turbine-tidal {
 		$char: '\E02B';
 	}
-	@if $filename == user-home {
+	@if $filename == turbine-wind {
 		$char: '\E02C';
 	}
-	@if $filename == wpforms {
+	@if $filename == twitter {
 		$char: '\E02D';
 	}
-	@if $filename == youtube {
+	@if $filename == user-home {
 		$char: '\E02E';
+	}
+	@if $filename == wpforms {
+		$char: '\E02F';
+	}
+	@if $filename == youtube {
+		$char: '\E030';
 	}
 
 	@return $char;
@@ -196,6 +202,9 @@
 .font-calendar {
 	@include font(calendar);
 }
+.font-car-battery {
+	@include font(car-battery);
+}
 .font-car-club {
 	@include font(car-club);
 }
@@ -213,6 +222,9 @@
 }
 .font-chevron-up {
 	@include font(chevron-up);
+}
+.font-close {
+	@include font(close);
 }
 .font-comment {
 	@include font(comment);
