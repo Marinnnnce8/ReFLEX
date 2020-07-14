@@ -105,18 +105,20 @@
         </div>
     </header>
 
-    <main class='nb-main uk-margin-large-bottom'>
+    <main class='nb-main'>
         <div class='uk-position-fixed uk-position-center-right nb-widget'>
             <a href="#" class="uk-button uk-button-primary"><span>Get in touch</span></a>
         </div>
         <div class='uk-position-bottom-right scroll-button'>
             <a href="#scroll-target" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
         </div>
-        <section class="banner">
-            <span class="font-dots-bg left" role="presentation"></span>
+        <section class="banner banner-map">
+            <span class="font-dots-bg left uk-visible@m" role="presentation"></span>
             <div class="circle" role="presentation">
-                <span class="uk-background-cover" data-uk-img
-                    style="background-image: url('./img/explore-orkney.jpg');"></span>
+                <span class="uk-background-cover multiply" data-uk-img
+                    style="background-image: url('./img/explore-orkney.jpg');">
+                <img src="./img/orkney-map-regions.svg" data-uk-svg alt="map image">
+                </span>
             </div>
             <div class='uk-container'>
                 <div class="banner-inner">
@@ -131,7 +133,7 @@
 
         <section class="map-section">
             <div class="uk-container">
-                <div class="uk-width-2-3@s">
+                <div class="uk-width-2-3@m">
                     <p>To best optimise the page and provide the visitor with useful and informative text, it would be
                         good
                         to have a sentence or two included here. These words are here to provide the reader with a basic
@@ -181,8 +183,9 @@
                     <ul class='uk-switcher switcher-container'>
                         <li>
                             <div class="map">
+                                <span class="map-total">7</span>
                                 <div>
-                                    <ul class="map-info-boxes">
+                                    <ul class="map-info-boxes uk-position-cover">
                                         <li class="map-info uk-card" id="map-info-1">
                                             <div class="uk-card-media-top uk-background-cover" data-uk-img
                                                 style="background-image: url('./img/map-info-1.jpg');">
@@ -191,7 +194,7 @@
                                             </div>
                                             <div class="uk-card-body">
                                                 <h3 class="uk-card-title"><img src="./img/charger.svg" data-uk-svg
-                                                        alt="image"> Charger</h3>
+                                                        alt="image">Charger</h3>
                                                 <ul>
                                                     <li class="uk-flex">
                                                         <span class="uk-text-uppercase">Location</span>
@@ -238,8 +241,8 @@
                                     <div class="map-keys uk-text-center">
                                         <span class="uk-text-uppercase">Map key</span>
                                         <ul class="uk-flex">
-                                            <li><button><span role="presentation"></span>ReFLEX assets</button></li>
-                                            <li><button><span role="presentation"></span>Non-ReFLEX assets</button></li>
+                                            <li><span><span role="presentation"></span>ReFLEX assets</span></li>
+                                            <li><span><span role="presentation"></span>Non-ReFLEX assets</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -257,8 +260,8 @@
                                     <div class="map-keys uk-text-center">
                                         <span class="uk-text-uppercase">Map key</span>
                                         <ul class="uk-flex">
-                                            <li><button><span role="presentation"></span>ReFLEX assets</button></li>
-                                            <li><button><span role="presentation"></span>Non-ReFLEX assets</button></li>
+                                            <li><span><span role="presentation"></span>ReFLEX assets</span></li>
+                                            <li><span><span role="presentation"></span>Non-ReFLEX assets</span></li>
                                         </ul>
                                     </div>
                                 </div>

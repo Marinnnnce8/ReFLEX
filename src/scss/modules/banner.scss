@@ -1,7 +1,7 @@
 //----------  banner
 //------------------------------------------------------------------------------
 .banner {
-	min-height: 500px;
+	// min-height: 500px;
 	position: relative;
 
 	.circle {
@@ -90,6 +90,27 @@
 		}
 	}
 
+	&.banner-map {
+		.circle {
+			.uk-background-cover {
+				background-color: rgba($blue-mid, .9);
+			}
+
+			.uk-svg {
+				max-height: 300px;
+				width: auto;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 60px;
+
+				path {
+					fill: $white;
+				}
+			}
+		}
+	}
+
 	@media (max-width: $breakpointLarge) {
 		.circle {
 			span {
@@ -99,30 +120,65 @@
 				right: -170px;
 			}
 		}
+
+		&.banner-map {
+			.circle .uk-svg {
+				transform: translateX(-60%);
+			}
+		}
 	}
 
 	@media (max-width: $breakpointMedium) {
-		&.banner-large {
-			min-height: 500px;
-		}
-	}
-
-	@media (max-width: $breakpointSmall) {
-		.font-info {
-			bottom: 30px;
-			right: 40px;
-		}
-		&.banner-large {
-			min-height: 340px;
-		}
-	}
-
-	@media (max-width: $breakpointMobile) {
 		h1 {
 			font-size: 44px;
 		}
 
+		&.banner-large {
+			min-height: 500px;
+		}
+
+		&.banner-map {
+			.circle .uk-svg {
+				transform: translateX(-75%);
+				max-height: 230px;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		h1 {
+			font-size: 34px;
+
+			+* {
+				margin-top: 5px;
+			}
+		}
+
+		.font-info {
+			bottom: 30px;
+			right: 40px;
+		}
+
+		&.banner-large {
+			min-height: 340px;
+		}
+
+		&.banner-map {
+			.circle .uk-svg {
+				max-height: 200px;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointMobile) {
+		&:not(.banner-large) {
+			text-align: center;
+		}
+
 		.circle {
+			position: relative;
+			min-height: 430px;
+
 			span {
 				box-shadow: 0 0 0 75px $blue-lightest;
 				border: 15px solid $lime;
@@ -130,6 +186,34 @@
 				right: auto;
 				left: 50%;
 				transform: translateX(-50%);
+				height: 280px;
+				width: 280px;
+				display: block;
+				position: relative;
+			}
+		}
+
+		&.banner-large {
+			margin: 120px 0 10px;
+			h1 {
+				margin-bottom: 20px;
+			}
+			.circle {
+				position: absolute;
+			}
+		}
+
+		&.banner-map {
+			.circle {
+				span {
+					top: 70px;
+				}
+
+				.uk-svg {
+					transform: translate(-50%, -50%);
+					top: 50%;
+					max-height: 165px;
+				}
 			}
 		}
 	}
@@ -145,8 +229,9 @@
 	padding-bottom: 55px;
 
 	@media (max-width: $breakpointMobile) {
-		min-height: 550px;
-		padding-bottom: 30px;
+		padding-bottom: 0;
+		min-height: auto;
+		margin-top: -70px;
 	}
 }
 
@@ -177,6 +262,7 @@
 		.uk-container {
 			max-width: calc(100% - 60px);
 		}
+
 		h1 {
 			font-size: 44px;
 			max-width: 85%;

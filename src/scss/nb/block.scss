@@ -48,6 +48,11 @@
 			}
 		}
 	}
+	@media (max-width: $breakpointMobile) {
+		nav {
+			margin-top: 20px;
+		}
+	}
 }
 
 .nb-main-internal {

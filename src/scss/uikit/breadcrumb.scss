@@ -1,13 +1,14 @@
 // uikit/breadcrumb
 .uk-breadcrumb {
-    margin: 30px 0 55px;
-    &:last-child {
-        margin-bottom: 55px;
-    }
+	margin: 30px 0 55px;
+
+	&:last-child {
+		margin-bottom: 55px;
+	}
 
 	* {
-        font-family: $ubuntu;
-        font-weight: $light;
+		font-family: $ubuntu;
+		font-weight: $light;
 		color: $blue;
 		font-size: 14px;
 	}
@@ -21,22 +22,23 @@
 	}
 
 	a {
-        position: relative;
-        &::after {
-            position: absolute;
-            left: 0;
-            bottom: 4px;
-            height: 1px;
-            background-color: $blue;
-            content: '';
-            width: 100%;
-            transition: inherit;
-        }
+		position: relative;
+
+		&::after {
+			position: absolute;
+			left: 0;
+			bottom: 4px;
+			height: 1px;
+			background-color: $blue;
+			content: '';
+			width: 100%;
+			transition: inherit;
+		}
 
 		@include hover {
-            &::after {
-                opacity: 0;
-            }
+			&::after {
+				opacity: 0;
+			}
 		}
 	}
 
@@ -57,6 +59,15 @@
 	@media (max-width: $breakpointXsmallMax) {
 		li:not(:first-of-type):not(:last-of-type) {
 			display: none;
+		}
+	}
+
+	@media (max-width: $breakpointMobile) {
+		margin: 5px 0 20px;
+		justify-content: center;
+
+		&:last-child {
+			margin-bottom: 20px;
 		}
 	}
 }

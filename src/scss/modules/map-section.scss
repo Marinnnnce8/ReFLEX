@@ -1,16 +1,28 @@
 .map-section {
-    padding-top: 50px;
+    padding: 50px 0 290px;
+    position: relative;
+    z-index: 1;
+
     @media (max-width: $breakpointSmallMax) {
-        .uk-container:last-of-type {
-            padding: 0;
+        padding: 0 0 280px;
+
+        .uk-container {
+            &:first-of-type p {
+                font-size: 16px;
+            }
+
+            &:last-of-type {
+                padding: 0;
+            }
         }
     }
 }
 
 .map-box {
     background-color: $lime-map;
+    box-shadow: 0 20px 30px 10px rgba($black, .2);
     border-radius: 50px;
-    margin-top: 50px;
+    margin-top: 35px;
     overflow: hidden;
 
     >.uk-grid .uk-switcher {
@@ -127,6 +139,7 @@
         li {
             &:first-of-type {
                 width: 50%;
+
                 button {
                     padding: 18px;
                     border-radius: 0;
@@ -144,8 +157,9 @@
 
             &:last-of-type {
                 width: 50%;
+
                 button {
-                    padding: 17px;
+                    padding: 17px 13px;
                     border: 0;
 
                     &::before {
@@ -188,16 +202,16 @@
         &::after {
             width: calc(100% + 4px);
             top: 100%;
-            background-color: $blue-map;
+            background-color: $blue-open;
             height: 20px;
             left: -2px;
             opacity: 0;
             transition: .1s;
-
+            box-shadow: 0 5px 12px rgba($black, .15);
         }
 
         @include hover {
-            background-color: $blue-map;
+            background-color: $blue-open;
             color: $white;
         }
 
@@ -226,6 +240,7 @@
         &:last-of-type .uk-dropdown {
             border-top-left-radius: 20px;
             border-top-right-radius: 0;
+            top: 44px !important; // sass-lint:disable-line no-important
 
             button {
                 padding: 15px;
@@ -248,6 +263,7 @@
             position: relative;
             width: 100%;
             text-align: left;
+            font-family: $font-default;
 
             &::after {
                 width: 9px;
@@ -280,19 +296,40 @@
             transform: translateY(-50%);
         }
     }
+
     @media (max-width: $breakpointSmallMax) {
         background-color: $blue-map;
         justify-content: center;
         padding: 10px 20px;
+
         .uk-button {
             border-color: $lime-map;
             color: $lime-map;
             width: 100%;
+
+            @include hover {
+                color: $lime-map;
+
+                &::before {
+                    color: $lime-map;
+                }
+            }
+
+            &.uk-open {
+                background-color: $lime-map;
+                color: $blue-map;
+
+                &::before {
+                    color: $blue-map;
+                }
+            }
         }
+
         .uk-inline {
             padding: 0;
             max-width: 130px;
             width: 100%;
+
             &:last-of-type {
                 margin-left: 15px;
             }
@@ -307,11 +344,11 @@
     overflow-y: auto;
     position: relative;
     border-bottom: 40px solid $lime-map;
+    z-index: 1;
 }
 
 .map-info-boxes {
-    position: relative;
-    z-index: 1;
+    padding-left: 0;
 }
 
 .map-info {
@@ -320,6 +357,12 @@
     background-color: $blue-map;
     border-radius: 20px;
     max-width: 395px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
 
     &::before {
         position: absolute;
@@ -461,6 +504,10 @@
             }
         }
     }
+
+    @media (max-width: $breakpointSmall) {
+        max-width: 300px;
+    }
 }
 
 .map-pins {
@@ -505,6 +552,7 @@
 
         @include hover {
             box-shadow: 0 6px 11px 1px rgba($blue, .3);
+            transform: translateY(-5px);
         }
 
         &.lilac {
@@ -512,6 +560,10 @@
 
             &::after {
                 border-color: $lilac transparent transparent;
+            }
+
+            .uk-svg path {
+                fill: $blue;
             }
         }
     }
@@ -536,11 +588,11 @@
     width: 100%;
 
     span,
-    button {
+    span>span {
         color: $white;
     }
 
-    >span {
+    span>span {
         font-size: 14px;
         font-weight: $bold;
     }
@@ -553,14 +605,15 @@
     li {
         width: 50%;
 
-        button {
+        >span {
+            display: block;
             font-size: 12px;
             font-family: $font-default;
             padding-top: 40px;
             position: relative;
             max-width: 70px;
 
-            span {
+            >span {
                 border-radius: 50%;
                 width: 26px;
                 height: 25px;
@@ -587,7 +640,7 @@
         }
 
         &:first-of-type {
-            button span {
+            span>span {
                 background-color: $lime;
 
                 &::after {
@@ -597,7 +650,7 @@
         }
 
         &:last-of-type {
-            button span {
+            span>span {
                 background-color: $lilac;
 
                 &::after {
@@ -610,9 +663,16 @@
 
 .map-region {
     position: relative;
+
     .map {
         max-width: 880px;
         width: 100%;
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+        .map {
+            max-width: 100%;
+        }
     }
 }
 
@@ -640,7 +700,7 @@
             font-weight: $bold;
             position: absolute;
             left: 50%;
-            top: 57%;
+            top: 56%;
             transform: translate(-50%, -50%);
         }
     }
@@ -649,7 +709,8 @@
         margin: 0;
         color: $white;
     }
-    @media (max-width: $breakpointSmallMax) {
+
+    @media (max-width: $breakpointXsmallMax) {
         position: absolute;
         left: 0;
         top: 0;
@@ -701,11 +762,13 @@
     .uk-grid li {
         padding-bottom: 5px;
         margin-top: 30px;
+        justify-content: center;
     }
 
     span {
         &:first-of-type {
             width: 85px;
+            max-width: 85px;
             height: 85px;
             border-radius: 50%;
             background-color: $blue-navy-2;
