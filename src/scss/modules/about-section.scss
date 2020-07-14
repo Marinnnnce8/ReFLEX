@@ -95,18 +95,21 @@
             margin-bottom: 25px;
         }
     }
-    
+
     @media (max-width: $breakpointTabletPortraitMin) {
         padding-bottom: 185px;
         width: calc(100% - 40px);
+
         h2 {
             font-size: 34px;
             margin-bottom: 25px;
         }
+
         p {
             font-size: 16px;
             margin-bottom: 35px;
         }
+
         .uk-button {
             max-width: 280px;
             width: 100%;
@@ -358,6 +361,12 @@
     padding: 20px;
     position: relative;
 
+    >svg path {
+        // opacity: 0;
+        // fill: none !important;
+        stroke-width: 4px;
+    }
+
     .triangle-left {
         position: absolute;
         content: '';
@@ -460,7 +469,25 @@
     }
 }
 
-// .ies-box-active {}
+.ies-box-active {
+    >svg path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        // stroke-dashoffset: 0;
+        animation: stroke 5s ease-out forwards;
+    }
+}
+
+@keyframes stroke {
+    0% {
+        stroke-dashoffset: 1000;
+
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
 
 .ies-box-inner {
     background-color: $blue-table-light;
