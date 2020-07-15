@@ -134,6 +134,9 @@
             button {
                 font-size: 10.8px;
                 text-align: left;
+                span::before {
+                    top: 50%;
+                }
             }
         }
     }

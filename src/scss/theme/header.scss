@@ -81,7 +81,7 @@
         span::after {
             position: absolute;
             display: block;
-            height: 2px;
+            height: 3px;
             transition: none;
             background-color: $white;
             animation: burgerIconAnimate 4s ease 3s forwards;
@@ -143,20 +143,36 @@
     //         justify-content: space-between;
     //     }
     // }
+    @media (max-width: $breakpointSmall) {
+        padding-top: 13px;
+
+        .uk-container-large {
+            padding-left: 8px;
+            padding-right: 9px;
+        }
+
+        .uk-navbar-toggle {
+            width: 48px;
+            height: 48px;
+        }
+    }
 }
 
 .nb-nav-open {
     .uk-navbar-toggle {
-        animation: toogleAnimate 4s linear forwards;
+        animation: toogleAnimate .6s linear forwards;
 
         span,
         span::before,
         span::after {
-            transition: 4s ease;
+            transition: .6s ease;
+            height: 6px;
+            border-radius: 50px;
         }
 
         span {
             background-color: transparent;
+            width: 26px;
 
             &::before,
             &::after {
@@ -170,6 +186,21 @@
 
             &:after {
                 transform: rotate(-45deg);
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmall) {
+        .uk-navbar-toggle {
+
+            span,
+            span::before,
+            span::after {
+                height: 4px;
+            }
+
+            span {
+                width: 17px;
             }
         }
     }

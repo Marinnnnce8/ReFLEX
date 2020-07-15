@@ -10,9 +10,17 @@
         font-size: 44px;
     }
 
+    @media (max-width: $breakpointLarge) {
+        h3 {
+            max-width: 35%;
+            margin: 0 auto 30px;
+        }
+    }
+
     @media (max-width: $breakpointMedium) {
         h3 {
             font-size: 34px;
+            max-width: 63%;
         }
     }
 
@@ -146,6 +154,139 @@
     position: absolute;
 }
 
+.renewables-wrap {
+    position: absolute;
+    top: -145px;
+    left: -140px;
+    width: 275px;
+    height: 195px;
+
+    .triangle-left {
+        position: absolute;
+        content: '';
+        width: 30%;
+        height: 74%;
+        right: 8%;
+        z-index: 0;
+        bottom: -17%;
+        border-right: 2px solid $lime;
+        border-top: 2px solid $lime;
+        border-top-right-radius: 50px;
+        transform: rotate(-32deg);
+
+        &::after,
+        span,
+        span::before {
+            position: absolute;
+            content: '';
+        }
+
+        &::after {
+            background-color: $blue;
+            border-radius: 50%;
+            bottom: 0;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            transform: translateX(50%);
+        }
+
+        span {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 27px 16.5px 0;
+            border-color: $lime transparent transparent;
+            top: 50%;
+            left: 100%;
+            transform: translate(-48.5%, -25%);
+
+            &::before {
+                left: -11.5px;
+                top: -24px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 18.5px 11px 0;
+                border-color: $blue-ies-triangle transparent transparent;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointLarge) {
+        left: -63px;
+        width: 190px;
+        height: 190px;
+
+        .triangle-left {
+            bottom: -11%;
+            right: -5%;
+        }
+    }
+
+    @media (max-width: $breakpointMedium) {
+        left: -150px;
+        top: -125px;
+        width: 170px;
+        height: 170px;
+
+        .triangle-left {
+            bottom: -7%;
+            right: -16%;
+            width: 18%;
+            height: 51%;
+
+            &::after {
+                width: 9px;
+                height: 9px;
+            }
+
+            span {
+                border-width: 18px 10px 0;
+
+                &::before {
+                    left: -7px;
+                    top: -16px;
+                    border-width: 12px 7px 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointTabletPortraitMin) {
+        left: -47px;
+        width: 100px;
+        height: 100px;
+        top: -90px;
+
+        .triangle-left {
+            width: 2px;
+            height: 24px;
+            left: 83%;
+            bottom: -8%;
+            border-radius: 0;
+            transform: rotate(-37deg);
+
+            &::after {
+                width: 5px;
+                height: 5px;
+                right: -1px;
+            }
+
+            span {
+                border-width: 10px 6px 0;
+                top: 35%;
+
+                &::before {
+                    left: -4.5px;
+                    top: -9px;
+                    border-width: 6px 4px 0;
+                }
+            }
+        }
+    }
+}
+
 .renewables {
     background-color: $white;
     width: 180px;
@@ -154,12 +295,14 @@
     box-shadow: 0 5px 22px 9px rgba($black, .1);
     border: 3px solid $lime;
     padding: 23px 17px 25px;
-    top: 57px;
-    left: 93px;
+    top: 0;
+    left: 0;
     z-index: 1;
+
 
     img {
         max-width: calc(100% / 3);
+        width: 100%;
         position: relative;
 
         &:first-of-type,
@@ -180,12 +323,18 @@
         display: block;
     }
 
+    @media (max-width: $breakpointLarge) {
+        width: 150px;
+        height: 150px;
+    }
+
     @media (max-width: $breakpointMedium) {
         width: 115px;
         height: 115px;
         top: 57px;
-        left: 35px;
+        left: 50px;
         padding: 15px 17px;
+        border-width: 2px;
 
         span {
             font-size: 12px;
@@ -206,9 +355,14 @@
         top: 20px;
         left: 13px;
         padding: 10px 8px;
+        border-width: 1px;
 
         span {
             font-size: 8px;
+        }
+
+        img:nth-of-type(2) {
+            margin: 0 1px;
         }
     }
 }
@@ -268,6 +422,15 @@
         }
     }
 
+    @media (max-width: $breakpointLarge) {
+        right: 30px;
+
+        >span {
+            width: 63px;
+            height: 24px;
+        }
+    }
+
     @media (max-width: $breakpointMedium) {
         width: 125px;
         min-height: 130px;
@@ -318,15 +481,15 @@
         right: 18px;
 
         >span {
-            width: 22px;
+            width: 12px;
             height: 2px;
-            right: 64%;
-            top: 108%;
+            right: 62%;
+            top: 103%;
             transform: rotate(-55deg);
 
             img {
                 right: 74%;
-                top: -10.5px;
+                top: -5.5px;
                 transform: rotate(-100deg);
             }
         }
@@ -357,124 +520,43 @@
     max-width: 710px;
     height: 455px;
     width: 100%;
-    // border: 2px solid $lime;
+    border: 2px solid $lime;
     padding: 20px;
     position: relative;
 
-    >svg path {
-        // opacity: 0;
-        // fill: none !important;
-        stroke-width: 4px;
-    }
-
-    .triangle-left {
+    .ellipse {
         position: absolute;
-        content: '';
-        width: 79px;
-        height: 158px;
-        left: 2%;
-        z-index: 0;
-        bottom: 80%;
-        border-right: 2px solid $lime;
-        border-top: 2px solid $lime;
-        border-top-right-radius: 50px;
-        transform: rotate(-32deg);
+        left: 0;
+        top: 0;
+        width: 100%;
+        bottom: 0;
 
-        &::after,
-        span,
-        span::before {
-            position: absolute;
-            content: '';
-        }
-
-        &::after {
-            background-color: $blue;
-            border-radius: 50%;
-            bottom: 0;
-            right: 0;
-            width: 12px;
-            height: 12px;
-            transform: translateX(50%);
-        }
-
-        span {
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 27px 16.5px 0;
-            border-color: $lime transparent transparent;
-            top: 50%;
-            left: 100%;
-            transform: translate(-48.5%, -25%);
-
-            &::before {
-                left: -11.5px;
-                top: -24px;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 18.5px 11px 0;
-                border-color: $blue-ies-triangle transparent transparent;
-            }
+        path {
+            // opacity: 0;
+            // fill: none !important;
+            stroke-width: 4px;
         }
     }
 
     @media (max-width: $breakpointMedium) {
         max-width: 430px;
         height: 295px;
-
-        .triangle-left {
-            span {
-                border-width: 18px 10px 0;
-
-                &::before {
-                    left: -7.5px;
-                    top: -16px;
-                    border-width: 12px 7px 0;
-                }
-            }
-        }
+        padding: 10px;
     }
 
     @media (max-width: $breakpointTabletPortraitMin) {
         max-width: 190px;
         width: 190px;
         height: 190px;
-
-        .triangle-left {
-            width: 2px;
-            height: 34px;
-            left: 21%;
-            bottom: 85%;
-            border-radius: 0;
-            transform: rotate(-37deg);
-
-            &::after {
-                width: 5px;
-                height: 5px;
-                right: -1px;
-            }
-
-            span {
-                border-width: 12px 8px 0;
-                top: 35%;
-
-                &::before {
-                    left: -5.5px;
-                    top: -11px;
-                    border-width: 8px 5px 0;
-                }
-            }
-        }
     }
 }
 
 .ies-box-active {
-    >svg path {
+    .ellipse path {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
         // stroke-dashoffset: 0;
-        animation: stroke 5s ease-out forwards;
+        // animation: stroke 5s ease-out forwards;
     }
 }
 
@@ -498,6 +580,7 @@
 
     svg {
         max-height: 100%;
+        width: 100%;
     }
 
     >.uk-svg,
@@ -836,7 +919,7 @@
             }
 
             .font-arrow-right {
-                transform: translateY(calc(0% - 20px));
+                transform: translateY(-20px);
             }
 
             svg {
@@ -850,6 +933,18 @@
         li {
             width: 100px;
             height: 100px;
+
+            &:first-of-type {
+                left: 3px;
+            }
+
+            &:nth-of-type(2) {
+                bottom: 2px;
+            }
+
+            &:last-of-type {
+                right: 3px;
+            }
 
             &::before,
             &::after {
@@ -898,6 +993,14 @@
             width: 70px;
             height: 70px;
 
+            &:first-of-type {
+                left: -4.5px;
+            }
+
+            &:last-of-type {
+                right: -4.5px;
+            }
+
             &::before,
             &::after {
                 width: 6px;
@@ -918,10 +1021,6 @@
 
             .font-arrow-right {
                 font-size: 8px;
-
-                // &::before {
-                //     bottom: 5px;
-                // }
             }
 
             @include hover {
@@ -993,6 +1092,7 @@
     @media (max-width: $breakpointMedium) {
         li {
             border-width: 10px 0 10px 18px;
+            bottom: 36.6px;
 
             &::before {
                 border-width: 7px 0 7px 12px;
@@ -1002,6 +1102,7 @@
 
             &:first-of-type {
                 border-width: 10px 18px 10px 0;
+                top: 11px;
 
                 &::before {
                     left: 4px;
@@ -1015,6 +1116,7 @@
     @media (max-width: $breakpointTabletPortraitMin) {
         li {
             border-width: 8px 0 8px 13px;
+            bottom: 27.6px;
 
             &::before {
                 border-width: 5px 0 5px 8px;

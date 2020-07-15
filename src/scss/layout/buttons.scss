@@ -62,6 +62,7 @@ input[type='submit'] {
 		width: 0%;
 		height: 100%;
 		z-index: 1;
+		border-radius: 50px;
 		opacity: 0;
 		background-color: $lime-mid;
 		transition: inherit;
@@ -107,8 +108,13 @@ input[type='submit'] {
 			width: 100%;
 		}
 	}
+
 	@media (max-width: $breakpointSmall) {
 		padding: 7px 65px 10px 35px;
+
+		&::before {
+			top: 50%;
+		}
 	}
 }
 
@@ -196,9 +202,11 @@ input[type='submit'] {
 	&.uk-text-large {
 		padding-right: 25px;
 		font-size: 18px;
+
 		&::after {
 			transform: translate(40%, -50%);
 		}
+
 		&::before {
 			font-size: 16px;
 		}
@@ -223,6 +231,7 @@ input[type='submit'] {
 		padding: 0;
 		margin-right: 9px;
 		margin-bottom: 8px;
+		z-index: 1;
 
 		&::before {
 			content: font-char($chevron-up);
@@ -243,14 +252,16 @@ input[type='submit'] {
 			}
 		}
 	}
+
 	@media (max-width: $breakpointXsmallMax) {
 		bottom: 62px;
+
 		.uk-button {
 			width: 48px;
 			height: 48px;
 
 			&::before {
-				top: 54%;
+				top: 50%;
 				left: 38%;
 				font-size: 14px;
 			}

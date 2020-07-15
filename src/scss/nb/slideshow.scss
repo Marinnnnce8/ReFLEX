@@ -63,7 +63,7 @@
         overflow: hidden;
         white-space: nowrap;
         max-width: 470px;
-        animation: slideInText 1s ease 1s forwards;
+        animation: slideInText .8s ease .8s forwards;
         position: relative;
 
         h1 {
@@ -83,6 +83,7 @@
     .uk-button-primary {
         color: $blue-darker;
         margin-top: 30px;
+        z-index: 2;
 
         &::before {
             width: 50px;
@@ -108,18 +109,18 @@
 
         &::after {
             background-color: $lime;
-            animation: slideIn 1s ease 1.5s forwards;
+            animation: slideIn .8s ease 1.2s forwards;
         }
     }
 
     .uk-active {
 
         .slideshow-text {
-            animation: slideInText 1s ease 1s forwards;
+            animation: slideInText .8s ease .8s forwards;
         }
 
         .slideshow-img::after {
-            animation: slideIn 1s ease 1.5s forwards;
+            animation: slideIn .8s ease 1.2s forwards;
         }
     }
 
@@ -311,7 +312,7 @@
 
             &::after {
                 font-size: 18px;
-                top: 58%;
+                top: 50%;
             }
 
             &:first-of-type {

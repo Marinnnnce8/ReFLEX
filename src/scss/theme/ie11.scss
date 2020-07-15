@@ -1,8 +1,62 @@
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+
+    .nb-nav.nb-nav-desktop .uk-navbar-nav .mega-menu .uk-nav-dropdown a {
+        @include hover {
+            background-color: $blue-lightest-3;
+
+            span::after {
+                width: 100px;
+                height: 100px;
+            }
+
+            span::before {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .nb-slideshow {
+        .uk-slidenav-container>div {
+            background-color: transparent;
+        }
+
+        .uk-slidenav {
+            &:first-of-type {
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+            }
+
+            &:last-of-type {
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+        }
+    }
+
+    .latest-news-services .latest-news-inner .uk-card-body .uk-svg {
+        width: 60px;
+    }
+
+    .newsletter .uk-card >.uk-flex-between >.uk-flex-between {
+        width: 68%;
+    }
+
+    .about-text {
+        padding-top: 270px;
+    }
+
+    .explore-map {
+        top: 41%;
+        height: 100%;
+    }
+
     .process-container::before {
         width: calc(100% - 50px);
         left: 50px;
     }
+
     .process-middle {
         display: none;
     }
@@ -11,6 +65,7 @@
         height: 75px;
         display: inline-block;
     }
+
     .values .uk-card {
         @include hover {
             .uk-svg {
