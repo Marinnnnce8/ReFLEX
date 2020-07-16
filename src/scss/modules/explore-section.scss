@@ -26,6 +26,10 @@
             z-index: 1;
             position: absolute;
             content: '';
+            overflow: hidden;
+            .dots-bg {
+                top: 15%;
+            }
         }
     }
 

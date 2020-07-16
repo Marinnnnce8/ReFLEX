@@ -11,6 +11,10 @@
         }
     }
 
+    .dots-bg {
+        top: -400px;
+    }
+
     @media (max-width: $breakpointXlarge) {
         .logo {
             max-width: 180px;

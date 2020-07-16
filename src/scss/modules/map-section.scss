@@ -15,6 +15,14 @@
         fill: $white;
     }
 
+    .dots-bg {
+        top: 300px;
+    }
+
+    h2 {
+        @include visually-hidden;
+    }
+
     @media (max-width: $breakpointSmallMax) {
         padding: 0 0 280px;
 

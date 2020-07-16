@@ -1,5 +1,15 @@
 .news-section {
     padding-bottom: 90px;
+    position: relative;
+
+    .dots-bg {
+        &:first-of-type {
+            bottom: 745px;
+        }
+        &:last-of-type {
+            top: 615px;
+        }
+    }
 
     h2 {
         @include visually-hidden;
