@@ -148,9 +148,11 @@
 
         .uk-card.uk-grid-collapse .uk-card-body {
             padding-left: 0;
+
             .uk-card-title {
                 margin-top: 25px;
             }
+
             .uk-button {
                 left: 0;
             }
@@ -199,6 +201,16 @@
 
     .uk-card {
         min-height: auto;
+
+        .uk-card-title {
+            transition: $nbSec ease-in-out;
+        }
+
+        @include hover {
+            .uk-card-title {
+                color: $lime-dark;
+            }
+        }
     }
 
     .uk-card-body {

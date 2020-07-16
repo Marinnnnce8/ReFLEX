@@ -68,6 +68,14 @@ screen and (-ms-high-contrast: none) {
         }
     }
 
+    .banner.services .banner-inner {
+        padding-top: 340px;
+    }
+
+    .process .arrow::before {
+        transform: translate(-50%, -45%);
+    }
+
     .footer-contact .link {
         @include hover {
             &::after {

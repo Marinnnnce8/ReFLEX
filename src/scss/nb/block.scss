@@ -48,6 +48,7 @@
 			}
 		}
 	}
+
 	@media (max-width: $breakpointMobile) {
 		nav {
 			margin-top: 20px;
@@ -354,40 +355,39 @@
 			@media (max-width: $breakpointSmall) {
 
 				li .uk-accordion-title {
-					padding: 30px 35px 27px 40px;
+					padding: 30px 35px 27px 30px;
 
 					&:not(.large) {
-						padding: 30px 47px 27px 40px;
+						padding: 30px 47px 27px 30px;
 					}
 
 					&::before {
 						right: 25px;
-						top: 55%;
+						margin-left: 0;
+						top: 50%;
+						font-size: 16px;
 					}
 
 					&.large:not(.uk-button)::before {
-						top: 54%;
+						top: 50%;
 					}
 				}
 
 				>li {
 					&.uk-open {
 						.uk-accordion-title {
-							padding: 30px 35px 23px 40px;
+							padding: 30px 35px 23px 30px;
 						}
 
-						a:not(.uk-button)::before {
-							top: 26%;
-						}
-
+						a:not(.uk-button)::before,
 						a.large:not(.uk-button)::before {
-							top: 29%;
+							top: 38%;
 						}
 					}
 				}
 
 				.uk-accordion-content {
-					padding: 0 20px 15px 40px;
+					padding: 0 20px 15px 30px;
 				}
 			}
 		}
@@ -749,6 +749,7 @@
 			display: none;
 		}
 	}
+
 	@media (max-width: $breakpointMediumMax) {
 		margin-top: 20px;
 	}
@@ -759,6 +760,7 @@
 		padding: 0 20px;
 		margin-top: 0;
 	}
+
 	@media (max-width: $breakpointXsmallMax) {
 		max-width: 300px;
 	}

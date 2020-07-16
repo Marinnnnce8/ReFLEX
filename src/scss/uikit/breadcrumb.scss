@@ -36,6 +36,8 @@
 		}
 
 		@include hover {
+			color: $blue;
+
 			&::after {
 				opacity: 0;
 			}

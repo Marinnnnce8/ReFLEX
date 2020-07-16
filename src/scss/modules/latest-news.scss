@@ -57,23 +57,6 @@
         }
     }
 
-    // @media (max-width: $breakpointLargeMax) {
-    //     ul li:nth-of-type(2) .uk-card {
-    //         border-top-right-radius: 20px;
-
-    //         .uk-card-body {
-    //             position: relative;
-
-    //             &::after {
-    //                 content: font-char($rounded-corner-left);
-    //                 right: 0;
-    //                 position: absolute;
-    //                 bottom: 0;
-    //             }
-    //         }
-    //     }
-    // }
-
     @media (max-width: $breakpointSmall) {
         >.uk-flex-middle {
             padding: 0;
@@ -398,6 +381,7 @@
     }
 
     .uk-card {
+        -webkit-mask-image: -webkit-radial-gradient($white, $black);// sass-lint:disable-line no-vendor-prefixes
         min-height: 290px;
         overflow: hidden;
 
@@ -518,11 +502,17 @@
             }
 
             &:nth-of-type(3) .uk-card {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
                 border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
             }
 
             &:nth-of-type(4) .uk-card {
+                border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
             }
 
             &:nth-of-type(5) .uk-card {
@@ -539,18 +529,22 @@
 
     @media (max-width: $breakpointXsmallMax) {
         .uk-card {
-            -webkit-mask-image: -webkit-radial-gradient($white, $black);// sass-lint:disable-line no-vendor-prefixes
             border-radius: 20px;
         }
 
         li {
             &:nth-of-type(3) .uk-card {
                 border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
             }
 
             &:nth-of-type(4) .uk-card {
                 border-top-left-radius: 20px;
                 border-bottom-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
             }
 
             &:last-of-type .uk-card {

@@ -161,6 +161,12 @@
 
         .uk-card-body {
             padding: 20px 20px 35px;
+
+            .uk-button-large {
+                padding-right: 34px;
+                max-width: 240px;
+                width: 100%;
+            }
         }
 
         .uk-card-title {

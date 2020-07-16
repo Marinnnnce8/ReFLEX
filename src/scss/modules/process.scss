@@ -40,7 +40,7 @@
             width: 2px;
 
             &::before {
-                left: 0;
+                left: -.6px;
                 top: 50%;
                 border-width: 25px 12.5px 0;
                 border-color: $blue transparent transparent;

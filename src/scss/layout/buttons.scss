@@ -109,12 +109,14 @@ input[type='submit'] {
 		}
 	}
 
-	@media (max-width: $breakpointSmall) {
-		padding: 7px 65px 10px 35px;
-
+	@media (max-width: $breakpointMedium) {
 		&::before {
 			top: 50%;
 		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		padding: 7px 65px 10px 35px;
 	}
 }
 
@@ -218,6 +220,12 @@ input[type='submit'] {
 		&::after {
 			width: 48px;
 			height: 48px;
+		}
+	}
+
+	@media (max-width: $breakpointMedium) {
+		&::before {
+			transform: translateY(-50%);
 		}
 	}
 }
