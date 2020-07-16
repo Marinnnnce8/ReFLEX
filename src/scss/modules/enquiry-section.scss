@@ -3,6 +3,11 @@
 
     .nb-block-form {
         padding-bottom: 335px;
+        max-width: 725px;
+
+        * {
+            max-width: 100%;
+        }
     }
 
     .uk-card {
@@ -123,8 +128,18 @@
         }
     }
 
-    @media (max-width: $breakpointSmall) {
+    @media (max-width: $breakpointLarge) {
+        .nb-block-form {
+            max-width: 490px;
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
         padding: 50px 0 0;
+
+        .uk-sticky-placeholder {
+            display: none !important; // sass-lint:disable-line no-important
+        }
     }
 }
 
@@ -166,23 +181,25 @@
     }
 
     @media (max-width: $breakpointMedium) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media (max-width: $breakpointSmallMax) {
         position: relative !important; // sass-lint:disable-line no-important
         left: auto !important; // sass-lint:disable-line no-important
         transform: none;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
         top: auto !important; // sass-lint:disable-line no-important
+        width: 100% !important; // sass-lint:disable-line no-important
+        margin-bottom: 50px !important; // sass-lint:disable-line no-important
 
         .uk-card-body {
             position: relative;
             top: auto;
             right: auto;
         }
-    }
-
-    @media (max-width: $breakpointSmallMax) {
-        padding-left: 30px;
-        padding-right: 30px;
     }
 
     @media (max-width: $breakpointXsmallMax) {
