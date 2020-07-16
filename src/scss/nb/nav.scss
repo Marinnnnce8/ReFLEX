@@ -130,12 +130,12 @@
 							border-right-color: $gray-mid;
 						}
 
-						&:first-of-type svg path:last-of-type,
-						&:nth-of-type(2) svg path:last-of-type,
-						&:nth-of-type(3) svg .st1,
-						&:nth-of-type(4) svg .st0,
-						&:nth-of-type(5) svg path:first-of-type,
-						&:last-of-type svg .st1 {
+						svg[data-svg*='lightbulb'] path:last-of-type,
+						svg[data-svg*='electric-vehicles'] path:last-of-type,
+						svg[data-svg*='home-batteries'] .st1,
+						svg[data-svg*='car-club'] .st0,
+						svg[data-svg*='heating'] path:first-of-type,
+						svg[data-svg*='bundle'] .st1 {
 							fill: $lime;
 						}
 					}

@@ -52,6 +52,7 @@ screen and (-ms-high-contrast: none) {
     }
 
     .why-section,
+    .explore-section,
     .banner.banner-map {
 
         .circle-bckg,
@@ -78,7 +79,8 @@ screen and (-ms-high-contrast: none) {
         }
     }
 
-    .banner.banner-map .multiply::after {
+    .banner.banner-map .multiply::after,
+    .explore-section .multiply::after {
         background-color: rgba($blue, .5);
     }
 
