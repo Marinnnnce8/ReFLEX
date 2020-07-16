@@ -142,6 +142,10 @@
         margin-bottom: 55px;
         padding-left: 0;
         margin-top: 0;
+
+        a::before {
+            top: 50%;
+        }
     }
 }
 
@@ -325,6 +329,7 @@
 }
 
 .footer-bottom {
+    padding-bottom: 23px;
     @media (max-width: $breakpointLarge) and (min-width: $breakpointMedium) {
         .uk-grid {
             margin: 0;
@@ -333,7 +338,6 @@
             .uk-flex-between {
                 justify-content: flex-end;
                 align-items: center;
-                padding-bottom: 25px;
                 padding-left: 0;
             }
         }
@@ -343,7 +347,6 @@
         .uk-grid {
             .uk-flex-between {
                 justify-content: flex-start;
-                margin-bottom: 25px;
             }
         }
     }
@@ -388,6 +391,7 @@
             width: calc(100% - 25px);
             bottom: 0;
             height: 2px;
+            max-height: 2px;
             background-color: $lime;
             transition: inherit;
             content: '';

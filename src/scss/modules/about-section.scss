@@ -243,6 +243,7 @@
 
             span {
                 border-width: 18px 10px 0;
+                transform: translate(-43.5%, -25%);
 
                 &::before {
                     left: -7px;
@@ -280,7 +281,7 @@
                 &::before {
                     left: -4.5px;
                     top: -9px;
-                    border-width: 6px 4px 0;
+                    border-width: 6.5px 4.5px 0;
                 }
             }
         }
@@ -1116,7 +1117,7 @@
     @media (max-width: $breakpointTabletPortraitMin) {
         li {
             border-width: 8px 0 8px 13px;
-            bottom: 27.6px;
+            
 
             &::before {
                 border-width: 5px 0 5px 8px;
@@ -1132,6 +1133,12 @@
                     top: -5px;
                     border-width: 5px 8px 5px 0;
                 }
+            }
+            &:nth-of-type(2) {
+                bottom: 27px;
+            }
+            &:last-of-type {
+                bottom: 28.5px;
             }
         }
     }

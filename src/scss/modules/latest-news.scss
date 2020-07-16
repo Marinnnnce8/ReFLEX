@@ -135,7 +135,7 @@
             bottom: 0;
             backface-visibility: hidden;
             padding: 25px 20px 80px 35px;
-            min-height: 1px;
+            min-height: 210px;
             transition: min-height .35s;
 
             &::after {
@@ -539,6 +539,7 @@
 
     @media (max-width: $breakpointXsmallMax) {
         .uk-card {
+            -webkit-mask-image: -webkit-radial-gradient($white, $black);// sass-lint:disable-line no-vendor-prefixes
             border-radius: 20px;
         }
 

@@ -39,12 +39,41 @@ screen and (-ms-high-contrast: none) {
         width: 60px;
     }
 
-    .newsletter .uk-card >.uk-flex-between >.uk-flex-between {
+    .newsletter .uk-card>.uk-flex-between>.uk-flex-between {
         width: 68%;
     }
 
     .about-text {
         padding-top: 270px;
+    }
+
+    .explore-section {
+        padding-top: 400px;
+    }
+
+    .why-section {
+        padding-top: 230px;
+        .circle-bckg {
+            overflow: hidden;
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                z-index: 1;
+                content: '';
+                background-color: rgba($lime, .5);
+            }
+        }
+    }
+
+    .footer-contact .link {
+        @include hover {
+            &::after {
+                max-height: 18px;
+            }
+        }
     }
 
     .explore-map {

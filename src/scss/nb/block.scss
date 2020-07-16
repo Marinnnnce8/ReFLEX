@@ -743,12 +743,14 @@
 	font-family: $ubuntu;
 	font-weight: $light;
 	font-size: 14px;
-	margin-top: 10px;
 
 	@media (max-width: $breakpointLarge) {
 		&.desc {
 			display: none;
 		}
+	}
+	@media (max-width: $breakpointMediumMax) {
+		margin-top: 20px;
 	}
 
 	@media (max-width: $breakpointTabletPortraitMin) {
