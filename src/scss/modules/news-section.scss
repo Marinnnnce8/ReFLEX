@@ -62,6 +62,12 @@
             }
         }
     }
+
+    @media (max-width: $breakpointMedium) {
+        a::before {
+            top: 50%;
+        }
+    }
 }
 
 .news-tabs {

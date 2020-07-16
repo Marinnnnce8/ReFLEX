@@ -566,6 +566,11 @@
 			}
 		}
 
+		@media (max-width: $breakpointMedium) {
+			.uk-slidenav::before {
+				top: 50%;
+			}
+		}
 		@media (max-width: $breakpointSmall) {
 			.uk-slidenav {
 				width: 48px;

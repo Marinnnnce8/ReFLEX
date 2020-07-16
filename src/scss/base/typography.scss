@@ -151,6 +151,11 @@ blockquote {
 		}
 	}
 
+	@media (max-width: $breakpointMedium) {
+		.font-quote::before {
+			top: 40%;
+		}
+	}
 	@media (max-width: $breakpointSmall) {
 		padding: 25px 0 10px 50px;
 

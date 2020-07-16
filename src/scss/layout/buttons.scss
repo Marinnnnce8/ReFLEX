@@ -312,4 +312,14 @@ input[type='submit'] {
 			}
 		}
 	}
+
+	@media (max-width: $breakpointMobileSmall) {
+		.uk-button {
+			font-size: 16px;
+
+			&::before {
+				font-size: 14px;
+			}
+		}
+	}
 }

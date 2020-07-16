@@ -3,6 +3,18 @@
     position: relative;
     z-index: 1;
 
+    .all-assets .st1,
+    .chargers .uk-svg path:last-of-type,
+    .car-clubs .st0,
+    .local-generation .uk-svg path:last-of-type {
+        fill: $lime-map;
+    }
+
+    .chargers .st1,
+    .car-clubs .st1 {
+        fill: $white;
+    }
+
     @media (max-width: $breakpointSmallMax) {
         padding: 0 0 280px;
 
@@ -131,6 +143,8 @@
     }
 
     @media (max-width: $breakpointSmallMax) {
+        padding: 0;
+
         button {
             font-size: 14px;
             max-width: 100%;
@@ -208,6 +222,7 @@
             opacity: 0;
             transition: .1s;
             box-shadow: 0 5px 12px rgba($black, .15);
+            border-radius: 0;
         }
 
         @include hover {
@@ -505,8 +520,24 @@
         }
     }
 
+    @media (max-width: $breakpointMedium) {
+        .uk-card-media-top button::before {
+            top: 50%;
+        }
+    }
+
     @media (max-width: $breakpointSmall) {
         max-width: 300px;
+
+        .uk-card-footer {
+            a {
+                padding: 0 15px 0 0;
+
+                &::after {
+                    width: calc(100% - 15px);
+                }
+            }
+        }
     }
 }
 
@@ -710,6 +741,12 @@
         color: $white;
     }
 
+    @media (max-width: $breakpointMedium) {
+        >button::before {
+            top: 50%;
+        }
+    }
+
     @media (max-width: $breakpointXsmallMax) {
         position: absolute;
         left: 0;
@@ -726,7 +763,7 @@
     margin-bottom: 0;
 
     button {
-        background-color: $blue-navy-2;
+        background-color: $blue-navy-3;
         font-family: $font-default;
         font-size: 13px;
         font-weight: $bold;
@@ -735,7 +772,7 @@
         width: 100%;
 
         @include hover {
-            background-color: $blue-navy-3;
+            background-color: $blue-navy-2;
         }
     }
 
@@ -753,7 +790,7 @@
         }
 
         &.uk-active button {
-            background-color: $blue-navy-3;
+            background-color: $blue-navy-2;
         }
     }
 }
@@ -798,22 +835,6 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-    }
-
-    .chargers .uk-svg path {
-        &:last-of-type {
-            fill: $lime;
-        }
-    }
-
-    .car-clubs .uk-svg path {
-        &.st0 {
-            fill: $lime;
-        }
-
-        &.st1 {
-            fill: $white;
-        }
     }
 }
 

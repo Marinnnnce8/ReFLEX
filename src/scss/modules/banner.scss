@@ -103,6 +103,7 @@
 				left: 50%;
 				transform: translateX(-50%);
 				top: 60px;
+				z-index: 2;
 
 				path {
 					fill: $white;
