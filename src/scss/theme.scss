@@ -81,6 +81,7 @@
 	@media (max-width: $breakpointSmall) {
 		position: relative;
 		top: -14px;
+
 		img {
 			width: 145px;
 		}
@@ -109,5 +110,17 @@
 	@media (max-width: $breakpointXsmallMax) {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+}
+
+
+.uk-list-circle>*,
+.uk-list-decimal>*,
+.uk-list-disc>*,
+.uk-list-hyphen>*,
+.uk-list-square>* {
+	padding-left: 0;
+	&::before {
+		display: none;
 	}
 }

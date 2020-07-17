@@ -211,12 +211,16 @@
 
         .slideshow-text {
             padding-top: 260px;
-            max-width: 420px;
+            max-width: 520px;
 
-            h1,
+            h1 {
+                max-width: 520px;
+                min-width: 520px;
+            }
+
             p {
-                max-width: 420px;
-                min-width: 420px;
+                max-width: 460px;
+                min-width: 460px;
             }
         }
     }
