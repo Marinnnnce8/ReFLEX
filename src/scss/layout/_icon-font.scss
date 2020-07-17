@@ -78,7 +78,7 @@
 	@if $filename == envelope {
 		$char: '\E011';
 	}
-	@if $filename == external-link {
+	@if $filename == external-icon {
 		$char: '\E012';
 	}
 	@if $filename == facebook {
@@ -241,8 +241,8 @@
 .font-envelope {
 	@include font(envelope);
 }
-.font-external-link {
-	@include font(external-link);
+.font-external-icon {
+	@include font(external-icon);
 }
 .font-facebook {
 	@include font(facebook);

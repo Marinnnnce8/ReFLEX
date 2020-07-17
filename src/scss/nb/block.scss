@@ -123,7 +123,7 @@
 				}
 			}
 
-			a[target="_blank"] {
+			a[target='_blank'] {
 				padding-right: 20px;
 
 				&::before {
@@ -131,7 +131,7 @@
 					top: 65%;
 					position: absolute;
 					font-family: 'svgicons';
-					content: font-char($external-link);
+					content: font-char($external-icon);
 					font-size: 14px;
 					transform: translateY(-50%);
 				}

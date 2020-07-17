@@ -3,16 +3,22 @@
     position: relative;
     z-index: 1;
 
-    .uk-svg[data-svg*='all-assets'] .st1,
-    .uk-svg[data-svg*='charger'] path:last-of-type,
-    .uk-svg[data-svg*='local-generation'] path:last-of-type,
-    .uk-svg[data-svg*='car-club'] .st0 {
-        fill: $lime-map;
-    }
 
-    .uk-svg[data-svg*='charger'] .st1,
-    .uk-svg[data-svg*='car-club'] .st1 {
-        fill: $white;
+    .map-info,
+    .map-filter,
+    .map-assets {
+
+        .uk-svg[data-svg*='all-assets'] .st1,
+        .uk-svg[data-svg*='charger'] path:last-of-type,
+        .uk-svg[data-svg*='local-generation'] path:last-of-type,
+        .uk-svg[data-svg*='car-club'] .st0 {
+            fill: $lime-map;
+        }
+
+        .uk-svg[data-svg*='charger'] .st1,
+        .uk-svg[data-svg*='car-club'] .st1 {
+            fill: $white;
+        }
     }
 
     .dots-bg {
@@ -43,6 +49,7 @@
                 padding: 0;
             }
         }
+
         .dots-bg {
             top: auto;
             bottom: 210px;
@@ -431,12 +438,21 @@
                 position: absolute;
                 color: $white;
                 font-size: 16px;
-                top: 57%;
+                top: 60%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 content: font-char($close);
                 font-family: 'svgicons';
                 display: block;
+                transition: $nbSec ease-in-out;
+            }
+
+            @include hover {
+                background-color: $white;
+
+                &::before {
+                    color: $blue-map;
+                }
             }
         }
     }

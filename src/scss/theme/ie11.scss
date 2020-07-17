@@ -43,6 +43,10 @@ screen and (-ms-high-contrast: none) {
         width: 68%;
     }
 
+    .uk-background-fixed {
+        background-attachment: scroll !important;
+    }
+
     .about-text {
         padding-top: 270px;
     }
@@ -93,6 +97,10 @@ screen and (-ms-high-contrast: none) {
     }
 
     .footer-contact .link {
+        &::after {
+            max-height: 2px;
+        }
+
         @include hover {
             &::after {
                 max-height: 18px;
@@ -194,4 +202,9 @@ screen and (-ms-high-contrast: none) {
         height: 30px;
         width: 30px;
     }
+}
+
+
+//Edge
+@supports (-ms-ime-align:auto) {
 }

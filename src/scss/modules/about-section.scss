@@ -541,23 +541,27 @@
     max-width: 710px;
     height: 455px;
     width: 100%;
-    border: 2px solid $lime;
+    // border: 2px solid $lime;
     padding: 20px;
     position: relative;
 
-    .ellipse {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        bottom: 0;
-
-        path {
-            // opacity: 0;
-            // fill: none !important;
-            stroke-width: 4px;
-        }
+    >svg path {
+        fill: $lime;
     }
+
+    // .ellipse {
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     bottom: 0;
+
+    //     path {
+    //         // opacity: 0;
+    //         // fill: none !important;
+    //         stroke-width: 4px;
+    //     }
+    // }
 
     @media (max-width: $breakpointMedium) {
         max-width: 430px;
@@ -572,25 +576,25 @@
     }
 }
 
-.ies-box-active {
-    .ellipse path {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        // stroke-dashoffset: 0;
-        // animation: stroke 5s ease-out forwards;
-    }
-}
+// .ies-box-active {
+//     .ellipse path {
+//         stroke-dasharray: 1000;
+//         stroke-dashoffset: 1000;
+//         // stroke-dashoffset: 0;
+//         // animation: stroke 5s ease-out forwards;
+//     }
+// }
 
-@keyframes stroke {
-    0% {
-        stroke-dashoffset: 1000;
+// @keyframes stroke {
+//     0% {
+//         stroke-dashoffset: 1000;
 
-    }
+//     }
 
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
+//     100% {
+//         stroke-dashoffset: 0;
+//     }
+// }
 
 .ies-box-inner {
     background-color: $blue-table-light;

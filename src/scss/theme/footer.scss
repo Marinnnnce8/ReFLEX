@@ -380,8 +380,13 @@
 .footer-contact {
     padding-top: 25px;
 
-    h3 {
+    p {
         margin-bottom: 25px;
+        font-family: $font-default;
+        font-weight: $bold;
+        color: $blue;
+        line-height: 1;
+        font-size: 34px;
     }
 
     span,
@@ -416,7 +421,6 @@
             width: calc(100% - 25px);
             bottom: 0;
             height: 2px;
-            max-height: 2px;
             background-color: $lime;
             transition: inherit;
             content: '';
@@ -485,7 +489,7 @@
     }
 
     @media (max-width: $breakpointLarge) {
-        h3 {
+        p {
             font-size: 22px;
         }
     }

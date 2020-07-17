@@ -1,4 +1,5 @@
 @media print {
+
 	.header,
 	.footer,
 	.nb-block-form,
@@ -6,7 +7,88 @@
 	.uk-button,
 	.uk-breadcrumb,
 	.uk-pagination,
-	.uk-modal {
+	.uk-modal,
+	.banner,
+	.nb-slideshow,
+	.dots-bg,
+	.nb-switcher,
+	.newsletter,
+	.about-inner,
+	.about-section>.uk-container,
+	.explore-section .circle,
+	.explore-section .circle-bckg,
+	.explore-text .uk-flex,
+	.why-section .circle,
+	.why-section .circle-bckg,
+	.latest-news,
+	.nb-main nav,
+	.values,
+	.process,
+	.uk-accordion,
+	figure,
+	.nb-block-gallery,
+	.uk-card-media-right,
+	.uk-card-media-left,
+	.nb-block-slideshow,
+	.map-section,
+	.news-share,
+	.ads,
+	.ads-info .uk-card-media-top,
+	.news-tabs,
+	.nb-widget,
+	.font-quote,
+	.enquiry-section,
+	a::after {
 		display: none !important;
+	}
+
+	.about-inner {
+		height: auto;
+	}
+
+	.uk-container,
+	.uk-container-small {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+
+	.about-text,
+	.explore-section,
+	.explore-wrap>.uk-flex,
+	.why-wrap>.uk-flex,
+	.why-section,
+	.ads-info .uk-card {
+		min-height: 0;
+	}
+
+	.explore-wrap>.uk-flex {
+		justify-content: flex-start;
+	}
+
+	.explore-section,
+	.about-text,
+	.why-section,
+	.explore-text,
+	.nb-block-promo .uk-card,
+	.nb-block-promo .uk-card-body,
+	.ads-info .uk-card,
+	blockquote {
+		margin: 0 !important;
+		padding: 0 !important;
+		left: auto;
+		border-radius: 0;
+	}
+
+	.ads-info {
+		display: block;
+	}
+
+	.uk-margin-large-bottom,
+	.uk-margin-medium-bottom {
+		margin-bottom: 10px !important;
+	}
+
+	blockquote {
+		border: 0;
 	}
 }

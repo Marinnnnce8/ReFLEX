@@ -34,7 +34,6 @@
             z-index: 1;
             position: absolute;
             content: '';
-            overflow: hidden;
         }
     }
 
@@ -168,6 +167,7 @@
     position: relative;
     width: 50%;
     padding-left: 24px;
+    z-index: 1;
 
     h2 {
         font-size: 54px;
@@ -281,13 +281,15 @@
     font-weight: $bold;
     transform: translate(-70%, -250%);
     z-index: 3;
+    text-align: center;
+    line-height: 1.2;
 
     &::before {
         position: absolute;
         width: 0;
         height: 0;
         content: '';
-        top: 100%;
+        top: calc(100% - 1px);
         left: 50%;
         transform: translateX(-50%);
         border-style: solid;
