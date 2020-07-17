@@ -338,9 +338,11 @@
 		&.nb-nav-mobile[aria-hidden="false"] {
 			overflow: visible;
 			animation: opening 1.2s ease forwards;
+			-webkit-transform:translate3d(0,0,0);
 
 			&:after {
 				animation: openingBckg 1.2s ease forwards;
+				-webkit-transform:translate3d(0,0,0);
 			}
 
 			&::before {
@@ -348,7 +350,7 @@
 			}
 
 			.uk-navbar-nav {
-				animation: openingNav 1.5s cubic-bezier(.68, -.55, .265, 1.55) forwards;
+				animation: openingNav 1.3s cubic-bezier(.68, -.55, .265, 1.55) forwards;
 
 				li {
 					animation: openingNavItems 1.2s cubic-bezier(.68, -.55, .265, 1.55) forwards;
