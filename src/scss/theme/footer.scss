@@ -11,8 +11,16 @@
         }
     }
 
-    .dots-bg {
-        top: -400px;
+    &:not(.footer-map) {
+        .dots-bg {
+            top: -400px;
+        }
+    }
+
+    &.footer-map {
+        .dots-bg {
+            bottom: 310px;
+        }
     }
 
     @media (max-width: $breakpointXlarge) {
@@ -25,6 +33,11 @@
         .logo {
             max-width: 220px;
         }
+
+        .dots-bg {
+            top: auto;
+            bottom: 200px;
+        }
     }
 
     @media (max-width: $breakpointLarge) and (min-width: $breakpointMedium) {
@@ -35,6 +48,7 @@
 
     @media (max-width: $breakpointMedium) {
         margin-top: -130px;
+
         .logo {
             margin-bottom: 45px;
         }
@@ -50,6 +64,11 @@
     @media (max-width: $breakpointXsmallMax) {
         margin-top: -110px;
         padding-bottom: 20px;
+
+        .dots-bg {
+            bottom: 425px;
+            height: 195px;
+        }
     }
 }
 
@@ -88,6 +107,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-top: 110px;
+
     @media (max-width: $breakpointMedium) {
         padding-top: 0;
     }
@@ -334,6 +354,7 @@
 
 .footer-bottom {
     padding-bottom: 23px;
+
     @media (max-width: $breakpointLarge) and (min-width: $breakpointMedium) {
         .uk-grid {
             margin: 0;

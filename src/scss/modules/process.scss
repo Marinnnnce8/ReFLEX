@@ -41,6 +41,18 @@
 
     @media (max-width: $breakpointSmallMax) {
         padding: 45px 70px 55px;
+
+        .dots-bg {
+            height: 310px;
+            width: 130px;
+            &:first-of-type {
+                top: 15px;
+            }
+    
+            &:last-of-type {
+                bottom: -150px;
+            }
+        }
     }
 
     @media (max-width: $breakpointSmall) {
@@ -55,6 +67,17 @@
                 top: 50%;
                 border-width: 25px 12.5px 0;
                 border-color: $blue transparent transparent;
+            }
+        }
+        .dots-bg {
+            width: 60px;
+            height: 185px;
+            &:first-of-type {
+                top: 0;
+            }
+    
+            &:last-of-type {
+                bottom: -100px;
             }
         }
     }

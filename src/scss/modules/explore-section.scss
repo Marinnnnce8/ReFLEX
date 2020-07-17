@@ -11,9 +11,17 @@
         top: 0;
     }
 
+    .dots-bg {
+        height: auto;
+        top: 260px;
+        z-index: 2;
+        max-height: 870px;
+    }
+
     .circle {
         left: 0;
         width: calc(50vw + 180px);
+        z-index: 0;
 
         .uk-background-cover {
             background-color: rgba($blue-mid, .9);
@@ -27,9 +35,6 @@
             position: absolute;
             content: '';
             overflow: hidden;
-            .dots-bg {
-                top: 15%;
-            }
         }
     }
 
@@ -40,6 +45,13 @@
         left: -330px;
         background-color: $blue-lightest;
         border-radius: 50%;
+    }
+
+    @media (max-width: $breakpointLarge) {
+        .dots-bg {
+            width: 120px;
+            top: 170px;
+        }
     }
 
     @media (max-width: $breakpointMedium) {
@@ -90,6 +102,12 @@
         .circle-bckg {
             width: 580px;
             height: 580px;
+        }
+
+        .dots-bg {
+            width: 65px;
+            top: auto;
+            bottom: -15px;
         }
     }
 }

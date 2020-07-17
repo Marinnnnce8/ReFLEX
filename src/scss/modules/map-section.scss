@@ -23,6 +23,14 @@
         @include visually-hidden;
     }
 
+    @media (max-width: $breakpointLarge) {
+        .dots-bg {
+            top: auto;
+            bottom: 130px;
+        }
+
+    }
+
     @media (max-width: $breakpointSmallMax) {
         padding: 0 0 280px;
 
@@ -34,6 +42,10 @@
             &:last-of-type {
                 padding: 0;
             }
+        }
+        .dots-bg {
+            top: auto;
+            bottom: 210px;
         }
     }
 }

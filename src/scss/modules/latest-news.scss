@@ -257,6 +257,12 @@
         }
     }
 
+    @media (max-width: $breakpointMediumMax) and (min-width: $breakpointSmall) {
+        ul li:last-of-type {
+            display: none;
+        }
+    }
+
     @media (max-width: $breakpointMedium) {
         .latest-news-inner>.uk-flex-middle {
             flex-direction: column;
@@ -283,6 +289,7 @@
                 border-top-right-radius: 20px;
             }
         }
+
         .uk-card-body::before {
             font-family: 'svgicons';
             bottom: 95%;
@@ -307,6 +314,12 @@
                 &::after {
                     content: font-char($rounded-corner-left);
                     right: 0;
+                }
+            }
+            &:last-of-type .uk-card-body  {
+                &::before {
+                    content: font-char($rounded-corner-right);
+                    left: 0;
                 }
             }
         }
@@ -362,7 +375,7 @@
     }
 
     .uk-card {
-        -webkit-mask-image: -webkit-radial-gradient($white, $black);// sass-lint:disable-line no-vendor-prefixes
+        -webkit-mask-image: -webkit-radial-gradient($white, $black); // sass-lint:disable-line no-vendor-prefixes
         min-height: 290px;
         overflow: hidden;
 
@@ -510,26 +523,24 @@
 
     @media (max-width: $breakpointXsmallMax) {
         .uk-card {
-            border-radius: 20px;
+            border-radius: 0;
         }
 
         li {
-            &:nth-of-type(3) .uk-card {
+            &:first-of-type .uk-card {
                 border-top-right-radius: 20px;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
             }
 
-            &:nth-of-type(4) .uk-card {
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
+            &:nth-of-type(2) .uk-card {
+                border-top-right-radius: 0;
+            }
+
+            &:nth-of-type(5) .uk-card {
+                border-bottom-left-radius: 0;
             }
 
             &:last-of-type .uk-card {
-                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
             }
         }
 

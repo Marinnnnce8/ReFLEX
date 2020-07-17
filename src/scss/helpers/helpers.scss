@@ -35,7 +35,7 @@ body {
 		position: absolute;
 	}
 
-	.st0 {
+	path {
 		fill: $lime;
 	}
 
@@ -48,9 +48,17 @@ body {
 	}
 
 	&.blue {
-		.st0 {
+		path {
 			fill: $blue-map;
 		}
+	}
+	@media (max-width: $breakpointLarge) {
+		height: 315px;
+		width: 100px;
+	}
+	@media (max-width: $breakpointSmall) {
+		height: 200px;
+		width: 65px;
 	}
 }
 

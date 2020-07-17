@@ -1,7 +1,6 @@
 //----------  banner
 //------------------------------------------------------------------------------
 .banner {
-	// min-height: 500px;
 	position: relative;
 
 	.circle {
@@ -80,12 +79,15 @@
 		}
 	}
 
+	&.enquiry,
 	&.services {
-		padding-top: 0;
-
 		.dots-bg {
 			top: 235px;
 		}
+	}
+
+	&.services {
+		padding-top: 0;
 
 		.banner-inner {
 			display: flex;
@@ -204,9 +206,11 @@
 
 		&.banner-large {
 			margin: 120px 0 10px;
+
 			h1 {
 				margin-bottom: 20px;
 			}
+
 			.circle {
 				position: absolute;
 			}

@@ -194,6 +194,8 @@
 }
 
 .ads-container {
+    position: relative;
+    z-index: 1;
     background-color: $white;
     padding: 45px;
     border-radius: 20px;

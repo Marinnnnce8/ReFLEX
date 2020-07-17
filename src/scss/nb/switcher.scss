@@ -4,7 +4,7 @@
     z-index: 1;
 
     .dots-bg {
-        top: 375px;
+        bottom: -15px;
     }
 
     h2 {
@@ -77,12 +77,15 @@
 
     @media (max-width: $breakpointMediumMax) {
         margin: -20px 0 70px;
+
         h2 {
             font-size: 44px;
         }
+
         .listings-nav li {
             max-width: 325px;
             width: 100%;
+
             &:first-of-type {
                 button {
                     padding: 29px 35px 28px 80px;
@@ -104,10 +107,15 @@
                     }
                 }
             }
+
             button {
                 font-size: 18px;
                 width: 100%;
             }
+        }
+
+        .dots-bg {
+            bottom: -65px;
         }
     }
 
@@ -116,6 +124,7 @@
         .listings-nav li {
             max-width: 140px;
             width: 100%;
+
             &:first-of-type {
                 button {
                     padding: 10px 20px 10px 60px;
@@ -135,13 +144,19 @@
                     }
                 }
             }
+
             button {
                 font-size: 10.8px;
                 text-align: left;
+
                 span::before {
                     top: 50%;
                 }
             }
+        }
+
+        .dots-bg {
+            bottom: -50px;
         }
     }
 }
