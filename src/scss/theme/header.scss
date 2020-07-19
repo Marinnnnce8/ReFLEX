@@ -1,5 +1,4 @@
 .header {
-    // position: fixed;
     position: absolute;
     left: 0;
     width: 100%;
@@ -129,20 +128,6 @@
         }
     }
 
-    // @media (max-width: $breakpointXsmallMax) {
-
-    //     .navbar-top,
-    //     .navbar-bottom {
-    //         >.uk-container {
-    //             padding-left: 15px;
-    //             padding-right: 15px;
-    //         }
-    //     }
-
-    //     .uk-flex-right {
-    //         justify-content: space-between;
-    //     }
-    // }
     @media (max-width: $breakpointSmall) {
         padding-top: 13px;
 

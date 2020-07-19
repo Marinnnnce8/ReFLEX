@@ -37,7 +37,12 @@ gulp.task("assets-fonts", function() {
 
 gulp.task("assets-img", function(){
 	gulp.src('src/img/*')
-        .pipe(imagemin())
+        .pipe(imagemin(
+          [
+            imagemin.gifsicle(),
+            imagemin.jpegtran(),
+            imagemin.optipng()
+          ]))
         .pipe(gulp.dest('dist/img'))
 });
 
