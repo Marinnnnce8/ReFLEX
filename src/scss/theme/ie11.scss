@@ -202,5 +202,27 @@ screen and (-ms-high-contrast: none) {
         height: 30px;
         width: 30px;
     }
+    
+    .map-info {
+        .uk-card-title .uk-svg {
+            width: 29px;
+        }
+
+        span {
+            min-width: 100px;
+        }
+        
+        .uk-card-footer a {
+            &::after {
+                max-height: 2px !important;
+            }
+
+            @include hover {
+                &::after {
+                    max-height: 18px !important;
+                }
+            }
+        }
+    }
 }
 

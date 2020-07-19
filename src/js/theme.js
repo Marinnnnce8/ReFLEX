@@ -112,6 +112,7 @@ var theme = {
 
 	//show and position map titile according to the hovered map item
 	mapTitleShow: function() {
+		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		var mapTitleEl = document.getElementsByClassName("js-explore-map-title")[0];
 		var mapParent = document.getElementsByClassName('explore-inner')[0];
 		var mapParentTop = mapParent.getBoundingClientRect().top;
@@ -120,7 +121,10 @@ var theme = {
 		var mapItemLeft = this.getBoundingClientRect().left;
 		mapTitleEl.innerHTML = '';
 		var mapParentBorderWidthVal = window.getComputedStyle(mapParent).getPropertyValue('border-width');
-		var mapParentBorderWidth = parseInt(mapParentBorderWidthVal) * 2;
+		var mapParentBorderWidth = parseInt(mapParentBorderWidthVal, 10) * 2;
+		if(isIE11) {
+			mapParentBorderWidth = 110;
+		}
 
 		var mapItemTopPosition = mapItemTop - mapParentTop;
 		var mapItemLeftPosition = mapItemLeft - mapParentLeft - mapParentBorderWidth;
