@@ -279,7 +279,7 @@
     border-radius: 50px;
     display: none;
     font-weight: $bold;
-    transform: translate(-70%, -250%);
+    transform: translate(0%, -250%);
     z-index: 3;
     text-align: center;
     line-height: 1.2;
@@ -297,11 +297,9 @@
         border-color: $lime transparent transparent;
     }
 
-    @media (max-width: $breakpointMedium) {
-        transform: translate(-65%, -250%);
-    }
-
     @media (max-width: $breakpointSmall) {
-        transform: translate(-127%, -170%);
+        padding: 9px 15px;
+        font-size: 14px;
+        transform: translate(0%, -170%);
     }
 }

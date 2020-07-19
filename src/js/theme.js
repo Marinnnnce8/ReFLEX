@@ -88,40 +88,42 @@ var theme = {
 		$nb.profilerStop("theme.blocks");
 	},
 
+	isTouchEnabled: function() { 
+		return ( 'ontouchstart' in window ) ||  
+			   ( navigator.maxTouchPoints > 0 ) ||  
+			   ( navigator.msMaxTouchPoints > 0 ); 
+	},
+
 	mapItemHover: function() {
 		var mapItem = document.getElementsByClassName("map-item");
-		for (var i = 0; i < mapItem.length; i++) {
-			mapItem[i].addEventListener("mouseover", this.mapTitleShow, false);
-	  }
-		for (var i = 0; i < mapItem.length; i++) {
-			mapItem[i].addEventListener("mouseout", this.mapTitleHide, false);
-	  }
+		if(this.isTouchEnabled()) {
+			for (var i = 0; i < mapItem.length; i++) {
+				mapItem[i].addEventListener("touchstart", this.mapTitleShow, false);
+	  		}
+		} else {
+			for (var i = 0; i < mapItem.length; i++) {
+				mapItem[i].addEventListener("mouseover", this.mapTitleShow, false);
+			  }
+			  for (var i = 0; i < mapItem.length; i++) {
+				mapItem[i].addEventListener("mouseout", this.mapTitleHide, false);
+			  }
+		}
 	},
 
 	//show and position map titile according to the hovered map item
 	mapTitleShow: function() {
 		var mapTitleEl = document.getElementsByClassName("js-explore-map-title")[0];
-		var mapParentTop = document.getElementsByClassName('explore-inner')[0].getBoundingClientRect().top;
+		var mapParent = document.getElementsByClassName('explore-inner')[0];
+		var mapParentTop = mapParent.getBoundingClientRect().top;
+		var mapParentLeft = mapParent.getBoundingClientRect().left;
 		var mapItemTop = this.getBoundingClientRect().top;
-		var mapItemLeft = this.getBoundingClientRect().top;
-		mapTitleEl.innerHTML = '';
-		var descAddToLeft = 0;
-		var mapItemWidthHalf = this.clientWidth;
 		var mapItemLeft = this.getBoundingClientRect().left;
-		var mapItemLeftPosition = 0;
-
-
-		//Find left positioning for desc/tablet/mob
-		if (window.matchMedia("screen and (min-width: 961px)").matches) {
-			descAddToLeft = 150;
-			mapItemLeftPosition = mapItemLeft + document.documentElement.scrollLeft + descAddToLeft;
-		} else if (window.matchMedia("(max-width: 640px)").matches) {
-			mapItemLeftPosition = mapItemLeft;
-		} else {
-			mapItemLeftPosition = mapItemLeft - mapItemWidthHalf;
-		}
+		mapTitleEl.innerHTML = '';
+		var mapParentBorderWidthVal = window.getComputedStyle(mapParent).getPropertyValue('border-width');
+		var mapParentBorderWidth = parseInt(mapParentBorderWidthVal) * 2;
 
 		var mapItemTopPosition = mapItemTop - mapParentTop;
+		var mapItemLeftPosition = mapItemLeft - mapParentLeft - mapParentBorderWidth;
 		var mapDataTitle = this.getAttribute("data-title");
 
 		mapTitleEl.innerHTML = mapDataTitle;
