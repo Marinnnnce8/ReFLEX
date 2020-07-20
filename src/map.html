@@ -19,9 +19,182 @@
 	<meta name="theme-color" content="#ffffff">
     <link rel='stylesheet' href='css/uikit.min.css' />
     <link rel='stylesheet' href='css/theme.min.css' />
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src='js/infobox.js'></script>
+    <script type="text/javascript">
+        function initialize() {
+            var secheltLoc = new google.maps.LatLng(49.47216, -123.76307);
+    
+            var myMapOptionsAssets = {
+                 zoom: 15
+                ,center: secheltLoc
+                ,mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            
+            var myMapOptionsRegion = {
+                 zoom: 15
+                ,center: secheltLoc
+                ,mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var theMapAssets = new google.maps.Map(document.getElementById("map_canvas_assets"), myMapOptionsAssets);
+
+            var theMapRegion = new google.maps.Map(document.getElementById("map_canvas_region"), myMapOptionsRegion);
+    
+    
+            var markerAssets = new google.maps.Marker({
+                map: theMapAssets,
+                draggable: true,
+                position: new google.maps.LatLng(58.984673, -2.962249),
+                visible: true
+            });
+
+            var markerRegion = new google.maps.Marker({
+                map: theMapRegion,
+                draggable: true,
+                position: new google.maps.LatLng(58.984673, -2.962249),
+                visible: true
+            });
+    
+            var boxTextAssets = document.createElement("div");
+            boxTextAssets.style.cssText = "";
+            boxTextAssets.innerHTML = "<span class='map-total'>7</span>" +
+                                "<div>" +
+                                    "<ul class='map-info-boxes uk-position-cover'>" +
+                                        "<li class='map-info uk-card' id='map-info-1'>" +
+                                            "<div class='uk-card-media-top uk-background-cover' data-uk-img style='background-image: url(\"./img/map-info-1.jpg\");'>" +
+                                                "<button data-uk-toggle='target: #map-info-1' aria-label='Close this info box'></button>" +
+                                            "</div>" +
+                                            "<div class='uk-card-body'>" +
+                                                "<h3 class='uk-card-title chargers'><img src='./img/charger.svg' data-uk-svg alt='image'>Charger</h3>" +
+                                                "<ul>" +
+                                                    "<li class='uk-flex'>" +
+                                                        "<span class='uk-text-uppercase'>Location</span>" +
+                                                        "<p>Great Western Road Car Park, Kirkwall (50791)</p>" +
+                                                    "</li>" +
+                                                    "<li class='uk-flex'>" +
+                                                        "<span class='uk-text-uppercase'>Type</span>" +
+                                                        "<p>Dual 7kW AC</p>" +
+                                                    "</li>" +
+                                                    "<li class='uk-flex'>" +
+                                                        "<span class='uk-text-uppercase'>Cable</span>" +
+                                                        "<p>Bring your own</p>" +
+                                                    "</li>" +
+                                                    "<li class='uk-flex'>" +
+                                                        "<span class='uk-text-uppercase'>Parking spaces</span>" +
+                                                        "<p>2</p>" +
+                                                    "</li>" +
+                                                    "<li class='uk-flex'>" +
+                                                        "<span class='uk-text-uppercase'>Access</span>" +
+                                                        "<p>ChargePlaceScotland card or mobile app </p>" +
+                                                    "</li>" +
+                                                    "<li class='uk-flex'>" +
+                                                        "<span class='uk-text-uppercase'>Price</span>" +
+                                                        "<p>£1.00 minimum charge and £0.20 per kWh. There is a penalty" +
+                                                            "charge of £5 if charging exceeds 3 hours.</p>" +
+                                                    "</li>" +
+                                                    "<li class='uk-flex'>" +
+                                                        "<span class='uk-text-uppercase'>Local facilities</span>" +
+                                                        "<p><a href='#'>https://www.orkney.com/map</a></p>" +
+                                                    "</li>" +
+                                               " </ul>" +
+                                                "<div class='uk-card-footer'>" +
+                                                    "<a href='#'>Find out more about <abbr title='Electric Vehicles'>EV</abbr> chargers</a>" +
+                                                "</div>" +
+                                            "</div>" +
+                                        "</li>" +
+                                   "</ul>" +
+                                    "<ul class='map-pins uk-position-cover'>" +
+                                        "<li><button aria-label='map pin'><img src='./img/charger.svg' data-uk-svg alt='image'></button></li>" +
+                                        "<li><button class='lilac' aria-label='map pin'><img src='./img/car-club.svg' data-uk-svg alt='image'></button></li>" +
+                                    "</ul>" +
+                                    "<div class='map-keys uk-text-center'>" +
+                                        "<span class='uk-text-uppercase'>Map key</span>" +
+                                        "<ul class='uk-flex'>" +
+                                            "<li><span><span role='presentation'></span>ReFLEX assets</span></li>" +
+                                            "<li><span><span role='presentation'></span>Non-ReFLEX assets</span></li>" +
+                                        "</ul>" +
+                                    "</div>" +
+                                "</div>";
+
+            var boxTextRegion = document.createElement("div");
+            boxTextRegion.style.cssText = "";
+            boxTextRegion.innerHTML = "<span class='map-total'>5</span>" +
+                                "<div>" +
+                                    "<ul class='map-pins uk-position-cover'>" +
+                                        "<li><button><img src='./img/charger.svg' data-uk-svg alt='image'></button></li>" +
+                                        "<li><button class='lilac'><img src='./img/car-club.svg' data-uk-svg alt='image'></button></li>" +
+                                    "</ul>" +
+                                    "<div class='map-keys uk-text-center'>" +
+                                        "<span class='uk-text-uppercase'>Map key</span>" +
+                                        "<ul class='uk-flex'>" +
+                                            "<li><span><span role='presentation'></span>ReFLEX assets</span></li>" +
+                                            "<li><span><span role='presentation'></span>Non-ReFLEX assets</span></li>" +
+                                        "</ul>" +
+                                    "</div>" +
+                                "</div>";
+    
+            var myOptionsAssets = {
+                 content: boxTextAssets
+                ,disableAutoPan: false
+                ,maxWidth: 0
+                ,pixelOffset: new google.maps.Size(-140, 0)
+                ,zIndex: null
+                ,boxStyle: { 
+                  background: "none"
+                  ,opacity: 1
+                  ,width: "100%"
+                  ,height: "740px"
+                 }
+                ,closeBoxMargin: ""
+                ,closeBoxURL: ""
+                ,infoBoxClearance: new google.maps.Size(1, 1)
+                ,isHidden: false
+                ,pane: "floatPane"
+                ,enableEventPropagation: false
+            };
+
+            var myOptionsRegion = {
+                 content: boxTextRegion
+                ,disableAutoPan: false
+                ,maxWidth: 0
+                ,pixelOffset: new google.maps.Size(-140, 0)
+                ,zIndex: null
+                ,boxStyle: { 
+                  background: "none"
+                  ,opacity: 1
+                  ,width: "100%"
+                  ,height: "740px"
+                 }
+                ,closeBoxMargin: ""
+                ,closeBoxURL: ""
+                ,infoBoxClearance: new google.maps.Size(1, 1)
+                ,isHidden: false
+                ,pane: "floatPane"
+                ,enableEventPropagation: false
+            };
+    
+            google.maps.event.addListener(markerAssets, "click", function (e) {
+                ibAssets.open(theMapAssets, this);
+            });
+    
+            var ibAssets = new InfoBox(myOptionsAssets);
+    
+            ibAssets.open(theMapAssets, markerAssets);
+
+            google.maps.event.addListener(markerRegion, "click", function (e) {
+                ibRegion.open(theMapRegion, this);
+            });
+    
+            var ibRegion = new InfoBox(myOptionsRegion);
+    
+            ibRegion.open(theMapRegion, markerRegion);
+        }
+    </script>
+    
 </head>
 
-<body id='scroll-target'>
+<body id='scroll-target' onload="initialize()">
 
     <header class='header'>
         <div class='uk-container uk-container-large'>
@@ -152,7 +325,7 @@
                 </div>
             </div>
             <div class='uk-container'>
-                <div class='map-box'  data-uk-scrollspy='cls:uk-animation-slide-bottom-medium;'>
+                <div class='map-box' data-uk-scrollspy='cls:uk-animation-slide-bottom-medium;'>
                     <div class='uk-child-width-1-2@m uk-grid-collapse' data-uk-grid>
                         <ul class='map-switch uk-flex' data-uk-switcher='connect: .switcher-container'>
                             <li><button class='uk-text-uppercase font-car-battery'>Explore by
@@ -195,90 +368,11 @@
                     </div>
                     <ul class='uk-switcher switcher-container'>
                         <li>
-                            <div class='map'>
-                                <span class='map-total'>7</span>
-                                <div>
-                                    <ul class='map-info-boxes uk-position-cover'>
-                                        <li class='map-info uk-card' id='map-info-1'>
-                                            <div class='uk-card-media-top uk-background-cover' data-uk-img
-                                                style="background-image: url('./img/map-info-1.jpg');">
-                                                <button data-uk-toggle="target: #map-info-1"
-                                                    aria-label="Close this info box"></button>
-                                            </div>
-                                            <div class='uk-card-body'>
-                                                <h3 class='uk-card-title chargers'><img src='./img/charger.svg'
-                                                        data-uk-svg alt='image'>Charger</h3>
-                                                <ul>
-                                                    <li class='uk-flex'>
-                                                        <span class='uk-text-uppercase'>Location</span>
-                                                        <p>Great Western Road Car Park, Kirkwall (50791)</p>
-                                                    </li>
-                                                    <li class='uk-flex'>
-                                                        <span class='uk-text-uppercase'>Type</span>
-                                                        <p>Dual 7kW AC</p>
-                                                    </li>
-                                                    <li class='uk-flex'>
-                                                        <span class='uk-text-uppercase'>Cable</span>
-                                                        <p>Bring your own</p>
-                                                    </li>
-                                                    <li class='uk-flex'>
-                                                        <span class='uk-text-uppercase'>Parking spaces</span>
-                                                        <p>2</p>
-                                                    </li>
-                                                    <li class='uk-flex'>
-                                                        <span class='uk-text-uppercase'>Access</span>
-                                                        <p>ChargePlaceScotland card or mobile app </p>
-                                                    </li>
-                                                    <li class='uk-flex'>
-                                                        <span class='uk-text-uppercase'>Price</span>
-                                                        <p>£1.00 minimum charge and £0.20 per kWh. There is a penalty
-                                                            charge of £5 if charging exceeds 3 hours.</p>
-                                                    </li>
-                                                    <li class='uk-flex'>
-                                                        <span class='uk-text-uppercase'>Local facilities</span>
-                                                        <p><a href='#'>https://www.orkney.com/map</a></p>
-                                                    </li>
-                                                </ul>
-                                                <div class='uk-card-footer'>
-                                                    <a href='#'>Find out more about <abbr
-                                                            title='Electric Vehicles'>EV</abbr> chargers</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <ul class='map-pins uk-position-cover'>
-                                        <li><button aria-label="map pin"><img src='./img/charger.svg' data-uk-svg alt='image'></button></li>
-                                        <li><button class='lilac' aria-label="map pin"><img src='./img/car-club.svg' data-uk-svg
-                                                    alt='image'></button></li>
-                                    </ul>
-                                    <div class='map-keys uk-text-center'>
-                                        <span class='uk-text-uppercase'>Map key</span>
-                                        <ul class='uk-flex'>
-                                            <li><span><span role='presentation'></span>ReFLEX assets</span></li>
-                                            <li><span><span role='presentation'></span>Non-ReFLEX assets</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class='map' id="map_canvas_assets">
                             </div>
                         </li>
                         <li class='uk-flex map-region'>
-                            <div class='map'>
-                                <span class='map-total'>5</span>
-                                <div>
-                                    <ul class='map-pins uk-position-cover'>
-                                        <li><button><img src='./img/charger.svg' data-uk-svg alt='image'></button></li>
-                                        <li><button class='lilac'><img src='./img/car-club.svg' data-uk-svg
-                                                    alt='image'></button></li>
-                                    </ul>
-                                    <div class='map-keys uk-text-center'>
-                                        <span class='uk-text-uppercase'>Map key</span>
-                                        <ul class='uk-flex'>
-                                            <li><span><span role='presentation'></span>ReFLEX assets</span></li>
-                                            <li><span><span role='presentation'></span>Non-ReFLEX assets</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class='map' id="map_canvas_region"></div>
                             <div class='map-sidebar uk-text-center' id='map-sidebar-1'>
                                 <button class='uk-hidden@s' aria-label='Close map region sidebar'
                                     data-uk-toggle='target: #map-sidebar-1'></button>

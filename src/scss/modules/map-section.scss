@@ -383,7 +383,6 @@
     background-color: $blue-map;
     height: 740px;
     max-height: 740px;
-    overflow-y: auto;
     position: relative;
     border-bottom: 40px solid $lime-map;
     z-index: 1;
@@ -649,7 +648,7 @@
     padding: 20px 10px;
     position: absolute;
     left: 10px;
-    bottom: 10px;
+    bottom: 30px;
     max-width: 200px;
     width: 100%;
 
