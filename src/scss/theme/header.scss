@@ -145,7 +145,7 @@
 
 .nb-nav-open {
     .uk-navbar-toggle {
-        animation: toogleAnimate .6s linear forwards;
+        animation: toggleAnimate .6s linear forwards;
 
         span,
         span::before,
@@ -201,7 +201,7 @@
     }
 }
 
-@keyframes toogleAnimate {
+@keyframes toggleAnimate {
     0% {
         background-color: rgba($blue, .9);
     }
