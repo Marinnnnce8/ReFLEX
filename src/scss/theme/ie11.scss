@@ -122,16 +122,26 @@ screen and (-ms-high-contrast: none) {
         display: none;
     }
 
-    .values .uk-svg {
-        height: 75px;
-        display: inline-block;
-    }
+    .values {
+        .uk-position-cover {
+            border-radius: 20px;
+        }
 
-    .values .uk-card {
-        @include hover {
-            .uk-svg {
-                height: 40px;
+        .uk-card {
+            @include hover {
+                .uk-position-cover {
+                    border-radius: 0;
+                }
+
+                .uk-svg {
+                    height: 40px;
+                }
             }
+        }
+
+        .uk-svg {
+            height: 75px;
+            display: inline-block;
         }
     }
 
@@ -202,7 +212,7 @@ screen and (-ms-high-contrast: none) {
         height: 30px;
         width: 30px;
     }
-    
+
     .map-info {
         .uk-card-title .uk-svg {
             width: 29px;
@@ -211,7 +221,7 @@ screen and (-ms-high-contrast: none) {
         span {
             min-width: 100px;
         }
-        
+
         .uk-card-footer a {
             &::after {
                 max-height: 2px !important;
@@ -225,4 +235,3 @@ screen and (-ms-high-contrast: none) {
         }
     }
 }
-

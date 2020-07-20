@@ -90,7 +90,7 @@
         }
     }
 
-     // sass-lint:disable-block class-name-format
+    // sass-lint:disable-block class-name-format
     .Selectfield {
         label {
             @include visually-hidden;
@@ -144,6 +144,11 @@
 
     @media (max-width: $breakpointSmallMax) {
         padding: 50px 0 0;
+
+        .nb-block-form {
+            padding-bottom: 335px;
+            max-width: 100%;
+        }
 
         .uk-sticky-placeholder {
             display: none !important; // sass-lint:disable-line no-important

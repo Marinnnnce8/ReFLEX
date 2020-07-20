@@ -31,6 +31,10 @@ fieldset {
     }
 }
 
+.uk-select:not(.uk-form-danger) {
+    height: 60px !important; // sass-lint:disable-line no-important
+}
+
 .uk-form-custom {
     margin-top: 40px;
     width: 100%;
