@@ -138,7 +138,7 @@
         &::before {
             position: absolute;
             color: $white;
-            top: 57%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 18px;
@@ -151,9 +151,6 @@
             &::before {
                 color: $lime;
             }
-        }
-        &.mac::before {
-            top: 50%;
         }
     }
 

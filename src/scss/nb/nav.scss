@@ -51,12 +51,12 @@
 					padding-right: 30px;
 				}
 
-				@include hover {
+				&:hover {
 					background-color: $blue;
 					color: $white;
 
 					&::before {
-						transform: translateY(-83%) rotate(-180deg);
+						transform: translateY(-50%) rotate(-180deg);
 					}
 				}
 			}
@@ -66,7 +66,7 @@
 				font-size: 10px;
 				color: inherit;
 				right: 15px;
-				top: 56%;
+				top: 50%;
 				transform: translateY(-50%);
 				transition: $nbSec ease-in-out;
 			}
@@ -234,7 +234,7 @@
 				background-color: $blueish;
 				border-radius: 50px;
 
-				@include hover {
+				&:hover {
 					background-color: $blue;
 					border-bottom-left-radius: 0;
 					border-bottom-right-radius: 0;
@@ -279,7 +279,7 @@
 						opacity: 0;
 						right: 25px;
 						transition: inherit;
-						top: 26px;
+						top: 22px;
 						font-size: 12px;
 						font-weight: $bold;
 					}
@@ -473,7 +473,7 @@
 							left: auto;
 							right: 30px;
 							color: $lime;
-							transform: translateY(-33%);
+							transform: translateY(-30%);
 							font-size: 14px;
 							font-weight: $bold;
 						}
@@ -481,7 +481,7 @@
 
 					&.font-chevron-right::before {
 						font-size: 14px;
-						top: 57%;
+						top: 50%;
 						transform: translateY(-50%);
 						position: absolute;
 						right: 35px;
@@ -545,7 +545,7 @@
 					position: absolute;
 					font-family: 'svgicons';
 					content: font-char($chevron-left);
-					top: 56%;
+					top: 50%;
 					transform: translateY(-50%);
 				}
 
@@ -605,7 +605,7 @@
 							&::before {
 								font-size: 10px;
 								right: 23px;
-								transform: translateY(-60%);
+								transform: translateY(-30%);
 							}
 						}
 

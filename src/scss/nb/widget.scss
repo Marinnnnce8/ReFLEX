@@ -10,7 +10,7 @@
 		&::before {
 			content: font-char($wpforms);
 			font-size: 22px;
-			transform: translateY(-58%) rotate(90deg);
+			transform: translateY(-50%) rotate(90deg);
 			color: $blue-darker;
 			backface-visibility: hidden;
 			font-weight: normal;

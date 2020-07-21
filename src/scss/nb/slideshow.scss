@@ -92,12 +92,7 @@
             border-radius: 50%;
             right: 10px;
             color: $white;
-            line-height: 57px;
             padding-left: 15px;
-            top: 50%;
-
-        }
-        &.mac::before {
             line-height: 50px;
         }
     }
@@ -163,7 +158,7 @@
             color: $blue;
             left: 50%;
             transform: translate(-50%, -50%);
-            top: 57%;
+            top: 50%;
         }
 
         &:first-of-type {
@@ -328,7 +323,6 @@
 
             &::after {
                 font-size: 18px;
-                top: 50%;
             }
 
             &:first-of-type {
@@ -421,8 +415,8 @@
                     width: 35px;
                     height: 35px;
                     font-size: 12px;
-                    line-height: 39px;
                     padding-left: 13px;
+                    line-height: 35px;
                 }
             }
         }

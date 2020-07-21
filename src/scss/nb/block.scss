@@ -128,7 +128,7 @@
 
 				&::before {
 					right: 0;
-					top: 65%;
+					top: 50%;
 					position: absolute;
 					font-family: 'svgicons';
 					content: font-char($external-icon);
@@ -537,7 +537,7 @@
 			&::before {
 				position: absolute;
 				font-size: 26px;
-				top: 60%;
+				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
 				color: $white;
@@ -566,11 +566,6 @@
 			}
 		}
 
-		@media (max-width: $breakpointMedium) {
-			.uk-slidenav::before {
-				top: 50%;
-			}
-		}
 		@media (max-width: $breakpointSmall) {
 			.uk-slidenav {
 				width: 48px;

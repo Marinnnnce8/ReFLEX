@@ -98,7 +98,7 @@
                 left: 42px;
                 font-size: 18px;
                 top: 50%;
-                transform: translateY(-36%);
+                transform: translateY(-50%);
             }
         }
 
@@ -111,7 +111,7 @@
                 left: 34px;
                 font-size: 20px;
                 top: 50%;
-                transform: translateY(-30%);
+                transform: translateY(-50%);
             }
         }
 
@@ -234,7 +234,7 @@
 
         &::before {
             content: font-char($chevron-down);
-            top: 60%;
+            top: 50%;
             right: 20px;
             font-size: 12px;
             font-weight: $bold;
@@ -266,7 +266,7 @@
             border-top-right-radius: 20px;
 
             &::before {
-                transform: translateY(-66%) rotate(180deg);
+                transform: translateY(-50%) rotate(180deg);
             }
 
             &::after {
@@ -437,7 +437,7 @@
                 position: absolute;
                 color: $white;
                 font-size: 16px;
-                top: 60%;
+                top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 content: font-char($close);
@@ -527,7 +527,7 @@
                 color: $lime-map;
                 content: font-char($arrow-right);
                 font-family: 'svgicons';
-                top: 5px;
+                top: 0;
             }
 
             &::after {
@@ -552,12 +552,6 @@
                     height: 100%;
                 }
             }
-        }
-    }
-
-    @media (max-width: $breakpointMedium) {
-        .uk-card-media-top button::before {
-            top: 50%;
         }
     }
 
@@ -765,7 +759,7 @@
             font-weight: $bold;
             position: absolute;
             left: 50%;
-            top: 56%;
+            top: 50%;
             transform: translate(-50%, -50%);
         }
     }
@@ -773,12 +767,6 @@
     h3 {
         margin: 0;
         color: $white;
-    }
-
-    @media (max-width: $breakpointMedium) {
-        >button::before {
-            top: 50%;
-        }
     }
 
     @media (max-width: $breakpointXsmallMax) {

@@ -30,146 +30,86 @@
 	@if $filename == arrow-right {
 		$char: '\E001';
 	}
-	@if $filename == book {
+	@if $filename == briefcase {
 		$char: '\E002';
 	}
-	@if $filename == briefcase {
+	@if $filename == calendar {
 		$char: '\E003';
 	}
-	@if $filename == calendar {
+	@if $filename == car-battery {
 		$char: '\E004';
 	}
-	@if $filename == car-battery {
+	@if $filename == chevron-down {
 		$char: '\E005';
 	}
-	@if $filename == car-club {
+	@if $filename == chevron-left {
 		$char: '\E006';
 	}
-	@if $filename == charger {
+	@if $filename == chevron-right {
 		$char: '\E007';
 	}
-	@if $filename == chevron-down {
+	@if $filename == chevron-up {
 		$char: '\E008';
 	}
-	@if $filename == chevron-left {
+	@if $filename == close {
 		$char: '\E009';
 	}
-	@if $filename == chevron-right {
+	@if $filename == comment {
 		$char: '\E00A';
 	}
-	@if $filename == chevron-up {
+	@if $filename == envelope {
 		$char: '\E00B';
 	}
-	@if $filename == close {
+	@if $filename == external-icon {
 		$char: '\E00C';
 	}
-	@if $filename == comment {
+	@if $filename == facebook {
 		$char: '\E00D';
 	}
-	@if $filename == dots-bg {
+	@if $filename == info {
 		$char: '\E00E';
 	}
-	@if $filename == drive {
+	@if $filename == instagram-logo {
 		$char: '\E00F';
 	}
-	@if $filename == electric-vehicles {
+	@if $filename == linkedin {
 		$char: '\E010';
 	}
-	@if $filename == envelope {
+	@if $filename == mail {
 		$char: '\E011';
 	}
-	@if $filename == external-icon {
+	@if $filename == map {
 		$char: '\E012';
 	}
-	@if $filename == facebook {
+	@if $filename == phone {
 		$char: '\E013';
 	}
-	@if $filename == FLEX-wifi-waves {
+	@if $filename == quote {
 		$char: '\E014';
 	}
-	@if $filename == heating-smaller {
+	@if $filename == road {
 		$char: '\E015';
 	}
-	@if $filename == heating {
+	@if $filename == rounded-corner-left {
 		$char: '\E016';
 	}
-	@if $filename == home-batteries {
+	@if $filename == rounded-corner-right {
 		$char: '\E017';
 	}
-	@if $filename == info {
+	@if $filename == tachometer {
 		$char: '\E018';
 	}
-	@if $filename == instagram-logo {
+	@if $filename == twitter {
 		$char: '\E019';
 	}
-	@if $filename == join {
+	@if $filename == user-home {
 		$char: '\E01A';
 	}
-	@if $filename == lightbulb {
+	@if $filename == wpforms {
 		$char: '\E01B';
 	}
-	@if $filename == linkedin {
-		$char: '\E01C';
-	}
-	@if $filename == mail {
-		$char: '\E01D';
-	}
-	@if $filename == map {
-		$char: '\E01E';
-	}
-	@if $filename == newsletter {
-		$char: '\E01F';
-	}
-	@if $filename == orkney-map-regions {
-		$char: '\E020';
-	}
-	@if $filename == phone {
-		$char: '\E021';
-	}
-	@if $filename == play-button-arrowhead {
-		$char: '\E022';
-	}
-	@if $filename == quote {
-		$char: '\E023';
-	}
-	@if $filename == radius {
-		$char: '\E024';
-	}
-	@if $filename == road {
-		$char: '\E025';
-	}
-	@if $filename == rounded-corner-left {
-		$char: '\E026';
-	}
-	@if $filename == rounded-corner-right {
-		$char: '\E027';
-	}
-	@if $filename == signup {
-		$char: '\E028';
-	}
-	@if $filename == solar-energy {
-		$char: '\E029';
-	}
-	@if $filename == tachometer {
-		$char: '\E02A';
-	}
-	@if $filename == turbine-tidal {
-		$char: '\E02B';
-	}
-	@if $filename == turbine-wind {
-		$char: '\E02C';
-	}
-	@if $filename == twitter {
-		$char: '\E02D';
-	}
-	@if $filename == user-home {
-		$char: '\E02E';
-	}
-	@if $filename == wpforms {
-		$char: '\E02F';
-	}
 	@if $filename == youtube {
-		$char: '\E030';
+		$char: '\E01C';
 	}
 
 	@return $char;
@@ -193,9 +133,6 @@
 .font-arrow-right {
 	@include font(arrow-right);
 }
-.font-book {
-	@include font(book);
-}
 .font-briefcase {
 	@include font(briefcase);
 }
@@ -204,12 +141,6 @@
 }
 .font-car-battery {
 	@include font(car-battery);
-}
-.font-car-club {
-	@include font(car-club);
-}
-.font-charger {
-	@include font(charger);
 }
 .font-chevron-down {
 	@include font(chevron-down);
@@ -229,15 +160,6 @@
 .font-comment {
 	@include font(comment);
 }
-.font-dots-bg {
-	@include font(dots-bg);
-}
-.font-drive {
-	@include font(drive);
-}
-.font-electric-vehicles {
-	@include font(electric-vehicles);
-}
 .font-envelope {
 	@include font(envelope);
 }
@@ -247,29 +169,11 @@
 .font-facebook {
 	@include font(facebook);
 }
-.font-FLEX-wifi-waves {
-	@include font(FLEX-wifi-waves);
-}
-.font-heating-smaller {
-	@include font(heating-smaller);
-}
-.font-heating {
-	@include font(heating);
-}
-.font-home-batteries {
-	@include font(home-batteries);
-}
 .font-info {
 	@include font(info);
 }
 .font-instagram-logo {
 	@include font(instagram-logo);
-}
-.font-join {
-	@include font(join);
-}
-.font-lightbulb {
-	@include font(lightbulb);
 }
 .font-linkedin {
 	@include font(linkedin);
@@ -280,23 +184,11 @@
 .font-map {
 	@include font(map);
 }
-.font-newsletter {
-	@include font(newsletter);
-}
-.font-orkney-map-regions {
-	@include font(orkney-map-regions);
-}
 .font-phone {
 	@include font(phone);
 }
-.font-play-button-arrowhead {
-	@include font(play-button-arrowhead);
-}
 .font-quote {
 	@include font(quote);
-}
-.font-radius {
-	@include font(radius);
 }
 .font-road {
 	@include font(road);
@@ -307,20 +199,8 @@
 .font-rounded-corner-right {
 	@include font(rounded-corner-right);
 }
-.font-signup {
-	@include font(signup);
-}
-.font-solar-energy {
-	@include font(solar-energy);
-}
 .font-tachometer {
 	@include font(tachometer);
-}
-.font-turbine-tidal {
-	@include font(turbine-tidal);
-}
-.font-turbine-wind {
-	@include font(turbine-wind);
 }
 .font-twitter {
 	@include font(twitter);

@@ -57,7 +57,7 @@
                 span::before {
                     color: inherit;
                     position: absolute;
-                    top: 60%;
+                    top: 50%;
                     transform: translateY(-50%);
                     font-size: 36px;
                 }
@@ -111,10 +111,6 @@
             button {
                 font-size: 18px;
                 width: 100%;
-
-                span::before {
-                    top: 50%;
-                }
             }
         }
 

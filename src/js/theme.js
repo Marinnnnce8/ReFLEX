@@ -10,7 +10,6 @@ var theme = {
 	init: function() {
 		this.blocks();
 		this.mapItemHover();
-		this.centerIconMacClass();
 	},
 
 	blocks: function() {
@@ -144,33 +143,6 @@ var theme = {
 		if(mapTitleEl.style.display !== "none" ||
 		getComputedStyle(mapTitleEl, null).display !== "none")
 		mapTitleEl.style.display = "none";
-	},
-
-	//add class to center icons on safari/chrome on mac
-	centerIconMacClass: function() {
-		var isOSX = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
-		var isiOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
-		var isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-
-		if(document.getElementsByClassName("nb-slideshow")[0] && (isOSX || isiOS || isMac)) {
-			var heroButtonParents = document.getElementsByClassName("nb-slideshow")[0].querySelectorAll("li");
-			for(var i = 0;i < heroButtonParents.length;i++){
-				heroButtonParents[i].querySelectorAll('.uk-button-primary')[0].classList.add("mac");
-			}
-		}
-		if(document.getElementsByClassName("news-share")[0] && (isOSX || isiOS || isMac)) {
-			var socialNewsButton = document.getElementsByClassName("news-share")[0].querySelectorAll("li");
-			for(var i = 0;i < socialNewsButton.length;i++){
-				socialNewsButton[i].querySelectorAll('a')[0].classList.add("mac");
-			}
-		}
-		var socialFooterButtonParents = document.getElementsByClassName("footer-socials")[0].querySelectorAll("li");
-
-		if(isOSX || isiOS || isMac) {
-			for(var i = 0;i < socialFooterButtonParents.length;i++){
-				socialFooterButtonParents[i].querySelectorAll('a')[0].classList.add("mac");
-			}
-		}
 	}
 };
 

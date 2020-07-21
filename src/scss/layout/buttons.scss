@@ -48,11 +48,12 @@ input[type='submit'] {
 		right: 30px;
 		font-family: 'svgicons';
 		color: inherit;
-		top: 56%;
+		top: 50%;
 		transform: translateY(-50%);
 		z-index: 2;
 		transition: inherit;
 		font-weight: normal;
+		font-size: inherit;
 	}
 
 	&::after {
@@ -129,6 +130,10 @@ input[type='submit'] {
 		background-color: $blue-mid;
 	}
 
+	&::before {
+		right: 18px;
+	}
+
 	&.uk-button-small {
 		padding: 6px 35px 6px 25px;
 	}
@@ -184,7 +189,7 @@ input[type='submit'] {
 	&::before {
 		top: 50%;
 		right: 0;
-		transform: translateY(-31%);
+		transform: translateY(-50%);
 		left: auto;
 		bottom: auto;
 		transition: $nbSec ease-in-out;
@@ -244,7 +249,7 @@ input[type='submit'] {
 		&::before {
 			content: font-char($chevron-up);
 			transform: translate(-50%, -50%);
-			top: 57%;
+			top: 50%;
 			left: 40%;
 		}
 
@@ -258,12 +263,6 @@ input[type='submit'] {
 			&::before {
 				color: $white;
 			}
-		}
-	}
-
-	@media (max-width: $breakpointMedium) {
-		.uk-button::before {
-			top: 50%;
 		}
 	}
 
