@@ -97,6 +97,9 @@
             top: 50%;
 
         }
+        &.mac::before {
+            line-height: 50px;
+        }
     }
 
     .slideshow-img {

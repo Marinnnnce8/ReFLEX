@@ -152,6 +152,9 @@
                 color: $lime;
             }
         }
+        &.mac::before {
+            top: 50%;
+        }
     }
 
     @media (max-width: $breakpointXlarge) {
@@ -166,10 +169,6 @@
         margin-bottom: 55px;
         padding-left: 0;
         margin-top: 0;
-
-        a::before {
-            top: 50%;
-        }
     }
 }
 

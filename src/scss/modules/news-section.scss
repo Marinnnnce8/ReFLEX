@@ -71,10 +71,7 @@
                 color: $lime;
             }
         }
-    }
-
-    @media (max-width: $breakpointMedium) {
-        a::before {
+        &.mac::before {
             top: 50%;
         }
     }
