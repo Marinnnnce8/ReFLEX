@@ -85,6 +85,30 @@ var theme = {
 			}
 		});
 
+		$uk.on($uk.$$('.uk-navbar-toggle'), 'click', function(e) {
+			var nav = $uk.$$('#nav');
+			var isNavOpen = false;
+			var isNavOpen = $uk.attr(nav, "aria-hidden");
+			var el = $uk.$$("body");
+			var cls = 'nav-open-animation';
+
+			if(isNavOpen === "true" || isNavOpen === null ) {
+				$uk.addClass(el, cls);
+			} else {
+				$uk.removeClass(el, cls);	
+			}
+		});
+
+		$uk.on($uk.$$('#nav, #nav .uk-navbar-dropdown'), 'hide', function(e) {
+			var el = e.target;
+			var cls = 'do-an-animation uk-open';
+			$uk.addClass(el, cls);
+			
+			setTimeout(function() {
+				$uk.removeClass(el, cls);
+			}, 1300); // However long the animation takes
+		});
+
 		$nb.profilerStop("theme.blocks");
 	},
 

@@ -342,7 +342,7 @@
 			-webkit-transform: translate3d(0, 0, 0);
 
 			&:after {
-				animation: openingBckg 1.2s ease forwards;
+				animation: openingFirstCircle 1.2s ease forwards;
 				-webkit-transform: translate3d(0, 0, 0);
 			}
 
@@ -413,7 +413,7 @@
 			}
 
 			&:after {
-				animation: closingBckg 1.2s ease forwards;
+				animation: closingFirstCircle 1.2s ease forwards;
 			}
 
 			&::before {
@@ -512,6 +512,23 @@
 			width: 100%;
 			margin-top: 0;
 
+			&.uk-open.do-an-animation {
+				width: 100%;
+				height: auto;
+				opacity: 1;
+				display: block;
+
+				&::before {
+					animation: dropdownOpacityOff .85s forwards;
+				}
+
+				.uk-navbar-dropdown-nav {
+					li {
+						animation: closingNavItems .75s cubic-bezier(.68, -.55, .265, 1.55) forwards;
+					}
+				}
+			}
+
 			li a {
 				font-size: 30px;
 				font-weight: normal;
@@ -565,6 +582,20 @@
 		.uk-navbar-dropdown-nav {
 			li:not(:first-of-type):not(:nth-of-type(2)) {
 				padding-left: 25px;
+			}
+		}
+
+		@media (max-width: $breakpointLarge) and (min-width: $breakpointMedium) {
+			>img {
+				right: 47%;
+				left: auto;
+			}
+		}
+
+		@media (max-width: $breakpointSmallMax) and (min-width: $breakpointTabletPortrait) {
+			>img {
+				right: 58%;
+				left: auto;
 			}
 		}
 
@@ -662,20 +693,15 @@
 	0% {
 		opacity: 1;
 		z-index: 1003;
-		height: 2px;
-		width: 18px;
-		padding: 0;
 	}
 
 	100% {
 		height: 100vh;
-		width: calc(100% + 50px);
-		right: -40px;
+		width: calc(100% + 30px);
+		right: -10px;
 		top: 0;
 		border-radius: 50%;
 		z-index: 1002;
-		overflow: visible;
-		padding: 75px 5px 0;
 	}
 }
 
@@ -782,23 +808,7 @@
 	}
 }
 
-@keyframes openingMob {
-	0% {
-		opacity: 1;
-		z-index: 1003;
-	}
-
-	100% {
-		height: 100vh;
-		width: calc(100% + 30px);
-		right: -10px;
-		top: 0;
-		border-radius: 50%;
-		z-index: 1002;
-	}
-}
-
-@keyframes openingBckg {
+@keyframes openingFirstCircle {
 	0% {
 		background-color: $white;
 		opacity: 1;
@@ -820,7 +830,7 @@
 	}
 }
 
-@keyframes closingBckg {
+@keyframes closingFirstCircle {
 	0% {
 		background-color: $blue;
 		right: -315px;
@@ -935,5 +945,19 @@
 
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes dropdownOpacityOff {
+	0% {
+		opacity: 1;
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }
